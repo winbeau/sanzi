@@ -28,18 +28,27 @@
     /* 醒目的“打开详细页”CTA：暖色 + 轻微浮起，引导点击 */
     .btn--detail{ font-weight:800; box-shadow:0 3px 10px rgba(0,0,0,.16); transition:transform .12s, filter .12s, box-shadow .12s; }
     .btn--detail:hover{ transform:translateY(-2px); filter:brightness(1.06); box-shadow:0 6px 16px rgba(0,0,0,.22); }
+    /* 顶部右上角 GitHub 链接（适配深色 Hero）*/
+    .gh-btn{ flex:none; display:inline-flex; align-items:center; gap:8px; height:42px; padding:0 16px; border-radius:var(--r-md);
+      background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.5); font-weight:700; font-size:var(--fs-400);
+      text-decoration:none; white-space:nowrap; transition:background .12s; }
+    .gh-btn:hover{ background:rgba(255,255,255,.26); text-decoration:none; }
+    .gh-btn .ico{ font-size:20px; }
   </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="hero-head">
-    <div class="u-row" style="gap:var(--sp-4);">
-      <div class="brand__logo" style="width:56px;height:56px;font-size:28px;">资</div>
-      <div>
-        <h1 style="font-size:var(--fs-900);">三资管理助手 · 原型版本预览</h1>
-        <p style="font-size:var(--fs-600); opacity:.95;">面向村集体三资专干的智能问答工具 —— 可问、可查、可学，回答全部基于资料并标注出处</p>
+    <div class="u-row" style="gap:var(--sp-4); justify-content:space-between; align-items:flex-start;">
+      <div class="u-row" style="gap:var(--sp-4); min-width:0;">
+        <div class="brand__logo" style="width:56px;height:56px;font-size:28px;">资</div>
+        <div>
+          <h1 style="font-size:var(--fs-900);">三资管理助手 · 原型版本预览</h1>
+          <p style="font-size:var(--fs-600); opacity:.95;">面向村集体三资专干的智能问答工具 —— 可问、可查、可学，回答全部基于资料并标注出处</p>
+        </div>
       </div>
+      <a class="gh-btn" href="https://github.com/winbeau/sanzi" target="_blank" rel="noopener"><i class="ico ico-github"></i><span>GitHub 仓库</span></a>
     </div>
   </header>
 
