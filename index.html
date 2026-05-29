@@ -11,7 +11,7 @@
     .wrap { width: 100%; margin: 0; padding: var(--sp-7) clamp(24px, 7vw, 120px); }
     .hero-head { background: var(--grad-hero); color:#fff; border-radius: var(--r-lg); border-top:3px solid var(--c-accent); padding: var(--sp-7); margin-bottom: var(--sp-6); }
     .preview-grid { display:grid; grid-template-columns: 1fr; gap: var(--sp-7); align-items:start; }
-    @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,1fr) 360px; } }
+    @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,7fr) minmax(0,3fr); } }
     /* PC 预览：等比缩放真实页面，撑满左侧大区 */
     .pcframe-shell{ border:1px solid var(--c-border); border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--sh-2); background:var(--c-surface); }
     .pcframe-bar{ height:38px; display:flex; align-items:center; gap:8px; padding:0 14px; background:var(--c-surface-2); border-bottom:1px solid var(--c-border); }
@@ -19,11 +19,11 @@
     .pcframe-url{ flex:1; height:22px; background:var(--c-surface); border-radius:var(--r-pill); border:1px solid var(--c-border); font-size:12px; color:var(--c-text-faint); display:flex; align-items:center; padding:0 12px; }
     .pcframe-view{ position:relative; width:100%; aspect-ratio: 1280/800; overflow:hidden; }
     .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:800px; border:0; transform-origin: top left; pointer-events:none; }
-    /* 手机预览：自然手机比例（不强行对齐 PC 高度）*/
-    .phone{ width:320px; max-width:100%; margin:0 auto; }
+    /* 手机预览：撑满右侧 3 份列宽（自然手机比例，按列宽缩放）*/
+    .phone{ width:100%; max-width:460px; margin:0 auto; }
     .phone-shell{ border:10px solid #1c2530; border-radius:30px; overflow:hidden; box-shadow:var(--sh-3); background:#1c2530; }
-    .phone-view{ position:relative; width:300px; height:560px; overflow:hidden; background:#fff; }
-    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:728px; border:0; transform-origin: top left; transform: scale(.769); pointer-events:none; }
+    .phone-view{ position:relative; width:100%; aspect-ratio:1/1.8; overflow:hidden; background:#fff; }
+    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:702px; border:0; transform-origin: top left; pointer-events:none; }
     .pv-cap{ text-align:center; color:var(--c-text-weak); font-size:var(--fs-300); margin-top:var(--sp-2); }
   </style>
 </head>
@@ -81,21 +81,25 @@
   <!-- 实时预览：PC + 手机（预览仅供查看，点按钮看详细）-->
   <section class="preview-grid" style="margin-bottom:var(--sp-7);">
     <div>
-      <div class="sect__title" style="margin-bottom:var(--sp-3);"><i class="ico ico-desktop"></i> PC 端</div>
+      <div class="u-row" style="justify-content:space-between; gap:var(--sp-3); margin-bottom:var(--sp-3);">
+        <div class="sect__title" style="margin:0;"><i class="ico ico-desktop"></i> PC 端</div>
+        <button id="pcDetail" class="btn btn--soft btn--sm"><i class="ico ico-external btn__ico"></i>打开 PC 详细页</button>
+      </div>
       <div class="pcframe-shell">
         <div class="pcframe-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="pcframe-url">三资管理助手 / pc</span></div>
         <div class="pcframe-view"><iframe id="pcFrame" data-preview="pc/home-entry.html" title="PC 预览"></iframe></div>
       </div>
-      <button id="pcDetail" class="btn btn--primary btn--block" style="margin-top:var(--sp-4);"><i class="ico ico-external btn__ico"></i>打开 PC 详细页</button>
     </div>
     <div>
-      <div class="sect__title" style="margin-bottom:var(--sp-3);"><i class="ico ico-mobile"></i> 安卓端</div>
+      <div class="u-row" style="justify-content:space-between; gap:var(--sp-3); margin-bottom:var(--sp-3);">
+        <div class="sect__title" style="margin:0;"><i class="ico ico-mobile"></i> 安卓端</div>
+        <button id="mDetail" class="btn btn--soft btn--sm"><i class="ico ico-external btn__ico"></i>打开安卓详细页</button>
+      </div>
       <div class="phone">
         <div class="phone-shell">
           <div class="phone-view"><iframe id="mFrame" data-preview="mobile/home-entry.html" title="移动预览"></iframe></div>
         </div>
-        <button id="mDetail" class="btn btn--primary btn--block" style="margin-top:var(--sp-4);"><i class="ico ico-external btn__ico"></i>打开安卓详细页</button>
-        <div class="pv-cap">预览仅供查看，点上方按钮在新窗口看完整页</div>
+        <div class="pv-cap">预览仅供查看，点右上按钮在新窗口看完整页</div>
       </div>
     </div>
   </section>
@@ -115,13 +119,15 @@
     var currentId = 'home-entry';
     function theme() { return window.SanziUI ? window.SanziUI.theme() : 'green'; }
 
-    // PC 预览等比缩放：按容器宽度 / 1280
-    function scalePC() {
-      var v = document.querySelector('.pcframe-view'), f = document.getElementById('pcFrame');
-      if (v && f) f.style.transform = 'scale(' + (v.clientWidth / 1280) + ')';
+    // 预览等比缩放：PC 按 /1280，手机按 /390，各自撑满所在列
+    function scaleFrames() {
+      var pv = document.querySelector('.pcframe-view'), pf = document.getElementById('pcFrame');
+      if (pv && pf) pf.style.transform = 'scale(' + (pv.clientWidth / 1280) + ')';
+      var mv = document.querySelector('.phone-view'), mf = document.getElementById('mFrame');
+      if (mv && mf) mf.style.transform = 'scale(' + (mv.clientWidth / 390) + ')';
     }
-    scalePC();
-    window.addEventListener('resize', scalePC);
+    scaleFrames();
+    window.addEventListener('resize', scaleFrames);
 
     // 切换预览页面
     document.querySelectorAll('[data-pick-page]').forEach(function (btn) {

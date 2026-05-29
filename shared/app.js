@@ -74,10 +74,6 @@
   }
 
   ready(function () {
-    // 若本页处于预览 iframe 中：所有链接改在新标签打开，既可点击又不会让预览页层层嵌套
-    if (window.top !== window.self) {
-      var _b = document.createElement('base'); _b.target = '_blank'; document.head.appendChild(_b);
-    }
     // 决策页：初始化预览 iframe
     document.querySelectorAll('iframe[data-preview]').forEach(syncIframe);
 
