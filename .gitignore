@@ -1,4 +1,3 @@
 node_modules/
-tools/report/screenshots/
-tools/report/report.json
+tools/report/
 .DS_Store

@@ -197,6 +197,7 @@ export async function verifyFile(filePath, opts = {}) {
   const consoleErrors = [];
   const failedRequests = [];
   let result;
+  let result_httpStatus = null;
   try {
     const context = await browser.newContext({
       viewport: { width, height },
@@ -214,9 +215,11 @@ export async function verifyFile(filePath, opts = {}) {
       const u = r.url();
       if (!u.startsWith('data:')) failedRequests.push(`${u} (${r.failure()?.errorText || '?'})`);
     });
-    const url = pathToFileURL(path.resolve(filePath)).href;
-    await page.goto(url, { waitUntil: 'load', timeout: 30000 });
-    await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => {});
+    const isUrl = /^https?:\/\//.test(filePath);
+    const url = isUrl ? filePath : pathToFileURL(path.resolve(filePath)).href;
+    const resp = await page.goto(url, { waitUntil: 'load', timeout: 45000 });
+    result_httpStatus = resp ? resp.status() : null;
+    await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
     await page.evaluate(() => document.fonts && document.fonts.ready).catch(() => {});
     await page.waitForTimeout(400);
     const checks = await page.evaluate(inPageChecks, { tol: TOL, isMobile });
@@ -239,6 +242,7 @@ export async function verifyFile(filePath, opts = {}) {
     const warnings = findings.filter((f) => f.level === 'warning');
     result = {
       file: filePath,
+      httpStatus: result_httpStatus,
       viewport: `${width}x${height}`,
       isMobile,
       pass: errors.length === 0,
