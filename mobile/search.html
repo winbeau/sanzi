@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 知识检索（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="m-shell">
+
+  <header class="m-topbar">
+    <a class="iconbtn" href="home-entry.html" aria-label="返回首页">←</a>
+    <div class="m-topbar__title">知识检索</div>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+  </header>
+
+  <main class="m-main">
+
+    <!-- 搜索框 + 语音（置顶） -->
+    <h1 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">搜一下：政策、流程、案例都能搜</h1>
+    <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-3);">
+      用大白话搜，每条结果都标出处，看不懂还能一键去问助手。
+    </p>
+    <div class="askbar" style="margin-bottom:var(--sp-3);">
+      <input class="askbar__input" value="报销" placeholder="例如：报销 / 盘亏 / 村务卡" aria-label="检索输入框">
+      <button class="mic" title="语音检索" aria-label="语音检索">🎤</button>
+      <button class="send" title="搜索" aria-label="搜索">🔍</button>
+    </div>
+    <p style="font-size:var(--fs-400); color:var(--c-text-weak); margin-bottom:var(--sp-4);">👆 不会打字？点话筒，直接说话也能搜</p>
+
+    <!-- 适用地区 / 以本县市最新为准 -->
+    <div class="alert alert--warn" style="margin-bottom:var(--sp-4);">
+      <span class="alert__ico">⚠️</span>
+      <div>
+        <span class="alert__title">适用地区：中方县（示例）。</span>
+        结果里的“多少钱、多少天”为示例口径，<b>以本县市最新制度为准</b>。
+      </div>
+    </div>
+
+    <!-- 热门 / 动作型问句建议 -->
+    <div class="sect__head"><div class="sect__title">大家常搜（点一下直接搜）</div></div>
+    <div class="suggest" style="margin-bottom:var(--sp-5);">
+      <a class="suggest__item" href="#">🧾 盘亏怎么核销</a>
+      <a class="suggest__item" href="#">💳 村务卡能刷多少</a>
+      <a class="suggest__item" href="#">📝 合同写哪些条款</a>
+      <a class="suggest__item" href="#">💰 多少钱上会</a>
+      <a class="suggest__item" href="#">🏦 银农直联怎么付款</a>
+    </div>
+
+    <!-- 结果计数 -->
+    <div class="sect__head"><div class="sect__title">搜“报销”，找到 8 条</div></div>
+
+    <!-- 分段 Tab：全部 / 政策 / 流程 / 案例 / 视频 -->
+    <div class="chips chips--scroll" style="margin-bottom:var(--sp-4);">
+      <button class="seg__btn seg__btn--active" type="button" data-seg="kind" data-target="all" style="white-space:nowrap;">全部 8</button>
+      <button class="seg__btn" type="button" data-seg="kind" data-target="policy" style="white-space:nowrap;">📖 政策 3</button>
+      <button class="seg__btn" type="button" data-seg="kind" data-target="process" style="white-space:nowrap;">🪜 流程 2</button>
+      <button class="seg__btn" type="button" data-seg="kind" data-target="case" style="white-space:nowrap;">⚖️ 案例 2</button>
+      <button class="seg__btn" type="button" data-seg="kind" data-target="video" style="white-space:nowrap;">🎬 视频 1</button>
+    </div>
+
+    <!-- ========== 面板：全部 ========== -->
+    <div data-panel-group="kind" data-panel="all" class="u-col" style="gap:var(--sp-4);">
+
+      <!-- 政策 1 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">📖 政策</span>
+          <span class="badge badge--date">2022 施行</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销要“纳入预算、限额管理”，不能想报就报</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">非生产性开支必须<b>限额、纳入预算</b>；严禁坐收坐支、白条抵库、超标准开支。</p>
+        <a class="src" href="policy-explain.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
+          <span class="src__meta">非生产性开支限额管理 · A节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="operation-cards.html" style="margin-top:var(--sp-2);">🗂️ 看操作卡</a>
+      </div>
+
+      <!-- 流程 1 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">🪜 流程</span>
+          <span class="badge badge--new">最常用</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销七步签字链：从拿票到归档</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">取票签字→出纳审核→监事会盖章→“一支笔”审批→代理中心审核→会计记账→归档。单笔 &gt; 1000 元须银行结算。</p>
+        <a class="src" href="process-guide.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）· 报销七步</span>
+          <span class="src__meta">签字链与单笔结算 · C节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="process-guide.html" style="margin-top:var(--sp-2);">🪜 看完整流程</a>
+      </div>
+
+      <!-- 政策 2 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">📖 政策</span>
+          <span class="badge badge--date">2025-05-01 施行</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销的集体资金不得存入个人账户</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">集体资金必须进专户，<b>不得公款私存</b>；付款走银行结算、资金直达对方。</p>
+        <a class="src" href="policy-explain.html">
+          <span class="src__ico">📕</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">集体经济组织法 第44条</span>
+          <span class="src__meta">资金不得存个人账户 · 2025-05-01 · A节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="policy-explain.html" style="margin-top:var(--sp-2);">📖 看政策解读</a>
+      </div>
+
+      <!-- 案例 1 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--risk">⚖️ 案例</span>
+          <span class="badge badge--region">违规警示</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销时用白条抵库 → 责令整改、追责</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">拿<b>白条、手写收据</b>顶替正式发票入账，没合法票据、没附件，被责令限期整改并追责。</p>
+        <a class="src" href="case-learning.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）· 白条抵库</span>
+          <span class="src__meta">严禁白条抵库 · F节典型案例</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="case-learning.html" style="margin-top:var(--sp-2);">⚖️ 看正反对照</a>
+      </div>
+
+      <!-- 流程 2 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">🪜 流程</span>
+          <span class="badge badge--region">线上报账</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">银农直联六步三岗：线上报账怎么付款</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">上传凭证→一级审核→二级审核→系统直连银行付款→生成电子凭证→月初交会计。<b>申请人与审核人不得同一人</b>。</p>
+        <a class="src" href="process-guide.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">银农直联 · 六步三岗</span>
+          <span class="src__meta">三岗分离、2 个工作日 · C节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="media-library.html" style="margin-top:var(--sp-2);">🎬 看操作视频</a>
+      </div>
+
+      <!-- 政策 3 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">📖 政策</span>
+          <span class="badge badge--date">2024-01-01 施行</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销入账记什么科目，按会计制度来</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">村会计记账的直接依据，报销凭证入账与会计科目以此为准。</p>
+        <a class="src" href="policy-explain.html">
+          <span class="src__ico">📘</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">会计制度（财会〔2023〕14号）</span>
+          <span class="src__meta">村会计记账依据 · 2024-01-01 · A节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="policy-explain.html" style="margin-top:var(--sp-2);">📖 看政策解读</a>
+      </div>
+
+      <!-- 案例 2 -->
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--risk">⚖️ 案例</span>
+          <span class="badge badge--region">违规警示</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">超标准招待费报销 → 退赔 + 处分</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">违规吃喝、超标准报销招待费，被责令退赔并处分。正确：限额、纳入预算、公开。</p>
+        <a class="src" href="case-learning.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）· 超标准开支</span>
+          <span class="src__meta">非生产性开支限额 · F节典型案例</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+        <a class="btn btn--ghost btn--block" href="case-learning.html" style="margin-top:var(--sp-2);">⚖️ 看正反对照</a>
+      </div>
+
+      <!-- 视频 1 -->
+      <div class="card card--pad">
+        <div class="vcard__cover" style="border-radius:var(--r-md); margin-bottom:var(--sp-3);">
+          <div class="vcard__play">▶</div>
+          <span class="vcard__dur">02:45</span>
+        </div>
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">🎬 视频</span>
+          <span class="badge badge--date">02:45</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销签字“七步流转”自检</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">大字幕讲清每一步谁签字、缺哪一步过不了账。</p>
+        <a class="src" href="media-library.html">
+          <span class="src__ico">🎬</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">学习视频 · 报销七步流转自检</span>
+          <span class="src__meta">配套报销流程 · H节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="media-library.html" style="margin-top:var(--sp-3);">▶ 看视频</a>
+        <a class="btn btn--ghost btn--block" href="qa-chat.html" style="margin-top:var(--sp-2);">💬 去问助手追问</a>
+      </div>
+
+      <!-- 兜底卡 -->
+      <div class="fallback">
+        <span class="fallback__ico">🤔</span>
+        <div>
+          <div class="fallback__title">没搜到你要的？</div>
+          换个说法再搜，或<a href="qa-chat.html">去问助手</a>说清情况。资料里确实没有的绝不编造——建议咨询乡镇农经站 / 县代理服务中心。
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== 面板：政策 ========== -->
+    <div data-panel-group="kind" data-panel="policy" class="u-col u-hide" style="gap:var(--sp-4);">
+      <div class="alert alert--info">
+        <span class="alert__ico">📖</span>
+        <div>已筛选“政策”，共 3 条。</div>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">📖 政策</span>
+          <span class="badge badge--date">2022 施行</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销要“纳入预算、限额管理”</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">非生产性开支必须限额、纳入预算；严禁坐收坐支、白条抵库、超标准开支。</p>
+        <a class="src" href="policy-explain.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
+          <span class="src__meta">非生产性开支限额管理 · A节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">📖 政策</span>
+          <span class="badge badge--date">2025-05-01 施行</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销的集体资金不得存入个人账户</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">集体资金必须进专户，不得公款私存；付款走银行结算。</p>
+        <a class="src" href="policy-explain.html">
+          <span class="src__ico">📕</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">集体经济组织法 第44条</span>
+          <span class="src__meta">资金不得存个人账户 · 2025-05-01 · A节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">📖 政策</span>
+          <span class="badge badge--date">2024-01-01 施行</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销入账记什么科目，按会计制度来</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">村会计记账的直接依据，报销凭证入账与会计科目以此为准。</p>
+        <a class="src" href="policy-explain.html">
+          <span class="src__ico">📘</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">会计制度（财会〔2023〕14号）</span>
+          <span class="src__meta">村会计记账依据 · 2024-01-01 · A节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手追问</a>
+      </div>
+    </div>
+
+    <!-- ========== 面板：流程 ========== -->
+    <div data-panel-group="kind" data-panel="process" class="u-col u-hide" style="gap:var(--sp-4);">
+      <div class="alert alert--info">
+        <span class="alert__ico">🪜</span>
+        <div>已筛选“流程”，共 2 条。</div>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">🪜 流程</span>
+          <span class="badge badge--new">最常用</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销七步签字链</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">取票签字→出纳审核→监事会盖章→“一支笔”审批→代理中心审核→会计记账→归档。</p>
+        <a class="src" href="process-guide.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）· 报销七步</span>
+          <span class="src__meta">签字链与单笔结算 · C节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="process-guide.html" style="margin-top:var(--sp-3);">🪜 看完整流程</a>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">🪜 流程</span>
+          <span class="badge badge--region">线上报账</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">银农直联六步三岗</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">上传凭证→一级审核→二级审核→直连银行付款→电子凭证→月初交会计。申请人与审核人不得同一人。</p>
+        <a class="src" href="process-guide.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">银农直联 · 六步三岗</span>
+          <span class="src__meta">三岗分离、2 个工作日 · C节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="process-guide.html" style="margin-top:var(--sp-3);">🪜 看完整流程</a>
+      </div>
+    </div>
+
+    <!-- ========== 面板：案例 ========== -->
+    <div data-panel-group="kind" data-panel="case" class="u-col u-hide" style="gap:var(--sp-4);">
+      <div class="alert alert--info">
+        <span class="alert__ico">⚖️</span>
+        <div>已筛选“案例”，共 2 条。</div>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--risk">⚖️ 案例</span>
+          <span class="badge badge--region">违规警示</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销时用白条抵库 → 责令整改、追责</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">拿白条、手写收据顶替正式发票入账，被责令限期整改并追责。</p>
+        <a class="src" href="case-learning.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）· 白条抵库</span>
+          <span class="src__meta">严禁白条抵库 · F节典型案例</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="case-learning.html" style="margin-top:var(--sp-3);">⚖️ 看正反对照</a>
+      </div>
+      <div class="card card--pad">
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--risk">⚖️ 案例</span>
+          <span class="badge badge--region">违规警示</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">超标准招待费报销 → 退赔 + 处分</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">违规吃喝、超标准报销招待费，被责令退赔并处分。正确：限额、纳入预算、公开。</p>
+        <a class="src" href="case-learning.html">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）· 超标准开支</span>
+          <span class="src__meta">非生产性开支限额 · F节典型案例</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="case-learning.html" style="margin-top:var(--sp-3);">⚖️ 看正反对照</a>
+      </div>
+    </div>
+
+    <!-- ========== 面板：视频 ========== -->
+    <div data-panel-group="kind" data-panel="video" class="u-col u-hide" style="gap:var(--sp-4);">
+      <div class="alert alert--info">
+        <span class="alert__ico">🎬</span>
+        <div>已筛选“视频”，共 1 条。</div>
+      </div>
+      <div class="card card--pad">
+        <div class="vcard__cover" style="border-radius:var(--r-md); margin-bottom:var(--sp-3);">
+          <div class="vcard__play">▶</div>
+          <span class="vcard__dur">02:45</span>
+        </div>
+        <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+          <span class="tag tag--ok">🎬 视频</span>
+          <span class="badge badge--date">02:45</span>
+        </div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销签字“七步流转”自检</div>
+        <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">大字幕讲清每一步谁签字、缺哪一步过不了账。</p>
+        <a class="src" href="media-library.html">
+          <span class="src__ico">🎬</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">学习视频 · 报销七步流转自检</span>
+          <span class="src__meta">配套报销流程 · H节</span></span>
+        </a>
+        <a class="btn btn--primary btn--block btn--lg" href="media-library.html" style="margin-top:var(--sp-3);">▶ 看视频</a>
+      </div>
+    </div>
+
+    <!-- 边界说明 -->
+    <div class="alert alert--info" style="margin-top:var(--sp-5);">
+      <span class="alert__ico">💡</span>
+      <div>检索只“找资料、讲清楚”，不经手钱、不替你办。要报账、签合同、办交易时会带你“去主系统办理”。</div>
+    </div>
+
+  </main>
+
+  <!-- 底部 Tab（检索不属于 5 个 tab，均不高亮） -->
+  <nav class="m-tabbar">
+    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
+    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
+    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
+    <a class="m-tab" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+  </nav>
+</div>
+</body>
+</html>

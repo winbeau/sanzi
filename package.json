@@ -1,0 +1,14 @@
+{
+  "name": "sanzi-assistant-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "三资管理助手 —— 面向村级三资专干的智能问答工具（纯前端原型：PC端 + 安卓移动端）",
+  "type": "module",
+  "scripts": {
+    "verify": "node tools/verify-all.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

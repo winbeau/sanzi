@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 政策解读（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-shell">
+
+  <!-- 左侧导航 -->
+  <aside class="pc-sidenav">
+    <div class="brand">
+      <div class="brand__logo">资</div>
+      <div>
+        <div class="brand__name">三资管理助手</div>
+        <div class="brand__sub">村集体三资 · 智能问答</div>
+      </div>
+    </div>
+    <nav class="navx">
+      <a class="navx__item" href="home-entry.html"><span class="navx__ico">🏠</span>首页</a>
+      <a class="navx__item" href="qa-chat.html"><span class="navx__ico">💬</span>智能问答</a>
+      <a class="navx__item" href="threshold-lookup.html"><span class="navx__ico">🔢</span>阈值速查</a>
+      <a class="navx__item" href="process-guide.html"><span class="navx__ico">🪜</span>流程指引</a>
+      <a class="navx__item" href="operation-cards.html"><span class="navx__ico">🗂️</span>操作卡片</a>
+      <a class="navx__item navx__item--active" href="policy-explain.html"><span class="navx__ico">📖</span>政策解读</a>
+      <a class="navx__item" href="case-learning.html"><span class="navx__ico">⚖️</span>案例学习</a>
+      <a class="navx__item" href="search.html"><span class="navx__ico">🔍</span>知识检索</a>
+      <a class="navx__item" href="media-library.html"><span class="navx__ico">🎬</span>视频音频</a>
+      <a class="navx__item" href="my-history-fav.html"><span class="navx__ico">⭐</span>我的收藏</a>
+      <a class="navx__item" href="help-settings.html"><span class="navx__ico">⚙️</span>帮助设置</a>
+    </nav>
+    <div class="u-spacer"></div>
+    <a class="navx__item" href="../index.html"><span class="navx__ico">🎨</span>版本预览</a>
+  </aside>
+
+  <!-- 右侧主区 -->
+  <main class="pc-main">
+    <header class="pc-topbar">
+      <div class="pc-topbar__title">政策解读</div>
+      <div class="u-spacer"></div>
+      <span class="rolechip"><span class="rolechip__ico">📍</span>湖南 · 中方县</span>
+      <span class="rolechip"><span class="rolechip__ico">👤</span>村报账员 ▾</span>
+      <a class="iconbtn" href="help-settings.html" title="帮助">❓</a>
+    </header>
+
+    <div class="pc-content">
+
+      <!-- 页头说明 -->
+      <section class="sect">
+        <h1 style="font-size:var(--fs-800); margin-bottom:var(--sp-3);">三资政策，用大白话讲明白</h1>
+        <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+          管钱、管账、管资产的规矩，都在这里。左边按“谁说了算”分四层，中间挑一条，右边先看大白话，再看原文。
+        </p>
+        <div class="trust-bar">
+          <span class="trust-bar__ico">✅</span>
+          每条都标了法规名称、条款和生效日期；资料里没有的，绝不编。
+        </div>
+      </section>
+
+      <!-- 主体：左分层目录 + 中条目列表 + 右详情 -->
+      <div style="display:grid; grid-template-columns:minmax(0,200px) minmax(0,1fr) minmax(0,1.4fr); gap:var(--sp-5); align-items:start;">
+
+        <!-- 左：分层目录 -->
+        <aside class="card card--pad" style="position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+          <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">按效力分层</h2>
+          <p style="font-size:var(--fs-300); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+            上面管下面：国家法律最大，往下越来越具体。
+          </p>
+          <nav class="u-col" style="gap:var(--sp-2);">
+            <a class="navx__item navx__item--active" href="#g-national" style="padding:var(--sp-2) var(--sp-3);">
+              <span class="navx__ico">①</span>国家法律
+            </a>
+            <a class="navx__item" href="#g-rule" style="padding:var(--sp-2) var(--sp-3);">
+              <span class="navx__ico">②</span>部门规章
+            </a>
+            <a class="navx__item" href="#g-opinion" style="padding:var(--sp-2) var(--sp-3);">
+              <span class="navx__ico">③</span>省市意见
+            </a>
+            <a class="navx__item" href="#g-local" style="padding:var(--sp-2) var(--sp-3);">
+              <span class="navx__ico">④</span>县乡细则
+            </a>
+          </nav>
+          <div class="alert alert--info" style="margin-top:var(--sp-5); font-size:var(--fs-300);">
+            <span class="alert__ico">💡</span>
+            <div>同一件事，<b>下层细则</b>规定的金额、时限要照办，<b>以本县市最新制度为准</b>。</div>
+          </div>
+        </aside>
+
+        <!-- 中：条目列表 -->
+        <section class="u-col" style="gap:var(--sp-5);">
+
+          <!-- 分组 ① 国家法律 -->
+          <div id="g-national">
+            <div class="u-row" style="gap:var(--sp-2); margin-bottom:var(--sp-3);">
+              <span class="badge badge--level">① 国家法律</span>
+              <span style="font-size:var(--fs-400); color:var(--c-text-weak);">最高效力，全国通用</span>
+            </div>
+
+            <a class="card card--pad" href="#d-org-law" style="display:block; border:2px solid var(--c-primary); margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--date">📅 2025-05-01 施行</span>
+                <span class="badge badge--region">🌐 全国</span>
+                <span class="badge badge--new">默认展开 ✓</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">中华人民共和国农村集体经济组织法</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：村集体是“特别法人”，钱怎么管、谁来定、怎么分，这部法说了算。
+              </p>
+            </a>
+
+            <a class="card card--pad" href="#d-no1" style="display:block; margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--date">📅 2025 年</span>
+                <span class="badge badge--region">🌐 全国</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">2025 年中央一号文件</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：继续把三资专项治理抓下去，钱账资产都要阳光透明。
+              </p>
+            </a>
+          </div>
+
+          <!-- 分组 ② 部门规章 -->
+          <div id="g-rule">
+            <div class="u-row" style="gap:var(--sp-2); margin-bottom:var(--sp-3);">
+              <span class="badge badge--level">② 部门规章</span>
+              <span style="font-size:var(--fs-400); color:var(--c-text-weak);">财政部、农业农村部等</span>
+            </div>
+
+            <a class="card card--pad" href="#d-fin-rule" style="display:block; margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--date">📅 2022 年</span>
+                <span class="badge badge--region">🌐 全国</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">农村集体经济组织财务制度</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：管钱的总规矩。严禁公款私存、白条抵库、坐收坐支、私设小金库。
+              </p>
+            </a>
+
+            <a class="card card--pad" href="#d-acct-rule" style="display:block; margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--date">📅 2024-01-01 施行</span>
+                <span class="badge badge--region">🌐 全国</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">农村集体经济组织会计制度</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：村会计记账、做报表的直接依据，财会〔2023〕14号。
+              </p>
+            </a>
+
+            <a class="card card--pad" href="#d-open-rule" style="display:block; margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--region">🌐 全国</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">农村集体经济组织财务公开规定</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：账要给大家看。一般财务每月公开，公开栏张贴一般不少于 7 天。
+              </p>
+            </a>
+          </div>
+
+          <!-- 分组 ③ 省市意见 -->
+          <div id="g-opinion">
+            <div class="u-row" style="gap:var(--sp-2); margin-bottom:var(--sp-3);">
+              <span class="badge badge--level">③ 省市意见</span>
+              <span style="font-size:var(--fs-400); color:var(--c-text-weak);">改革方向与登记口径</span>
+            </div>
+
+            <a class="card card--pad" href="#d-reform" style="display:block; margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--date">📅 2016 / 2017</span>
+                <span class="badge badge--region">🌐 全国 → 省市</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">产权制度改革意见 + 清产核资通知</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：资产按 资源性 / 经营性 / 非经营性 三类登记建账。
+              </p>
+            </a>
+
+            <a class="card card--pad" href="#d-trade" style="display:block; margin-bottom:var(--sp-3);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--region">🏙️ 各省市</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">农村产权流转交易管理办法</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：集体资产资源交易、工程招投标“应进必进”，进平台公开，禁场外私下交易。
+              </p>
+            </a>
+          </div>
+
+          <!-- 分组 ④ 县乡细则 -->
+          <div id="g-local">
+            <div class="u-row" style="gap:var(--sp-2); margin-bottom:var(--sp-3);">
+              <span class="badge badge--level">④ 县乡细则</span>
+              <span style="font-size:var(--fs-400); color:var(--c-text-weak);">最贴近你的本地依据</span>
+            </div>
+
+            <a class="card card--pad" href="#d-local" style="display:block; margin-bottom:var(--sp-3); border:1.5px solid var(--c-warn);">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <span class="badge badge--date">📅 2025 版（示例）</span>
+                <span class="badge badge--region">📍 湖南 · 中方县</span>
+              </div>
+              <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">本县三资管理实施细则</h3>
+              <p style="font-size:var(--fs-400); color:var(--c-text-weak);">
+                一句话：金额档位、权限、时限的本地数字看这里，<b>以本县市最新制度为准</b>。
+              </p>
+            </a>
+          </div>
+
+        </section>
+
+        <!-- 右：详情区 -->
+        <section class="u-col" style="gap:var(--sp-5); position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+
+          <!-- 默认展开：农村集体经济组织法 -->
+          <article class="result" id="d-org-law">
+            <div class="result__head">
+              农村集体经济组织法 · 大白话解读（默认展开）
+            </div>
+            <div class="result__body">
+              <div class="u-row u-row--wrap" style="gap:var(--sp-2);">
+                <span class="badge badge--date">📅 2024-06-28 通过 · 2025-05-01 施行</span>
+                <span class="badge badge--region">🌐 全国</span>
+                <span class="badge badge--level">① 国家法律</span>
+              </div>
+
+              <div>
+                <div class="answer__seg-title">这部法管什么</div>
+                <p>
+                  这是村集体三资的“根本大法”。它把村集体定成<b>“特别法人”</b>，意思是村集体能以自己的名义管钱、管资产、签合同。
+                  钱怎么管、谁来定、怎么分，都要按它来。
+                </p>
+              </div>
+
+              <div>
+                <div class="answer__seg-title">几条你一定要记住</div>
+                <ul style="margin:0; padding-left:var(--sp-5); line-height:var(--lh-normal);">
+                  <li><b>第44条：</b>集体的钱<b>不能存进个人账户</b>，必须进集体专户。公款私存是红线。</li>
+                  <li><b>第36条：</b>八类集体财产<b>不能分到个人头上</b>。</li>
+                  <li><b>第40–42条：</b>有了收益，先提公积公益金，再按章程给大家分。</li>
+                  <li><b>第45–46条：</b>账要<b>定期公开</b>；年度报告和分配方案要在成员大会<b>开会前 10 天</b>给大家看。</li>
+                  <li><b>第26–27条：</b>开成员大会，要<b>2/3 以上成员到场、2/3 以上同意</b>才算数。</li>
+                  <li><b>第32条：</b>设监事会，专门盯着、监督。</li>
+                </ul>
+              </div>
+
+              <div class="alert alert--warn">
+                <span class="alert__ico">⚠️</span>
+                <div><span class="alert__title">具体金额、时限以本县市最新制度为准。</span>法律定的是大原则（比如表决比例），本地细则可能有更具体的数字。</div>
+              </div>
+
+              <!-- 原文折叠 -->
+              <div class="src-list" data-collapsed="true">
+                <div class="src-list__head">看原文条款（点这里展开/收起）</div>
+                <div class="src-list__body">
+                  <div class="card card--pad card--flat" style="background:var(--c-surface-2); font-size:var(--fs-400);">
+                    <p style="margin-bottom:var(--sp-2);"><b>第四十四条</b> 农村集体经济组织的资金应当存入其开立的银行账户，不得存入个人账户。</p>
+                    <p style="margin-bottom:var(--sp-2);"><b>第四十五条</b> 农村集体经济组织应当依照法律、行政法规和章程的规定，定期向成员公开财务状况和财产经营管理等情况。</p>
+                    <p style="margin-bottom:var(--sp-2);"><b>第四十六条</b> 年度财务会计报告、收益分配方案等，应当在成员大会召开十日前提供成员查阅。</p>
+                    <p>（以上为要点摘录，<b>完整条文以官方公布文本为准</b>。）</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 引用来源 -->
+              <a class="src" href="#" style="width:100%;">
+                <span class="src__ico">📗</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">《中华人民共和国农村集体经济组织法》</span>
+                  <span class="src__meta">第26–27、32、36、40–46条 · 2025-05-01 施行</span>
+                </span>
+              </a>
+
+              <!-- 关联跳转 -->
+              <div class="u-row u-row--wrap" style="gap:var(--sp-3);">
+                <a class="btn btn--soft btn--sm" href="process-guide.html">🪜 四议两公开流程</a>
+                <a class="btn btn--ghost btn--sm" href="case-learning.html">⚖️ 看相关案例</a>
+                <a class="btn btn--ghost btn--sm" href="qa-chat.html">💬 就这条问助手</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 其它条目：折叠详情（details） -->
+          <details class="card" id="d-fin-rule">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-primary);">📖</span>农村集体经济组织财务制度 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--date">📅 2022</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>这是管钱的总规矩。四类人各管一摊：<b>成员大会—理事会—监事会—会计</b>。
+                收益分配有顺序：先补亏损，再提公积公益金，最后才给成员分。
+              </p>
+              <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+                <span class="alert__ico">🚫</span>
+                <div><b>四条红线，碰不得：</b>公款私存、私设小金库、白条抵库、坐收坐支。</div>
+              </div>
+              <div class="src-list" data-collapsed="true">
+                <div class="src-list__head">看原文要点</div>
+                <div class="src-list__body">
+                  <div class="card card--pad card--flat" style="background:var(--c-surface-2); font-size:var(--fs-400);">
+                    严禁坐收坐支、公款私存、私设“小金库”、以“白条”抵库；非生产性开支实行限额管理、纳入预算。（要点摘录，以官方文本为准）
+                  </div>
+                </div>
+              </div>
+              <a class="src" href="#" style="width:100%; margin-top:var(--sp-3);">
+                <span class="src__ico">📘</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">《农村集体经济组织财务制度》</span>
+                  <span class="src__meta">财政部、农业农村部 · 2022</span>
+                </span>
+              </a>
+            </div>
+          </details>
+
+          <details class="card" id="d-acct-rule">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-primary);">📖</span>农村集体经济组织会计制度 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--date">📅 2024-01-01</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>这是村会计记账、做报表的<b>直接依据</b>。文号是<b>财会〔2023〕14号</b>，2024 年 1 月 1 日起施行。
+              </p>
+              <a class="src" href="#" style="width:100%;">
+                <span class="src__ico">📙</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">《农村集体经济组织会计制度》</span>
+                  <span class="src__meta">财会〔2023〕14号 · 2024-01-01 施行</span>
+                </span>
+              </a>
+            </div>
+          </details>
+
+          <details class="card" id="d-open-rule">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-primary);">📖</span>财务公开规定 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--region">🌐 全国</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>账要给全村人看。一般财务<b>每月公开</b>，重大事项及时公开。
+                公开前要由民主理财小组/监事会（3–5人）<b>审核签字</b>、报乡镇农经部门备案。
+              </p>
+              <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
+                <span class="alert__ico">⚠️</span>
+                <div>公开栏张贴<b>一般不少于 7 天</b>；具体天数<b>以本县市最新制度为准</b>。</div>
+              </div>
+              <a class="src" href="#" style="width:100%;">
+                <span class="src__ico">📑</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">《农村集体经济组织财务公开规定》</span>
+                  <span class="src__meta">公开栏张贴一般不少于 7 天</span>
+                </span>
+              </a>
+            </div>
+          </details>
+
+          <details class="card" id="d-trade">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-primary);">📖</span>产权流转交易管理办法 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--region">🏙️ 各省市</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>卖资产、发包资源、搞工程，达到门槛的<b>“应进必进”</b>农村产权交易平台，公开进行，
+                <b>严禁场外私下交易</b>。
+              </p>
+              <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
+                <span class="alert__ico">⚠️</span>
+                <div>各地进场门槛不一样（如非资源类资产 1 万、资源类土地 2000、采购 5 万），<b>以本县市最新制度为准</b>。</div>
+              </div>
+              <a class="src" href="threshold-lookup.html" style="width:100%;">
+                <span class="src__ico">📙</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">各地《农村产权流转交易管理办法》</span>
+                  <span class="src__meta">资产资源交易、工程招投标“应进必进”</span>
+                </span>
+              </a>
+            </div>
+          </details>
+
+          <details class="card" id="d-local" style="border:1.5px solid var(--c-warn);">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-warn);">📍</span>本县三资管理实施细则 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--region">📍 中方县</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>这是离你最近、最具体的依据。<b>金额档位、审批权限、办理时限</b>都看它。
+                示例口径为湖南·中方县 2025。
+              </p>
+              <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
+                <span class="alert__ico">⚠️</span>
+                <div><span class="alert__title">这是示例数字，以本县市最新制度为准。</span>正式办理前请核对本村乡镇最新文件。</div>
+              </div>
+              <!-- 兜底卡 -->
+              <div class="fallback">
+                <span class="fallback__ico">🤔</span>
+                <div>
+                  <div class="fallback__title">本村细则里查不到？</div>
+                  没在资料里找到的，绝不编。建议咨询乡镇农经站 / 委托代理服务中心，或去问助手。
+                </div>
+              </div>
+              <a class="btn btn--ghost btn--sm" href="threshold-lookup.html" style="margin-top:var(--sp-3);">🔢 去阈值速查看本地数字</a>
+            </div>
+          </details>
+
+          <details class="card" id="d-reform">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-primary);">📖</span>产权改革意见 + 清产核资 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--date">📅 2016/2017</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>把家底摸清、登记建账。资产分三类：<b>资源性</b>（地、林、水）、<b>经营性</b>（能赚钱的）、<b>非经营性</b>（学校、道路等公益）。
+              </p>
+              <a class="src" href="#" style="width:100%;">
+                <span class="src__ico">📑</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">产权制度改革意见(2016) / 清产核资通知(2017)</span>
+                  <span class="src__meta">资源性 / 经营性 / 非经营性 三类建账</span>
+                </span>
+              </a>
+            </div>
+          </details>
+
+          <details class="card" id="d-no1">
+            <summary class="card--pad" style="cursor:pointer; list-style:none; font-size:var(--fs-600); font-weight:800; display:flex; align-items:center; gap:var(--sp-3);">
+              <span style="color:var(--c-primary);">📖</span>2025 年中央一号文件 · 解读
+              <span class="u-spacer"></span>
+              <span class="badge badge--date">📅 2025</span>
+            </summary>
+            <div class="card--pad" style="padding-top:0;">
+              <p style="margin-bottom:var(--sp-3);">
+                <b>结论先行：</b>继续深化农村集体资金资产资源管理<b>专项治理</b>，目标就一个词——<b>阳光透明</b>。
+              </p>
+              <a class="src" href="#" style="width:100%;">
+                <span class="src__ico">📑</span>
+                <span style="display:flex; flex-direction:column;">
+                  <span class="src__name">2025 年中央一号文件</span>
+                  <span class="src__meta">深化三资管理专项治理 · 阳光透明</span>
+                </span>
+              </a>
+            </div>
+          </details>
+
+        </section>
+
+      </div>
+
+      <!-- 重点专题入口 -->
+      <section class="sect" style="margin-top:var(--sp-7);">
+        <div class="sect__head">
+          <div class="sect__title">重点专题，点进去专门看</div>
+        </div>
+        <div class="qgrid" style="grid-template-columns:repeat(3,1fr);">
+          <a class="qcard" href="process-guide.html"><span class="qcard__ico">🗳️</span>四议两公开</a>
+          <a class="qcard" href="process-guide.html"><span class="qcard__ico">📋</span>财务公开</a>
+          <a class="qcard" href="qa-chat.html"><span class="qcard__ico">👥</span>成员身份与股权</a>
+          <a class="qcard" href="case-learning.html"><span class="qcard__ico">🚫</span>非生产性开支红线</a>
+          <a class="qcard" href="process-guide.html"><span class="qcard__ico">📦</span>清产核资</a>
+          <a class="qcard" href="threshold-lookup.html"><span class="qcard__ico">🔢</span>金额阈值速查</a>
+        </div>
+      </section>
+
+      <!-- 边界说明 -->
+      <div class="alert alert--info">
+        <span class="alert__ico">💡</span>
+        <div><span class="alert__title">温馨提示：</span>本助手只“讲清楚、教明白”，这里的解读是帮你看懂政策，不替代官方文本。要真正办理时，会带你“去主系统办理”。</div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

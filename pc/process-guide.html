@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 流程指引（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-shell">
+
+  <!-- 左侧导航 -->
+  <aside class="pc-sidenav">
+    <div class="brand">
+      <div class="brand__logo">资</div>
+      <div>
+        <div class="brand__name">三资管理助手</div>
+        <div class="brand__sub">村集体三资 · 智能问答</div>
+      </div>
+    </div>
+    <nav class="navx">
+      <a class="navx__item" href="home-entry.html"><span class="navx__ico">🏠</span>首页</a>
+      <a class="navx__item" href="qa-chat.html"><span class="navx__ico">💬</span>智能问答</a>
+      <a class="navx__item" href="threshold-lookup.html"><span class="navx__ico">🔢</span>阈值速查</a>
+      <a class="navx__item navx__item--active" href="process-guide.html"><span class="navx__ico">🪜</span>流程指引</a>
+      <a class="navx__item" href="operation-cards.html"><span class="navx__ico">🗂️</span>操作卡片</a>
+      <a class="navx__item" href="policy-explain.html"><span class="navx__ico">📖</span>政策解读</a>
+      <a class="navx__item" href="case-learning.html"><span class="navx__ico">⚖️</span>案例学习</a>
+      <a class="navx__item" href="search.html"><span class="navx__ico">🔍</span>知识检索</a>
+      <a class="navx__item" href="media-library.html"><span class="navx__ico">🎬</span>视频音频</a>
+      <a class="navx__item" href="my-history-fav.html"><span class="navx__ico">⭐</span>我的收藏</a>
+      <a class="navx__item" href="help-settings.html"><span class="navx__ico">⚙️</span>帮助设置</a>
+    </nav>
+    <div class="u-spacer"></div>
+    <a class="navx__item" href="../index.html"><span class="navx__ico">🎨</span>版本预览</a>
+  </aside>
+
+  <!-- 右侧主区 -->
+  <main class="pc-main">
+    <header class="pc-topbar">
+      <div class="pc-topbar__title">流程指引</div>
+      <div class="u-spacer"></div>
+      <span class="rolechip"><span class="rolechip__ico">📍</span>湖南 · 中方县</span>
+      <span class="rolechip"><span class="rolechip__ico">👤</span>村报账员 ▾</span>
+      <a class="iconbtn" href="help-settings.html" title="帮助">❓</a>
+    </header>
+
+    <div class="pc-content">
+
+      <!-- 页头说明 -->
+      <section class="sect">
+        <h1 style="font-size:var(--fs-800); margin-bottom:var(--sp-3);">一步一步教你办，每步谁签字、要啥材料、几天办完</h1>
+        <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+          选一个常办的事，跟着步骤往下走就行。这里只“教你怎么走”，真正报账、付款、交易请到主系统办理。
+        </p>
+        <div class="trust-bar">
+          <span class="trust-bar__ico">✅</span>
+          每步流程都标注了出处；金额/时限以本县市最新制度为准，超出你权限的请上报乡镇。
+        </div>
+      </section>
+
+      <!-- 流程切换 -->
+      <section class="sect">
+        <div class="seg" style="flex-wrap:wrap; border-radius:var(--r-lg);">
+          <button class="seg__btn seg__btn--active" type="button" data-seg="flow" data-target="reimburse">🧾 报销七步签字链</button>
+          <button class="seg__btn" type="button" data-seg="flow" data-target="bank">🏦 银农直联六步</button>
+          <button class="seg__btn" type="button" data-seg="flow" data-target="vote">🗳️ 四议两公开六步</button>
+          <button class="seg__btn" type="button" data-seg="flow" data-target="asset">📋 清产核资九步</button>
+        </div>
+      </section>
+
+      <!-- ============ 流程一：报销七步签字链（默认） ============ -->
+      <div data-panel-group="flow" data-panel="reimburse">
+        <div style="display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:var(--sp-6); align-items:start;">
+
+          <!-- 左：步骤主区 -->
+          <section>
+            <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+              <div class="u-row" style="justify-content:space-between; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <h2 style="font-size:var(--fs-700);">报销七步签字链</h2>
+                <span class="badge badge--region">共 7 步</span>
+              </div>
+              <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">从拿到票据到归档，一共七个签字环节，缺一个章都过不了账。当前进度示例：第 1 步。</p>
+              <div class="progress"><div class="progress__bar" style="width:14%;"></div></div>
+              <p class="numpad-hint" style="margin-top:var(--sp-2);">进度示例：第 1 / 7 步</p>
+            </div>
+
+            <div class="card card--pad">
+              <div class="steps">
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">1</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">经办人取得合法票据并注明用途、签字</div>
+                    <p>必须是正规发票，不能用白条、收据顶替。在票据背面写清楚“买了什么、做什么用的”，本人签字。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：经办人</span>
+                      <span class="metachip">📎 要带：正式发票 + 用途说明</span>
+                      <span class="metachip metachip--time">⏱️ 时限：取得后及时交账</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">2</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">出纳审核整理</div>
+                    <p>出纳核对票据是否齐全、金额对不对、是不是真实业务，按顺序整理装订。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：出纳</span>
+                      <span class="metachip">📎 要带：票据 + 附件（合同/验收单）</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">3</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">监事会 / 民主理财小组审查签字盖章</div>
+                    <p>由监事会或民主理财小组（3–5 人）审查这笔开支合不合规，签字盖章后才能往下走。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：监事会 / 民主理财小组</span>
+                      <span class="metachip">📎 要带：审查意见 + 签字盖章</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">4</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">法定代表人“一支笔”审批</div>
+                    <p>由集体经济组织法定代表人统一审批，这就是常说的“一支笔”。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：法定代表人</span>
+                      <span class="metachip">📎 要带：审批签字</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">5</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">乡镇代理中心审核</div>
+                    <p>报送乡镇（街道）代理服务中心审核，这是“村账乡管”的关键一环。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：乡镇代理服务中心</span>
+                      <span class="metachip">📎 要带：完整报账资料</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">6</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">会计审核记账</div>
+                    <p>会计依据审核通过的凭证记账，做到账实相符、账账相符。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：会计</span>
+                      <span class="metachip">📎 要带：审批齐全的凭证</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">7</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">归档</div>
+                    <p>凭证连同附件统一归档保管，备查备审。一笔报销才算真正办完。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：会计 / 档案管理</span>
+                      <span class="metachip">📎 要带：装订成册的凭证</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 金额时限提醒 -->
+              <div class="alert alert--warn" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">⚠️</span>
+                <div>
+                  <span class="alert__title">钱怎么付、几天入账，以本县市最新制度为准。</span>
+                  示例口径：单笔 &gt; 1000 元须银行结算、资金直达供应商；现金收入须 3 日内存入专户。
+                  <a class="src" href="policy-explain.html" style="margin-top:var(--sp-2);">
+                    <span class="src__ico">📗</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度（2022）</span>
+                    <span class="src__meta">报销审批 / 现金结算 · C节报销七步</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 引用来源 -->
+              <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-4);">
+                <div class="src-list__head">这套流程的出处（点这里收起/展开）</div>
+                <div class="src-list__body">
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📗</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度</span>
+                    <span class="src__meta">财政部、农业农村部 2022 · 报销审批、严禁白条抵库</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📘</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织会计制度</span>
+                    <span class="src__meta">财会〔2023〕14号 · 2024-01-01 施行</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第44条</span>
+                    <span class="src__meta">集体资金不得存入个人账户 · 2025-05-01 施行</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 兜底卡 -->
+              <div class="fallback" style="margin-top:var(--sp-4);">
+                <span class="fallback__ico">🤔</span>
+                <div>
+                  <div class="fallback__title">遇到本流程里没写的特殊情况？</div>
+                  未在资料中找到对应规定时，建议咨询乡镇农经站或县委托代理服务中心；也可以直接“去问助手”，把情况说清楚。
+                </div>
+              </div>
+
+              <!-- 底部操作 -->
+              <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-5);">
+                <a class="btn btn--external" href="#">去主系统办理</a>
+                <a class="btn btn--soft" href="media-library.html">🎬 看视频：七步流转自检（02:45）</a>
+                <a class="btn btn--ghost" href="case-learning.html">⚖️ 看案例：白条抵库</a>
+              </div>
+              <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+                <span class="alert__ico">📣</span>
+                <div><span class="alert__title">超出你权限的，请上报乡镇。</span>金额较大、情况复杂或本村无法决定的，按规定报乡镇（街道）经管站把关，不要自行处理。</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 右：合规检查清单边栏 -->
+          <aside style="position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+            <div class="card card--pad">
+              <h3 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">✅ 合规检查清单</h3>
+              <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-4);">票据“六有”逐项打勾，全勾上才能交账。</p>
+              <div class="check">
+                <div class="check__item"><span class="check__box"></span><span>① 有真实事由（确属公务、真实业务）</span></div>
+                <div class="check__item"><span class="check__box"></span><span>② 有合法正式票据（不是白条/收据）</span></div>
+                <div class="check__item"><span class="check__box"></span><span>③ 有经办人签字</span></div>
+                <div class="check__item"><span class="check__box"></span><span>④ 有验收 / 证明人</span></div>
+                <div class="check__item"><span class="check__box"></span><span>⑤ 有审批人签字（一支笔）</span></div>
+                <div class="check__item"><span class="check__box"></span><span>⑥ 有相关附件（合同 / 会议记录等）</span></div>
+              </div>
+              <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+                <span class="src__ico">📗</span>
+                <span style="display:flex; flex-direction:column;"><span class="src__name">票据“六有”自检</span>
+                <span class="src__meta">财务制度 · C节</span></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- ============ 流程二：银农直联六步 ============ -->
+      <div data-panel-group="flow" data-panel="bank" class="u-hide">
+        <div style="display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:var(--sp-6); align-items:start;">
+
+          <section>
+            <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+              <div class="u-row" style="justify-content:space-between; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <h2 style="font-size:var(--fs-700);">银农直联六步（三岗分设）</h2>
+                <span class="badge badge--region">共 6 步</span>
+              </div>
+              <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">线上扫描凭证 → 两级审核 → 系统直连银行付款，原则上不走现金。当前进度示例：第 1 步。</p>
+              <div class="progress"><div class="progress__bar" style="width:16%;"></div></div>
+              <p class="numpad-hint" style="margin-top:var(--sp-2);">进度示例：第 1 / 6 步</p>
+            </div>
+
+            <div class="card card--pad">
+              <div class="steps">
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">1</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">报账员平台扫描上传凭证</div>
+                    <p>报账员在银农直联平台扫描、上传合法票据和审批资料，发起付款申请。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：申请人（报账员）</span>
+                      <span class="metachip">📎 要带：发票 + 审批资料</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">2</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">一级审核（乡镇经管站）</div>
+                    <p>乡镇经管站作一级审核，看凭证是否合规；不合规直接驳回。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：一级审核人（经管站）</span>
+                      <span class="metachip metachip--time">⏱️ 时限：2 个工作日内</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">3</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">二级审核（代理服务中心）</div>
+                    <p>代理服务中心作二级审核，再次把关。申请人与审核人不得为同一人。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：二级审核人（代理中心）</span>
+                      <span class="metachip metachip--time">⏱️ 时限：2 个工作日内</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">4</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">系统直连银行付款</div>
+                    <p>两级审核通过后，系统直接连接银行付款，资金直达收款方。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：系统自动 / 银行</span>
+                      <span class="metachip">📎 要带：审核通过的付款单</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">5</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">自动生成电子凭证</div>
+                    <p>付款成功后系统自动生成电子凭证，全程留痕、可追溯。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：系统自动</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">6</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">月初打印上月明细交会计入账</div>
+                    <p>月初打印上月付款明细，交村会计入账，做到线上线下一致。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：报账员 → 会计</span>
+                      <span class="metachip metachip--time">⏱️ 时限：每月月初</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert--warn" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">⚠️</span>
+                <div>
+                  <span class="alert__title">三岗分设、限时审核，以本县市最新制度为准。</span>
+                  示例口径：申请人与审核人不得同一人；各环节 2 个工作日内审核；原则上禁现金，村务卡严禁化整为零拆分。
+                  <a class="src" href="policy-explain.html" style="margin-top:var(--sp-2);">
+                    <span class="src__ico">📗</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">银农直联操作规程</span>
+                    <span class="src__meta">三岗三审、限时审核 · C节银农直联六步</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-4);">
+                <div class="src-list__head">这套流程的出处（点这里收起/展开）</div>
+                <div class="src-list__body">
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📗</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度</span>
+                    <span class="src__meta">财政部、农业农村部 2022 · 禁现金、专户管理</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第44条</span>
+                    <span class="src__meta">集体资金不得存入个人账户 · 2025-05-01 施行</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="fallback" style="margin-top:var(--sp-4);">
+                <span class="fallback__ico">🤔</span>
+                <div>
+                  <div class="fallback__title">平台报错、凭证被驳回不知道为啥？</div>
+                  未在资料中找到对应说明时，建议咨询乡镇经管站或代理服务中心；也可“去问助手”说明具体提示。
+                </div>
+              </div>
+
+              <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-5);">
+                <a class="btn btn--external" href="#">去主系统办理</a>
+                <a class="btn btn--soft" href="media-library.html">🎬 看视频：银农直联付款全流程（03:20）</a>
+                <a class="btn btn--ghost" href="case-learning.html">⚖️ 看案例：村务卡化整为零</a>
+              </div>
+              <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+                <span class="alert__ico">📣</span>
+                <div><span class="alert__title">超出你权限的，请上报乡镇。</span>大额支付、平台异常或权限不够时，按规定报乡镇（街道）经管站处理，不要绕开系统现金支付。</div>
+              </div>
+            </div>
+          </section>
+
+          <aside style="position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+            <div class="card card--pad">
+              <h3 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">✅ 合规检查清单</h3>
+              <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-4);">付款前逐项打勾，确认合规再发起。</p>
+              <div class="check">
+                <div class="check__item"><span class="check__box"></span><span>申请人与审核人不是同一个人</span></div>
+                <div class="check__item"><span class="check__box"></span><span>凭证已扫描上传、信息完整</span></div>
+                <div class="check__item"><span class="check__box"></span><span>一级审核 2 个工作日内完成</span></div>
+                <div class="check__item"><span class="check__box"></span><span>二级审核 2 个工作日内完成</span></div>
+                <div class="check__item"><span class="check__box"></span><span>资金直达收款方、未走个人账户</span></div>
+                <div class="check__item"><span class="check__box"></span><span>未化整为零拆分、未违规用现金</span></div>
+              </div>
+              <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+                <span class="src__ico">📗</span>
+                <span style="display:flex; flex-direction:column;"><span class="src__name">银农直联三岗要求</span>
+                <span class="src__meta">财务制度 · C节</span></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- ============ 流程三：四议两公开六步 ============ -->
+      <div data-panel-group="flow" data-panel="vote" class="u-hide">
+        <div style="display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:var(--sp-6); align-items:start;">
+
+          <section>
+            <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+              <div class="u-row" style="justify-content:space-between; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <h2 style="font-size:var(--fs-700);">四议两公开六步</h2>
+                <span class="badge badge--region">共 6 步</span>
+              </div>
+              <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">资产处置、资源发包、工程项目、重大举债、收益分配等大事，必须走这六步。当前进度示例：第 1 步。</p>
+              <div class="progress"><div class="progress__bar" style="width:16%;"></div></div>
+              <p class="numpad-hint" style="margin-top:var(--sp-2);">进度示例：第 1 / 6 步</p>
+            </div>
+
+            <div class="card card--pad">
+              <div class="steps">
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">1</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">党组织提议</div>
+                    <p>由村党组织就重大事项提出初步意见，作为后续讨论的起点。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：村党组织</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">2</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">村两委（理事会）商议</div>
+                    <p>村两委（理事会）开会商议，把方案讨论细化。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：村两委 / 理事会</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">3</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">党员大会审议</div>
+                    <p>提交党员大会审议，听取党员意见后形成审议意见。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：党员大会</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">4</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">成员（代表）大会决议</div>
+                    <p>提交成员（代表）大会表决决议，这是最关键的一步，结果作数要看表决比例。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：成员（代表）大会</span>
+                      <span class="metachip">🗳️ 2/3 出席、半数以上通过（无记名/举手）</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">5</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">决议公开</div>
+                    <p>把决议结果在村务公开栏公开，接受群众监督。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：村委会 / 监事会</span>
+                      <span class="metachip metachip--time">⏱️ 公开栏张贴一般不少于 7 天</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">6</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">实施结果公开</div>
+                    <p>事情办完后，再把实施结果公开一次，做到全程阳光。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：村委会 / 监事会</span>
+                      <span class="metachip metachip--time">⏱️ 一般不少于 7 天</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert--warn" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">⚠️</span>
+                <div>
+                  <span class="alert__title">表决比例与公示天数，以本县市最新制度为准。</span>
+                  示例口径：成员（代表）大会需 2/3 以上出席、半数以上通过；公开栏张贴一般不少于 7 天。
+                  <a class="src" href="policy-explain.html" style="margin-top:var(--sp-2);">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第26–27条</span>
+                    <span class="src__meta">成员大会表决比例 · 2025-05-01 施行</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-4);">
+                <div class="src-list__head">这套流程的出处（点这里收起/展开）</div>
+                <div class="src-list__body">
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第26–27条</span>
+                    <span class="src__meta">成员大会 2/3 出席、2/3 同意 · 2025-05-01 施行</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📙</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务公开规定</span>
+                    <span class="src__meta">公开栏张贴一般不少于 7 天</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="fallback" style="margin-top:var(--sp-4);">
+                <span class="fallback__ico">🤔</span>
+                <div>
+                  <div class="fallback__title">不确定这件事要不要走四议两公开？</div>
+                  先到“阈值速查”按金额判断；查不到再咨询乡镇农经站或“去问助手”。
+                </div>
+              </div>
+
+              <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-5);">
+                <a class="btn btn--external" href="#">去主系统办理</a>
+                <a class="btn btn--soft" href="media-library.html">🎬 看视频：四议两公开怎么上会（03:05）</a>
+                <a class="btn btn--ghost" href="threshold-lookup.html">🔢 多少钱要上会？去速查</a>
+              </div>
+              <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+                <span class="alert__ico">📣</span>
+                <div><span class="alert__title">超出你权限的，请上报乡镇。</span>重大举债、大额处置等超出本村权限的事项，按规定报乡镇（街道）审核备案。</div>
+              </div>
+            </div>
+          </section>
+
+          <aside style="position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+            <div class="card card--pad">
+              <h3 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">✅ 合规检查清单</h3>
+              <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-4);">上会前后逐项打勾，缺一项都站不住。</p>
+              <div class="check">
+                <div class="check__item"><span class="check__box"></span><span>党组织提议、两委商议有记录</span></div>
+                <div class="check__item"><span class="check__box"></span><span>党员大会审议有记录</span></div>
+                <div class="check__item"><span class="check__box"></span><span>成员（代表）大会 2/3 以上出席</span></div>
+                <div class="check__item"><span class="check__box"></span><span>表决 半数以上通过、记录在案</span></div>
+                <div class="check__item"><span class="check__box"></span><span>决议公开 ≥ 7 天</span></div>
+                <div class="check__item"><span class="check__box"></span><span>实施结果公开 ≥ 7 天</span></div>
+              </div>
+              <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+                <span class="src__ico">📕</span>
+                <span style="display:flex; flex-direction:column;"><span class="src__name">四议两公开六步</span>
+                <span class="src__meta">组织法 / 财务公开规定 · C节</span></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- ============ 流程四：清产核资九步 ============ -->
+      <div data-panel-group="flow" data-panel="asset" class="u-hide">
+        <div style="display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:var(--sp-6); align-items:start;">
+
+          <section>
+            <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+              <div class="u-row" style="justify-content:space-between; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-2);">
+                <h2 style="font-size:var(--fs-700);">清产核资九步</h2>
+                <span class="badge badge--region">共 9 步</span>
+              </div>
+              <p style="color:var(--c-text-weak); margin-bottom:var(--sp-3);">把集体家底摸清楚、登记上账、公示确认，最后纳入全国监管平台。当前进度示例：第 1 步。</p>
+              <div class="progress"><div class="progress__bar" style="width:11%;"></div></div>
+              <p class="numpad-hint" style="margin-top:var(--sp-2);">进度示例：第 1 / 9 步</p>
+            </div>
+
+            <div class="card card--pad">
+              <div class="steps">
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">1</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">清查</div>
+                    <p>全面清查集体的资源性、经营性、非经营性三类资产，一项不漏。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：清产核资工作组</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">2</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">登记</div>
+                    <p>把清查出来的资产逐项登记造册，名称、数量、坐落写清楚。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：工作组 / 会计</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">3</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">核实</div>
+                    <p>账实核对，盘盈盘亏查明原因，确保账实相符。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：工作组 / 监事会</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">4</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">公示</div>
+                    <p>清查核实结果向全体成员公示，接受监督、收集意见。</p>
+                    <div class="step__meta">
+                      <span class="metachip metachip--who">👤 谁来做：村委会 / 监事会</span>
+                      <span class="metachip metachip--time">⏱️ 公示一般不少于 7 天</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">5</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">确认</div>
+                    <p>经成员（代表）大会确认结果，争议处理后再定下来。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：成员（代表）大会</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">6</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">建台账</div>
+                    <p>建立规范的资产台账，按三类分别建账管理。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：会计</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">7</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">审核备案</div>
+                    <p>报乡镇（街道）农经部门审核备案。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：乡镇农经部门</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">8</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">汇总上报</div>
+                    <p>逐级汇总数据上报，口径统一、数据准确。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：乡镇 / 县农经部门</span></div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">9</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">纳入全国监管平台</div>
+                    <p>数据纳入全国农村集体资产监督管理平台，实现动态监管。</p>
+                    <div class="step__meta"><span class="metachip metachip--who">👤 谁来做：县农经部门 / 平台</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert--warn" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">⚠️</span>
+                <div>
+                  <span class="alert__title">公示天数与备案时限，以本县市最新制度为准。</span>
+                  示例口径：清查结果公示一般不少于 7 天；资产按资源性 / 经营性 / 非经营性三类登记建账。
+                  <a class="src" href="policy-explain.html" style="margin-top:var(--sp-2);">
+                    <span class="src__ico">📙</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">九部门清产核资通知（2017）</span>
+                    <span class="src__meta">三类登记建账 · C节清产核资九步</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-4);">
+                <div class="src-list__head">这套流程的出处（点这里收起/展开）</div>
+                <div class="src-list__body">
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📙</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">关于稳步推进农村集体产权制度改革的意见（2016）</span>
+                    <span class="src__meta">资产分三类登记建账</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📙</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">九部门清产核资通知（2017）</span>
+                    <span class="src__meta">清产核资工作要求</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第36条</span>
+                    <span class="src__meta">八类集体财产不得分割到个人 · 2025-05-01 施行</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="fallback" style="margin-top:var(--sp-4);">
+                <span class="fallback__ico">🤔</span>
+                <div>
+                  <div class="fallback__title">盘点账实不符、资产难界定？</div>
+                  未在资料中找到处理口径时，建议咨询乡镇农经站或县代理服务中心；也可“去问助手”。
+                </div>
+              </div>
+
+              <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-5);">
+                <a class="btn btn--external" href="#">去主系统办理</a>
+                <a class="btn btn--soft" href="media-library.html">🎬 看视频：清产核资九步（04:00）</a>
+                <a class="btn btn--ghost" href="case-learning.html">⚖️ 看案例：资产低价处置</a>
+              </div>
+              <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+                <span class="alert__ico">📣</span>
+                <div><span class="alert__title">超出你权限的，请上报乡镇。</span>资产权属争议、跨村界定等超出本村权限的，按规定报乡镇（街道）农经部门处理。</div>
+              </div>
+            </div>
+          </section>
+
+          <aside style="position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+            <div class="card card--pad">
+              <h3 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">✅ 合规检查清单</h3>
+              <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-4);">逐项打勾，确保清得清、登得全、报得准。</p>
+              <div class="check">
+                <div class="check__item"><span class="check__box"></span><span>三类资产清查无遗漏</span></div>
+                <div class="check__item"><span class="check__box"></span><span>逐项登记、账实相符</span></div>
+                <div class="check__item"><span class="check__box"></span><span>结果公示 ≥ 7 天</span></div>
+                <div class="check__item"><span class="check__box"></span><span>成员（代表）大会确认</span></div>
+                <div class="check__item"><span class="check__box"></span><span>建立规范台账、分类建账</span></div>
+                <div class="check__item"><span class="check__box"></span><span>报乡镇审核备案、纳入平台</span></div>
+              </div>
+              <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+                <span class="src__ico">📙</span>
+                <span style="display:flex; flex-direction:column;"><span class="src__name">清产核资九步</span>
+                <span class="src__meta">2016 意见 / 2017 通知 · C节</span></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- 边界说明 -->
+      <div class="alert alert--info" style="margin-top:var(--sp-7);">
+        <span class="alert__ico">💡</span>
+        <div><span class="alert__title">温馨提示：</span>本助手只“教你怎么走、提醒别踩坑”，不直接经手钱、不替你办理。真正要报账、付款、上会、交易时，请“去主系统办理”。</div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

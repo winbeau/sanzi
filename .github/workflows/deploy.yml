@@ -1,0 +1,53 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# 允许 GITHUB_TOKEN 部署到 Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只跑一个部署，新提交可取消进行中的旧部署
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble static site (_site)
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp index.html _site/
+          cp -r shared pc mobile _site/
+          # 关闭 Jekyll 处理（纯静态站点）
+          touch _site/.nojekyll
+          # 简单 404：跳回首页（项目页基路径为 /sanzi/）
+          printf '%s' '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=/sanzi/"><title>跳转中…</title></head><body style="font-family:sans-serif;padding:40px">页面不存在，正在返回 <a href="/sanzi/">三资管理助手首页</a>…</body></html>' > _site/404.html
+          echo "==== _site 内容 ===="
+          find _site -maxdepth 2 -type f | sort
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>组件画廊（验证用）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-content" style="max-width:900px;">
+  <h1 style="font-size:var(--fs-800);margin:var(--sp-6) 0;">组件画廊 · 验证基调</h1>
+
+  <div class="seg" style="margin-bottom:var(--sp-6);">
+    <button class="seg__btn seg__btn--active" data-theme-swatch="green">惠农绿</button>
+    <button class="seg__btn" data-theme-swatch="blue">政务蓝</button>
+    <button class="seg__btn" data-theme-swatch="red">党政红</button>
+  </div>
+
+  <!-- 三段式答案 + 引用 -->
+  <h2 class="sect__title u-mt4">① 三段式答案 + 引用来源</h2>
+  <div class="chat u-mt4" style="margin-bottom:var(--sp-7);">
+    <div class="msg msg--user"><div class="msg__avatar">👤</div><div class="bubble">招待客人的餐费发票能不能报账？</div></div>
+    <div class="msg msg--bot">
+      <div class="msg__avatar">资</div>
+      <div class="bubble">
+        <div class="answer__verdict"><span class="verdict-pill verdict-pill--no">不能直接报</span>需从严控制并履行审批</div>
+        <p>村集体的招待费属于非生产性开支，必须从严管控、限额管理、纳入预算，且严禁用于违规吃喝。一般餐费发票不能直接入账报销。</p>
+        <div class="answer__seg">
+          <div class="answer__seg-title">该怎么办</div>
+          <p>1）确属公务、在预算限额内 → 附事由说明、经办人签字；2）经监事会审查、负责人“一支笔”审批；3）报乡镇代理中心审核后入账。</p>
+        </div>
+        <div class="answer__seg">
+          <div class="answer__seg-title">系统里怎么点</div>
+          <p>在主系统“报账填报”里选“非生产性开支—招待费”，上传发票与审批单。</p>
+        </div>
+        <div class="answer__jump u-mt4">
+          <a class="btn btn--soft btn--sm" href="#">📖 看政策原文</a>
+          <a class="btn btn--soft btn--sm" href="#">🪜 看报销流程</a>
+          <a class="btn btn--external btn--sm" href="#">去主系统办理</a>
+        </div>
+        <div class="src-list u-mt4" data-collapsed="false">
+          <div class="src-list__head">查看依据（2）</div>
+          <div class="src-list__body">
+            <a class="src" href="#"><span class="src__ico">📄</span><span><span class="src__name">《农村集体经济组织财务制度》</span> <span class="src__meta">第三章 · 非生产性开支 · 2022施行</span></span></a>
+            <a class="src" href="#"><span class="src__ico">📄</span><span><span class="src__name">中方县三资管理实施细则</span> <span class="src__meta">报账审批 · 2025 · 以本县市最新制度为准</span></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 兜底 -->
+  <h2 class="sect__title">② 未找到兜底卡</h2>
+  <div class="fallback u-mt4" style="margin-bottom:var(--sp-7);">
+    <span class="fallback__ico">🔎</span>
+    <div>
+      <div class="fallback__title">未在资料中找到对应依据</div>
+      <p class="u-weak">这个问题暂时没有可靠出处，建议咨询乡镇农经站 / 委托代理服务中心。</p>
+      <a class="btn btn--ghost btn--sm u-mt2" href="#">联系人工 / 留言</a>
+    </div>
+  </div>
+
+  <!-- 步骤卡 -->
+  <h2 class="sect__title">③ 流程步骤卡</h2>
+  <div class="card card--pad u-mt4" style="margin-bottom:var(--sp-7);">
+    <div class="steps">
+      <div class="step"><div class="step__rail"><div class="step__no">1</div><div class="step__line"></div></div>
+        <div class="step__body"><div class="step__title">经办人取得合法票据并签字</div>
+          <div class="step__meta"><span class="metachip metachip--who">👤 经办人</span><span class="metachip">📎 正式发票</span></div></div></div>
+      <div class="step"><div class="step__rail"><div class="step__no">2</div><div class="step__line"></div></div>
+        <div class="step__body"><div class="step__title">监事会 / 民主理财小组审查</div>
+          <div class="step__meta"><span class="metachip metachip--who">👥 监事会</span><span class="metachip metachip--time">⏱ 不符不予放行</span></div></div></div>
+      <div class="step"><div class="step__rail"><div class="step__no">3</div></div>
+        <div class="step__body"><div class="step__title">负责人“一支笔”审批 → 报代理中心入账</div>
+          <div class="step__meta"><span class="metachip metachip--who">👤 法定代表人</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- 勾选清单 -->
+  <h2 class="sect__title">④ 合规检查清单（可勾选）</h2>
+  <div class="check u-mt4" style="margin-bottom:var(--sp-7);">
+    <div class="check__item"><span class="check__box"></span><span>票据“六有”齐全（有名称、有日期、有事由…）</span></div>
+    <div class="check__item check__item--done"><span class="check__box">✓</span><span>金额未超非生产性开支限额</span></div>
+    <div class="check__item"><span class="check__box"></span><span>已附审批单与经办人签字</span></div>
+  </div>
+
+  <!-- 速查结果 -->
+  <h2 class="sect__title">⑤ 阈值速查结果卡</h2>
+  <div class="result u-mt4" style="margin-bottom:var(--sp-7);">
+    <div class="result__head">资产处置 · 金额 8000 元 → 须上会 + 公示</div>
+    <div class="result__body">
+      <div class="kv"><span class="kv__k">决策程序</span><span class="kv__v">四议两公开（提议→商议→审议→决议）</span></div>
+      <div class="kv"><span class="kv__k">表决比例</span><span class="kv__v">成员代表 2/3 出席、半数以上通过</span></div>
+      <div class="kv"><span class="kv__k">是否进场</span><span class="kv__v">须进农村产权交易平台公开处置</span></div>
+      <div class="alert alert--warn"><span class="alert__ico">⚠️</span><div>金额阈值各地不同，<b>以本县市最新制度为准</b>。</div></div>
+    </div>
+  </div>
+
+  <!-- 正反对照 -->
+  <h2 class="sect__title">⑥ 案例正反对照</h2>
+  <div class="compare u-mt4" style="margin-bottom:var(--sp-7);">
+    <div class="compare__col compare__col--bad"><div class="compare__label">❌ 错误做法</div>
+      <p>村干部口头决定，将集体鱼塘低价发包给亲属，未公开未进场。</p><p class="u-mt2"><span class="tag tag--risk">处理：通报 + 追责 + 合同撤销</span></p></div>
+    <div class="compare__col compare__col--good"><div class="compare__label">✅ 正确做法</div>
+      <p>制定方案→四议两公开→进产权交易平台公开竞价→签书面合同并10日内备案。</p></div>
+  </div>
+
+  <!-- 视频卡 -->
+  <h2 class="sect__title">⑦ 学习视频卡</h2>
+  <div class="qgrid u-mt4" style="grid-template-columns:repeat(2,1fr);margin-bottom:var(--sp-8);">
+    <div class="vcard"><div class="vcard__cover"><div class="vcard__play">▶</div><span class="vcard__dur">03:20</span></div>
+      <div class="vcard__body"><div class="vcard__title">银农直联付款全流程演示</div></div></div>
+    <div class="vcard"><div class="vcard__cover"><div class="vcard__play">▶</div><span class="vcard__dur">02:45</span></div>
+      <div class="vcard__body"><div class="vcard__title">报销签字“七步流转”自检</div></div></div>
+  </div>
+</div>
+
+<!-- 悬浮助手 -->
+<button class="fab" data-assist-open><span class="fab__ico">🎤</span>问助手</button>
+</body>
+</html>

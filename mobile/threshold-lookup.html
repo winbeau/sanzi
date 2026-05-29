@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 阈值速查（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="m-shell">
+
+  <header class="m-topbar">
+    <a class="iconbtn" href="home-entry.html" aria-label="返回首页">←</a>
+    <div class="m-topbar__title">阈值速查</div>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+  </header>
+
+  <main class="m-main">
+
+    <!-- 页头说明 -->
+    <h1 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">多少钱要上会、要招投标？</h1>
+    <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+      选类型 → 填金额 → 出结果。告诉你该走什么程序、要不要表决、要不要进场、要不要备案。
+    </p>
+
+    <!-- 第1步 选类型 -->
+    <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+      <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">第 1 步 · 选事项类型</h2>
+      <div class="chips">
+        <button class="chip" type="button">🏗️ 资产购建</button>
+        <button class="chip chip--active" type="button">📦 资产处置</button>
+        <button class="chip" type="button">🌾 资源发包</button>
+        <button class="chip" type="button">🧱 工程建设</button>
+        <button class="chip" type="button">💵 现金资金</button>
+        <button class="chip" type="button">📝 合同</button>
+      </div>
+    </div>
+
+    <!-- 第2步 填金额 -->
+    <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+      <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">第 2 步 · 填金额</h2>
+      <div class="u-row" style="gap:var(--sp-3); margin-bottom:var(--sp-2);">
+        <input class="input" id="amt" inputmode="numeric" value="8000"
+               style="font-size:var(--fs-800); font-weight:800; text-align:right; min-height:64px; min-width:0;"
+               aria-label="金额输入">
+        <span style="font-size:var(--fs-700); font-weight:800; flex:none;">元</span>
+      </div>
+      <p class="numpad-hint" style="margin-bottom:var(--sp-4);">👆 直接填数字，不用填小数。例如 8000 表示八千元。</p>
+      <button class="btn btn--primary btn--block btn--lg" type="button">🔍 查一查</button>
+    </div>
+
+    <!-- 醒目提示条：结果上方 -->
+    <div class="alert alert--warn" style="margin-bottom:var(--sp-4);">
+      <span class="alert__ico">⚠️</span>
+      <div><span class="alert__title">金额档位以本县市最新制度为准。</span>下方为中方县 2025 示例口径。</div>
+    </div>
+
+    <!-- 结果卡（默认：资产处置 8000 元） -->
+    <div class="result" id="result" style="margin-bottom:var(--sp-4);">
+      <div class="result__head">
+        结论：资产处置 8000 元 &gt; 5000 元 —— 必须“四议两公开”，还要进场公开拍卖、报乡镇备案，不能私下卖。
+      </div>
+      <div class="result__body">
+        <div class="kv">
+          <div class="kv__k">事项</div>
+          <div class="kv__v">资产处置（卖、报废、转让集体资产）</div>
+        </div>
+        <div class="kv">
+          <div class="kv__k">档位</div>
+          <div class="kv__v">8000 元，落在“&gt; 5000 元”档</div>
+        </div>
+        <div class="kv">
+          <div class="kv__k">决策程序</div>
+          <div class="kv__v">必须走“四议两公开”六步</div>
+        </div>
+        <div class="kv">
+          <div class="kv__k">表决比例</div>
+          <div class="kv__v"><span class="u-bold">2/3 以上出席、半数以上同意</span></div>
+        </div>
+        <div class="kv">
+          <div class="kv__k">是否进场</div>
+          <div class="kv__v"><span class="tag tag--risk">必须进场</span> 进产权交易平台公开拍卖，禁私下交易</div>
+        </div>
+        <div class="kv">
+          <div class="kv__k">是否备案</div>
+          <div class="kv__v"><span class="tag tag--ok">需备案</span> 方案与结果报乡镇农经部门</div>
+        </div>
+
+        <!-- 引用来源 -->
+        <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-2);">
+          <div class="src-list__head">这条结论的出处（点这里收起/展开）</div>
+          <div class="src-list__body">
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📘</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">中方县三资管理实施细则</span>
+              <span class="src__meta">资产处置档位 · 示例 中方县 2025</span></span>
+            </a>
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📗</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第26–27条</span>
+              <span class="src__meta">成员大会表决 · 2025-05-01 施行</span></span>
+            </a>
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📙</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">农村产权流转交易管理办法</span>
+              <span class="src__meta">资产交易“应进必进” · 各地版本</span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 兜底卡 -->
+        <div class="fallback">
+          <span class="fallback__ico">🤔</span>
+          <div>
+            <div class="fallback__title">本村细则里查不到？</div>
+            建议咨询乡镇农经站或县代理服务中心；也可“去问助手”说清楚情况。
+          </div>
+        </div>
+
+        <!-- 底部操作 -->
+        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-top:var(--sp-2);">🪜 看完整流程</a>
+        <a class="btn btn--ghost btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);">💬 去问助手</a>
+        <a class="btn btn--external btn--block btn--lg" href="#" style="margin-top:var(--sp-3);">去主系统办理</a>
+      </div>
+    </div>
+
+    <!-- 国家通用版 / 本地差异 -->
+    <div class="seg" style="margin-bottom:var(--sp-3);">
+      <button class="seg__btn seg__btn--active" type="button" data-seg="ver" data-target="local">本地（中方县）</button>
+      <button class="seg__btn" type="button" data-seg="ver" data-target="national">国家通用版</button>
+    </div>
+    <div data-panel-group="ver" data-panel="local" class="card card--pad" style="margin-bottom:var(--sp-5);">
+      <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">中方县 · 资产处置全档位</h3>
+      <div class="u-col" style="gap:var(--sp-3);">
+        <div class="kv"><div class="kv__k">≤ 5000</div><div class="kv__v">理事会方案 + 成员大会通过 + 公示</div></div>
+        <div class="kv"><div class="kv__k">&gt; 5000</div><div class="kv__v"><span class="u-bold">四议两公开 + 进场拍卖 + 乡镇备案</span>（8000 在此档）</div></div>
+      </div>
+      <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+        <span class="src__ico">📘</span>
+        <span style="display:flex; flex-direction:column;"><span class="src__name">中方县三资管理实施细则</span><span class="src__meta">示例 中方县 2025</span></span>
+      </a>
+    </div>
+    <div data-panel-group="ver" data-panel="national" class="card card--pad u-hide" style="margin-bottom:var(--sp-5);">
+      <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">国家通用版 · 资产处置原则</h3>
+      <div class="u-col" style="gap:var(--sp-3);">
+        <div class="kv"><div class="kv__k">决策</div><div class="kv__v">重大处置走四议两公开，经成员（代表）大会决议</div></div>
+        <div class="kv"><div class="kv__k">交易</div><div class="kv__v">资产资源“应进必进”交易平台，公开进行</div></div>
+        <div class="kv"><div class="kv__k">门槛</div><div class="kv__v">具体金额由各地细则定，<span class="u-bold">以本县市最新制度为准</span></div></div>
+      </div>
+      <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+        <span class="src__ico">📗</span>
+        <span style="display:flex; flex-direction:column;"><span class="src__name">组织法 / 产权流转交易办法</span><span class="src__meta">2025-05-01 / 各地版本</span></span>
+      </a>
+    </div>
+
+    <!-- 常见档位速记 -->
+    <div class="sect__head"><div class="sect__title">常见档位速记（中方县示例）</div></div>
+    <div class="card card--pad" style="margin-bottom:var(--sp-3);">
+      <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">🏗️ 资产购建</h3>
+      <div class="u-col" style="gap:var(--sp-2);">
+        <div class="kv"><div class="kv__k">≤ 5000</div><div class="kv__v">理事会+监事会共同决定</div></div>
+        <div class="kv"><div class="kv__k">5000–5万</div><div class="kv__v">成员代表大会通过 + 乡镇备案</div></div>
+        <div class="kv"><div class="kv__k">&gt; 5万</div><div class="kv__v">成员大会 + 公示 + 乡镇审核备案</div></div>
+      </div>
+    </div>
+    <div class="card card--pad" style="margin-bottom:var(--sp-3);">
+      <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">🧱 工程建设</h3>
+      <div class="u-col" style="gap:var(--sp-2);">
+        <div class="kv"><div class="kv__k">&lt; 4万</div><div class="kv__v">成员大会通过后实施</div></div>
+        <div class="kv"><div class="kv__k">4万–100万</div><div class="kv__v">四议两公开 + 简易招标 + 先备案后招标</div></div>
+        <div class="kv"><div class="kv__k">&gt; 100万</div><div class="kv__v">按《招标投标法》执行</div></div>
+      </div>
+    </div>
+    <div class="card card--pad" style="margin-bottom:var(--sp-4);">
+      <h3 style="font-size:var(--fs-600); margin-bottom:var(--sp-3);">💵 现金 / 进场</h3>
+      <div class="u-col" style="gap:var(--sp-2);">
+        <div class="kv"><div class="kv__k">单笔&gt;1000</div><div class="kv__v">须银行结算、资金直达供应商</div></div>
+        <div class="kv"><div class="kv__k">收款</div><div class="kv__v">3 日内存入专户</div></div>
+        <div class="kv"><div class="kv__k">进场</div><div class="kv__v">达地方门槛“应进必进”平台</div></div>
+      </div>
+    </div>
+
+    <div class="alert alert--warn">
+      <span class="alert__ico">⚠️</span>
+      <div><span class="alert__title">这些数字是中方县 2025 示例，以本县市最新制度为准。</span>各地门槛不一致，办理前核对本地文件。</div>
+    </div>
+
+  </main>
+
+  <!-- 底部 Tab -->
+  <nav class="m-tabbar">
+    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
+    <a class="m-tab m-tab--active" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
+    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
+    <a class="m-tab" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+  </nav>
+</div>
+</body>
+</html>

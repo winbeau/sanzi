@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 悬浮助手插件演示（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+
+<!-- ============ 模拟「别的系统」：XX县农村集体三资管理平台 ============ -->
+<!-- 注意：本页不使用 pc-shell 侧栏，因为这是被嵌入的“主系统业务页”，助手是浮在它上面的插件 -->
+<div style="min-height:100vh; display:flex; flex-direction:column; background:var(--c-bg);">
+
+  <!-- 模拟主系统顶栏 -->
+  <header class="mock-top">
+    <span class="mock-top__logo">🏛️ XX县农村集体三资管理平台</span>
+    <span class="u-spacer"></span>
+    <a class="mock-tab" href="#">资金管理</a>
+    <a class="mock-tab" href="#">资产管理</a>
+    <a class="mock-tab" href="#">资源管理</a>
+    <a class="mock-tab mock-tab--active" href="#">报账填报</a>
+    <a class="mock-tab" href="#">财务公开</a>
+    <span style="color:#aab4c4; margin-left:var(--sp-4);">👤 张报账员</span>
+  </header>
+
+  <!-- 模拟主系统业务主体 -->
+  <main style="flex:1; width:100%; max-width:var(--maxw-content); margin:0 auto; padding:var(--sp-7);">
+
+    <!-- 该页是“别的系统”的提示横幅，强化插件越界感 -->
+    <div class="alert" style="border-left-color:#4a90d9; background:var(--c-surface); margin-bottom:var(--sp-5);">
+      <span class="alert__ico">🧩</span>
+      <div>
+        <span class="alert__title">您正在使用「三资管理平台 · 报账填报」</span><br>
+        右下角的<b>「问助手」</b>是浮在本系统之上的插件，随处可唤醒，就地为您解释政策、做合规提醒。
+      </div>
+    </div>
+
+    <div class="card card--pad" style="max-width:var(--maxw-read); margin:0 auto;">
+      <h1 class="card__title" style="font-size:var(--fs-800);">📝 报账单填报</h1>
+      <p class="u-weak" style="margin-bottom:var(--sp-5);">请如实填写下列信息，附上合法票据，提交后进入审批流程。</p>
+
+      <div class="mock-form-row">
+        <span class="mock-form-row__label">报账日期</span>
+        <input class="input" type="text" value="2026-05-29" aria-label="报账日期">
+      </div>
+
+      <div class="mock-form-row">
+        <span class="mock-form-row__label">事由</span>
+        <input class="input" type="text" value="接待上级检查组午餐" aria-label="事由">
+      </div>
+
+      <div class="mock-form-row">
+        <span class="mock-form-row__label">开支类型</span>
+        <select class="input" aria-label="开支类型">
+          <option>办公费</option>
+          <option>水电费</option>
+          <option selected>非生产性开支 — 招待费</option>
+          <option>差旅费</option>
+          <option>维修费</option>
+        </select>
+      </div>
+
+      <div class="mock-form-row">
+        <span class="mock-form-row__label">金额（元）</span>
+        <input class="input" type="text" value="1280.00" aria-label="金额">
+      </div>
+
+      <div class="mock-form-row">
+        <span class="mock-form-row__label">附件（发票）</span>
+        <div style="border:2px dashed var(--c-border-strong); border-radius:var(--r-md); padding:var(--sp-5); text-align:center; color:var(--c-text-weak);">
+          📎 点击或拖拽上传发票图片 / PDF<br>
+          <span style="font-size:var(--fs-300);">（已上传：餐饮发票.jpg）</span>
+        </div>
+      </div>
+
+      <div class="mock-form-row">
+        <span class="mock-form-row__label">经办人</span>
+        <input class="input" type="text" value="张报账员" aria-label="经办人">
+      </div>
+
+      <!-- 这是主系统自己的按钮：普通 primary，不是助手能完成的动作 -->
+      <div style="margin-top:var(--sp-6); display:flex; gap:var(--sp-4); justify-content:flex-end;">
+        <button class="btn btn--ghost">暂存</button>
+        <button class="btn btn--primary">提交审批</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ============ 悬浮助手插件（浮在主系统之上） ============ -->
+
+<!-- 右下角唤醒按钮 -->
+<button class="fab" data-assist-open aria-label="打开三资管理助手">
+  <span class="fab__ico">🎤</span>问助手
+</button>
+
+<!-- 助手面板：原型里默认展开（不加 u-hide），方便截图 -->
+<div class="assist" id="assist">
+  <div class="assist__head">
+    <span style="font-size:24px;">🤝</span>
+    <div class="assist__title">三资管理助手 · 就地帮您看</div>
+    <button class="iconbtn" data-assist-close aria-label="收起助手" style="color:#fff;">✕</button>
+  </div>
+
+  <div class="assist__body">
+
+    <!-- 只读说明 -->
+    <div class="alert alert--info" style="padding:var(--sp-3);">
+      <span class="alert__ico">👀</span>
+      <div>助手只读取当前页信息做解释与合规提醒，<b>不替你提交</b>。</div>
+    </div>
+
+    <!-- 识别到的当前上下文 -->
+    <div class="card card--flat" style="background:var(--c-surface-2); border:1px solid var(--c-border); padding:var(--sp-3) var(--sp-4);">
+      <div style="font-size:var(--fs-400); color:var(--c-text-weak);">📄 我看到您正在填这一笔：</div>
+      <div class="u-bold" style="margin-top:var(--sp-1);">招待费 · 1280元 · “接待上级检查组午餐”</div>
+    </div>
+
+    <!-- 用户的就地提问 -->
+    <div class="msg msg--user">
+      <div class="msg__avatar">👤</div>
+      <div class="bubble">这个招待费能不能直接报？</div>
+    </div>
+
+    <!-- 三段式答案 -->
+    <div class="msg msg--bot">
+      <div class="msg__avatar">🤝</div>
+      <div class="bubble">
+        <!-- 结论先行 -->
+        <div class="answer__verdict">
+          <span class="verdict-pill verdict-pill--no">不能直接报</span>
+        </div>
+        <p>招待费属于<b>非生产性开支</b>，不能见票就报。必须先满足限额、走完审批流程，确属公务且在限额内才可入账。</p>
+
+        <!-- 简短流程 -->
+        <div class="answer__seg">
+          <div class="answer__seg-title">该怎么做（简版）</div>
+          <ol style="margin:0; padding-left:1.4em; line-height:var(--lh-normal);">
+            <li>核对是否<b>确属公务接待</b>、是否在本村<b>预算与限额</b>内；</li>
+            <li>票据“六有”：真实事由 + 正式发票 + 经办人签字 + 证明人 + 审批人 + 附件；</li>
+            <li>按<b>七步签字链</b>报账：经办 → 出纳 → 监事会/理财小组 → “一支笔” → 乡镇代理中心 → 会计记账 → 归档。</li>
+          </ol>
+        </div>
+
+        <!-- 阈值/时限提醒 -->
+        <div class="alert alert--warn" style="margin-top:var(--sp-3); padding:var(--sp-3);">
+          <span class="alert__ico">⚠️</span>
+          <div>非生产性开支限额、单笔结算门槛各地不同，<b>以本县市最新制度为准</b>。单笔超 1000 元须银行结算、资金直达供应商。</div>
+        </div>
+
+        <!-- 引用来源 -->
+        <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-3);">
+          <div class="src-list__head">依据这些资料（点我收起/展开）</div>
+          <div class="src-list__body">
+            <a class="src" href="../pc/policy-explain.html">
+              <span class="src__ico">📑</span>
+              <span><span class="src__name">《农村集体经济组织财务制度》</span><span class="src__meta">财政部、农业农村部 2022 · 非生产性开支限额管理、纳入预算、严禁违规吃喝</span></span>
+            </a>
+            <a class="src" href="../pc/threshold-lookup.html">
+              <span class="src__ico">📑</span>
+              <span><span class="src__name">本县三资管理实施细则（中方县 2025）</span><span class="src__meta">单笔&gt;1000元须银行结算 · 以本县市最新制度为准</span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 兜底 -->
+        <div class="fallback" style="margin-top:var(--sp-3); padding:var(--sp-4);">
+          <span class="fallback__ico">🛟</span>
+          <div>
+            <div class="fallback__title">拿不准限额具体数？</div>
+            本助手资料里没有您村的确切限额数字，建议咨询乡镇农经站 / 委托代理服务中心。
+          </div>
+        </div>
+
+        <!-- 去主系统办理（边界） -->
+        <div class="answer__jump" style="margin-top:var(--sp-4);">
+          <a class="btn btn--external" href="#">去主系统对应步骤办理</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 底部迷你输入栏 -->
+  <div class="assist__foot">
+    <div class="askbar" style="padding:var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-4); box-shadow:none;">
+      <input class="askbar__input" style="font-size:var(--fs-500);" placeholder="继续问，比如：能报多少？" aria-label="继续提问">
+      <button class="mic" aria-label="语音提问">🎤</button>
+      <button class="send" aria-label="发送">➤</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

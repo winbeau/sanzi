@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 案例学习（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="m-shell">
+
+  <header class="m-topbar">
+    <a class="iconbtn" href="home-entry.html" aria-label="返回首页">←</a>
+    <div class="m-topbar__title">案例学习</div>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+  </header>
+
+  <main class="m-main">
+
+    <!-- 页头说明 -->
+    <h1 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">真实案例：啥是错的、该咋做</h1>
+    <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-3);">
+      每个案例分四段看：哪违纪、啥问题、咋处理、踩了哪条红线。
+    </p>
+    <div class="trust-bar" style="margin-bottom:var(--sp-4);">
+      <span class="trust-bar__ico">✅</span>案例与处理都标出处；金额/时限以本县市最新制度为准。
+    </div>
+
+    <!-- 吉林专项整治数据 -->
+    <section class="card card--pad" style="background:var(--grad-hero); border:none; color:#fff; margin-bottom:var(--sp-5);">
+      <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">📊 专项整治真查真纠</div>
+      <p style="font-size:var(--fs-500); opacity:.96;">
+        清查合同 <b style="font-size:var(--fs-700);">49044</b> 份，纠正显失公平 <b style="font-size:var(--fs-700);">2684</b> 份，挽回损失 <b style="font-size:var(--fs-700);">1387 万</b> 余元。
+      </p>
+      <a class="src" href="policy-explain.html" style="margin-top:var(--sp-3); background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.3); color:#fff;">
+        <span class="src__ico" style="color:#fff;">📊</span>
+        <span style="display:flex; flex-direction:column;"><span class="src__name">吉林专项整治数据</span>
+        <span class="src__meta" style="color:rgba(255,255,255,.85);">F节 · 全国性案例数据</span></span>
+      </a>
+    </section>
+
+    <!-- 10 类违纪手法分类（横滑） -->
+    <div class="sect__head"><div class="sect__title">10 类常见违纪手法</div></div>
+    <div class="chips chips--scroll" style="margin-bottom:var(--sp-5);">
+      <button class="chip chip--active" type="button">全部</button>
+      <button class="chip" type="button">坐收坐支</button>
+      <button class="chip" type="button">白条抵库</button>
+      <button class="chip" type="button">公款私存</button>
+      <button class="chip" type="button">私设小金库</button>
+      <button class="chip" type="button">违规出借资金</button>
+      <button class="chip" type="button">资产低价处置</button>
+      <button class="chip" type="button">违规发包</button>
+      <button class="chip" type="button">虚报冒领</button>
+      <button class="chip" type="button">超标准开支</button>
+      <button class="chip" type="button">合同显失公平</button>
+    </div>
+
+    <!-- 分段 Tab：案例 / 自查 -->
+    <div class="seg" style="display:flex; width:100%; margin-bottom:var(--sp-4);">
+      <button class="seg__btn seg__btn--active" type="button" data-seg="cl" data-target="cases" style="flex:1;">⚠️ 违规案例</button>
+      <button class="seg__btn" type="button" data-seg="cl" data-target="self" style="flex:1;">🛡️ 风险自查</button>
+    </div>
+
+    <!-- ========== 面板一：违规案例 ========== -->
+    <div data-panel-group="cl" data-panel="cases">
+
+      <!-- 案例 1 -->
+      <div class="case" style="margin-bottom:var(--sp-4);">
+        <div class="case__head">
+          <span class="tag tag--risk">违规发包 · 显失公平</span>
+          <div class="u-spacer"></div>
+          <span class="badge badge--region">案例 1</span>
+        </div>
+        <div class="case__body">
+          <div class="case__row"><span class="case__k">违纪事实</span>
+            <span>村干部<b>口头决定</b>把鱼塘低价发包给亲属，没公开、没进场，显失公平。</span></div>
+          <div class="case__row"><span class="case__k">问题类型</span>
+            <span><span class="tag tag--risk">违规发包</span></span></div>
+          <div class="case__row"><span class="case__k">处理结果</span>
+            <span>通报批评 + 追责，合同被<b>撤销</b>，重新进场公开发包。</span></div>
+          <div class="case__row"><span class="case__k">涉及条款</span>
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📕</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">集体经济组织法 第26–27条</span>
+              <span class="src__meta">重大事项须成员大会表决 · 2025-05-01</span></span>
+            </a></div>
+        </div>
+      </div>
+
+      <!-- 案例 1 正反对照（上下色块） -->
+      <div class="card card--pad" style="margin-bottom:var(--sp-5);">
+        <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">案例 1 · 正反对照</h2>
+        <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">同样发包鱼塘，对照着看：</p>
+        <div class="compare" style="grid-template-columns:1fr;">
+          <div class="compare__col compare__col--bad">
+            <div class="compare__label">❌ 错误做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>口头决定，没开会、没记录</div>
+              <div>没公开、没进交易平台</div>
+              <div>低价给亲属，显失公平</div>
+              <div>没书面合同 / 没备案</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-danger-700);">⚖️ 后果：通报 + 追责，合同撤销。</div>
+          </div>
+          <div class="compare__col compare__col--good">
+            <div class="compare__label">✅ 示范做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>① 理事会提方案</div>
+              <div>② 走四议两公开</div>
+              <div>③ 进场公开竞价（应进必进）</div>
+              <div>④ 签书面合同，10 日内备案</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-primary-700);">👍 效果：公道、合规、有据可查。</div>
+          </div>
+        </div>
+        <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+          <span class="alert__ico">⚠️</span>
+          <div>
+            <span class="alert__title">多大金额要进场，以本县市最新制度为准。</span>
+            示例：资产处置 &gt; 5000 元须四议两公开 + 进场 + 备案。
+          </div>
+        </div>
+        <a class="src" href="threshold-lookup.html" style="margin-top:var(--sp-3);">
+          <span class="src__ico">🔢</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">本县三资细则（示例·中方县 2025）</span>
+          <span class="src__meta">资产处置 / 进场阈值 · D节</span></span>
+        </a>
+        <a class="btn btn--external btn--block btn--lg" href="#" style="margin-top:var(--sp-4);">去主系统办理</a>
+      </div>
+
+      <!-- 案例 2 -->
+      <div class="case" style="margin-bottom:var(--sp-4);">
+        <div class="case__head">
+          <span class="tag tag--risk">白条抵库</span>
+          <div class="u-spacer"></div>
+          <span class="badge badge--region">案例 2</span>
+        </div>
+        <div class="case__body">
+          <div class="case__row"><span class="case__k">违纪事实</span>
+            <span>用<b>白条、手写收据</b>顶替正式发票入账，没合法票据。</span></div>
+          <div class="case__row"><span class="case__k">问题类型</span>
+            <span><span class="tag tag--risk">白条抵库</span></span></div>
+          <div class="case__row"><span class="case__k">处理结果</span>
+            <span>责令限期整改、补齐合法票据，责任人被追责。</span></div>
+          <div class="case__row"><span class="case__k">涉及条款</span>
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📗</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
+              <span class="src__meta">严禁白条抵库 · 财政部、农业农村部</span></span>
+            </a></div>
+        </div>
+      </div>
+
+      <!-- 案例 2 正反对照 -->
+      <div class="card card--pad" style="margin-bottom:var(--sp-5);">
+        <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">案例 2 · 正反对照</h2>
+        <div class="compare" style="grid-template-columns:1fr;">
+          <div class="compare__col compare__col--bad">
+            <div class="compare__label">❌ 错误做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>拿白条 / 收据当发票入账</div>
+              <div>没用途说明、没附件</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-danger-700);">⚖️ 后果：责令整改、追责。</div>
+          </div>
+          <div class="compare__col compare__col--good">
+            <div class="compare__label">✅ 示范做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>取得合法正式发票</div>
+              <div>票据“六有”齐全</div>
+              <div>走报销七步签字链</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-primary-700);">👍 效果：过账顺、查得清。</div>
+          </div>
+        </div>
+        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-top:var(--sp-4);">🪜 看报销七步签字链</a>
+      </div>
+
+      <!-- 案例 3 -->
+      <div class="case" style="margin-bottom:var(--sp-4);">
+        <div class="case__head">
+          <span class="tag tag--risk">坐收坐支</span>
+          <div class="u-spacer"></div>
+          <span class="badge badge--region">案例 3</span>
+        </div>
+        <div class="case__body">
+          <div class="case__row"><span class="case__k">违纪事实</span>
+            <span>现金收入<b>不入账、直接开支</b>，账上看不到来龙去脉。</span></div>
+          <div class="case__row"><span class="case__k">问题类型</span>
+            <span><span class="tag tag--risk">坐收坐支</span></span></div>
+          <div class="case__row"><span class="case__k">处理结果</span>
+            <span>按违纪追责，责令收支全部入账、规范现金管理。</span></div>
+          <div class="case__row"><span class="case__k">涉及条款</span>
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📗</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
+              <span class="src__meta">严禁坐收坐支 · 收入应收尽收</span></span>
+            </a></div>
+        </div>
+      </div>
+
+      <!-- 案例 3 正反对照 -->
+      <div class="card card--pad" style="margin-bottom:var(--sp-5);">
+        <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">案例 3 · 正反对照</h2>
+        <div class="compare" style="grid-template-columns:1fr;">
+          <div class="compare__col compare__col--bad">
+            <div class="compare__label">❌ 错误做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>收现金不入账，直接花掉</div>
+              <div>票款不分流</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-danger-700);">⚖️ 后果：违纪追责。</div>
+          </div>
+          <div class="compare__col compare__col--good">
+            <div class="compare__label">✅ 示范做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>应收尽收、开正式票据</div>
+              <div>3 日内存入专户</div>
+              <div>票款分流、收支两条线</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-primary-700);">👍 效果：账实相符、可追溯。</div>
+          </div>
+        </div>
+        <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+          <span class="alert__ico">⚠️</span>
+          <div><span class="alert__title">现金管理时限以本县市最新制度为准。</span>示例：现金收入须 3 日内存入专户。</div>
+        </div>
+      </div>
+
+      <!-- 案例 4 -->
+      <div class="case" style="margin-bottom:var(--sp-4);">
+        <div class="case__head">
+          <span class="tag tag--risk">小金库 · 公款私存</span>
+          <div class="u-spacer"></div>
+          <span class="badge badge--region">案例 4</span>
+        </div>
+        <div class="case__body">
+          <div class="case__row"><span class="case__k">违纪事实</span>
+            <span>集体的钱<b>存进个人账户</b>、账外另设一本账（小金库），逃避监督。</span></div>
+          <div class="case__row"><span class="case__k">问题类型</span>
+            <span><span class="tag tag--risk">私设小金库</span> <span class="tag tag--risk">公款私存</span></span></div>
+          <div class="case__row"><span class="case__k">处理结果</span>
+            <span>严肃处理、清退资金归入专户，责任人被追责。</span></div>
+          <div class="case__row"><span class="case__k">涉及条款</span>
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📕</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">集体经济组织法 第44条</span>
+              <span class="src__meta">集体资金不得存入个人账户 · 2025-05-01</span></span>
+            </a></div>
+        </div>
+      </div>
+
+      <!-- 案例 4 正反对照 -->
+      <div class="card card--pad" style="margin-bottom:var(--sp-5);">
+        <h2 style="font-size:var(--fs-600); margin-bottom:var(--sp-2);">案例 4 · 正反对照</h2>
+        <div class="compare" style="grid-template-columns:1fr;">
+          <div class="compare__col compare__col--bad">
+            <div class="compare__label">❌ 错误做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>钱存个人账户（公款私存）</div>
+              <div>账外另立小金库</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-danger-700);">⚖️ 后果：严肃处理、清退追责。</div>
+          </div>
+          <div class="compare__col compare__col--good">
+            <div class="compare__label">✅ 示范做法</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <div>统一资金专户管理</div>
+              <div>村账乡管、一本账</div>
+              <div>定期财务公开</div>
+            </div>
+            <div style="margin-top:var(--sp-3); font-weight:800; color:var(--c-primary-700);">👍 效果：阳光透明、可监督。</div>
+          </div>
+        </div>
+        <a class="btn btn--external btn--block btn--lg" href="#" style="margin-top:var(--sp-4);">去主系统办理</a>
+      </div>
+
+      <!-- 兜底卡 -->
+      <div class="fallback">
+        <span class="fallback__ico">🤔</span>
+        <div>
+          <div class="fallback__title">没找到一样的案例？</div>
+          未在资料中找到时，建议咨询乡镇农经站或县代理服务中心；也可“去问助手”说清情况。
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== 面板二：风险自查 ========== -->
+    <div data-panel-group="cl" data-panel="self" class="u-hide">
+      <div class="card card--pad" style="margin-bottom:var(--sp-5);">
+        <h2 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">🛡️ 你村有没有踩线？</h2>
+        <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-4);">
+          逐条点一下打勾。打勾=做到了；没打勾的就是<b>风险点</b>。
+        </p>
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span><span>现金收入都及时入账、3 日内存专户（没坐收坐支）</span></div>
+          <div class="check__item"><span class="check__box"></span><span>报账全是正规发票，没白条、收据抵库</span></div>
+          <div class="check__item"><span class="check__box"></span><span>钱都在专户里，没存任何个人账户</span></div>
+          <div class="check__item"><span class="check__box"></span><span>没有账外账、没有小金库</span></div>
+          <div class="check__item"><span class="check__box"></span><span>资产处置、发包都走了四议两公开 + 进场</span></div>
+          <div class="check__item"><span class="check__box"></span><span>合同价格公道、有书面合同、按时备案</span></div>
+        </div>
+
+        <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+          <span class="alert__ico">📋</span>
+          <div>
+            <span class="alert__title">整改建议：</span>有一条没打勾就要马上处理——停止该做法、资金账目归位、补走合规程序，并报乡镇经管站。金额/时限以本县市最新制度为准。
+          </div>
+        </div>
+        <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+          <span class="src__ico">📗</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
+          <span class="src__meta">十类红线 · B节红线/边界</span></span>
+        </a>
+        <a class="btn btn--external btn--block btn--lg" href="#" style="margin-top:var(--sp-4);">去主系统办理</a>
+      </div>
+    </div>
+
+    <!-- 边界说明 -->
+    <div class="alert alert--info">
+      <span class="alert__ico">💡</span>
+      <div>本助手只“讲清楚、教明白”，不经手钱、不替你办。要发包、签合同、办交易时会带你“去主系统办理”。</div>
+    </div>
+
+  </main>
+
+  <!-- 底部 Tab -->
+  <nav class="m-tabbar">
+    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
+    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
+    <a class="m-tab m-tab--active" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
+    <a class="m-tab" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+  </nav>
+</div>
+</body>
+</html>

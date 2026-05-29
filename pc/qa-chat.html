@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 智能问答（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-shell">
+
+  <!-- 左侧导航 -->
+  <aside class="pc-sidenav">
+    <div class="brand">
+      <div class="brand__logo">资</div>
+      <div>
+        <div class="brand__name">三资管理助手</div>
+        <div class="brand__sub">村集体三资 · 智能问答</div>
+      </div>
+    </div>
+    <nav class="navx">
+      <a class="navx__item" href="home-entry.html"><span class="navx__ico">🏠</span>首页</a>
+      <a class="navx__item navx__item--active" href="qa-chat.html"><span class="navx__ico">💬</span>智能问答</a>
+      <a class="navx__item" href="threshold-lookup.html"><span class="navx__ico">🔢</span>阈值速查</a>
+      <a class="navx__item" href="process-guide.html"><span class="navx__ico">🪜</span>流程指引</a>
+      <a class="navx__item" href="operation-cards.html"><span class="navx__ico">🗂️</span>操作卡片</a>
+      <a class="navx__item" href="policy-explain.html"><span class="navx__ico">📖</span>政策解读</a>
+      <a class="navx__item" href="case-learning.html"><span class="navx__ico">⚖️</span>案例学习</a>
+      <a class="navx__item" href="search.html"><span class="navx__ico">🔍</span>知识检索</a>
+      <a class="navx__item" href="media-library.html"><span class="navx__ico">🎬</span>视频音频</a>
+      <a class="navx__item" href="my-history-fav.html"><span class="navx__ico">⭐</span>我的收藏</a>
+      <a class="navx__item" href="help-settings.html"><span class="navx__ico">⚙️</span>帮助设置</a>
+    </nav>
+    <div class="u-spacer"></div>
+    <a class="navx__item" href="../index.html"><span class="navx__ico">🎨</span>版本预览</a>
+  </aside>
+
+  <!-- 右侧主区 -->
+  <main class="pc-main">
+    <header class="pc-topbar">
+      <div class="pc-topbar__title">💬 智能问答</div>
+      <div class="u-spacer"></div>
+      <span class="rolechip"><span class="rolechip__ico">📍</span>湖南 · 中方县</span>
+      <span class="rolechip"><span class="rolechip__ico">👤</span>村报账员 ▾</span>
+      <a class="iconbtn" href="help-settings.html" title="帮助">❓</a>
+    </header>
+
+    <div class="pc-content">
+
+      <!-- 可信度提示 -->
+      <div class="trust-bar" style="margin-bottom:var(--sp-5);">
+        <span class="trust-bar__ico">✅</span>
+        每个回答都标出处，来自官方政策法规与业务资料；资料里没有的，绝不替你编。
+      </div>
+
+      <!-- 主区：对话流（居中）+ 右侧相关推荐 -->
+      <div style="display:grid; grid-template-columns:minmax(0,820px) 280px; gap:var(--sp-6); align-items:start;">
+
+        <!-- 对话流 -->
+        <div style="min-width:0;">
+          <div class="chat">
+
+            <!-- 轮次 1：招待餐费能不能报 -->
+            <div class="msg msg--user">
+              <div class="msg__avatar">👤</div>
+              <div class="bubble">村里来人吃饭这顿招待餐费，能不能直接报账？</div>
+            </div>
+
+            <div class="msg msg--bot">
+              <div class="msg__avatar">资</div>
+              <div class="bubble" style="width:100%;">
+                <!-- 结论 -->
+                <div class="answer__verdict">
+                  <span class="verdict-pill verdict-pill--no">✕ 不能</span>
+                  <span>不能“直接”报账</span>
+                </div>
+                <p style="margin-bottom:var(--sp-2);">
+                  招待餐费属于<b>非生产性开支</b>，不能随到随报。必须先<b>纳入预算、控制在限额内</b>，且确属公务，再按签字流程才能入账。严禁违规吃喝。
+                </p>
+
+                <!-- 段一：该怎么办（流程） -->
+                <div class="answer__seg">
+                  <div class="answer__seg-title">该怎么办</div>
+                  <ol style="margin:0; padding-left:var(--sp-6); line-height:var(--lh-normal);">
+                    <li>确认是<b>公务接待</b>、有真实事由，不是私人吃喝；</li>
+                    <li>金额要在本村<b>非生产性开支限额</b>内、已纳入年度预算；</li>
+                    <li>取得<b>合法正式发票</b>（不能用白条、收据顶替）；</li>
+                    <li>走<b>报销七步签字链</b>：经办人 → 出纳 → 监事会/民主理财小组 → “一支笔”审批 → 乡镇代理中心 → 会计记账 → 归档。</li>
+                  </ol>
+                </div>
+
+                <!-- 段二：系统里怎么点（操作） -->
+                <div class="answer__seg">
+                  <div class="answer__seg-title">系统里怎么点</div>
+                  <p style="margin-bottom:var(--sp-2);">
+                    本助手只讲清楚、不替你办。真正报账要去<b>主系统（银农直联）</b>：报账员上传发票凭证 → 一级审核（乡镇经管站）→ 二级审核（代理中心）→ 系统直连银行付款。<b>申请人和审核人不能是同一个人。</b>
+                  </p>
+                  <a class="btn btn--external" href="#" title="跳转主系统">去主系统办理</a>
+                </div>
+
+                <!-- 阈值/红线提醒 -->
+                <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+                  <span class="alert__ico">⚠️</span>
+                  <div>招待限额、能不能报，各地标准不一样，<b>以本县市最新制度为准</b>；超标准招待要退赔并追责。</div>
+                </div>
+
+                <!-- 跳转按钮 -->
+                <div class="answer__jump">
+                  <a class="chip" href="process-guide.html">🪜 看流程</a>
+                  <a class="chip" href="policy-explain.html">📖 看政策</a>
+                  <a class="chip" href="case-learning.html">⚖️ 看案例</a>
+                  <a class="chip" href="media-library.html">🎬 看视频</a>
+                  <a class="chip chip--active" href="threshold-lookup.html">🔢 查限额阈值</a>
+                </div>
+
+                <!-- 可折叠引用 -->
+                <div class="src-list" data-collapsed="true" style="margin-top:var(--sp-4);">
+                  <div class="src-list__head">查看依据（2）</div>
+                  <div class="src-list__body">
+                    <a class="src" href="policy-explain.html">
+                      <span class="src__ico">📑</span>
+                      <span><span class="src__name">《农村集体经济组织财务制度》</span>
+                      <span class="src__meta">财政部、农业农村部 2022 · 非生产性开支限额管理、严禁白条抵库</span></span>
+                    </a>
+                    <a class="src" href="process-guide.html">
+                      <span class="src__ico">📑</span>
+                      <span><span class="src__name">报销七步签字链</span>
+                      <span class="src__meta">单笔 &gt;1000 元须银行结算、资金直达供应商</span></span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 朗读 / 收藏 -->
+                <div class="u-row" style="margin-top:var(--sp-3); gap:var(--sp-2);">
+                  <button class="iconbtn" title="朗读这条回答" aria-label="朗读">🔊</button>
+                  <button class="iconbtn" title="收藏这条回答" aria-label="收藏">⭐</button>
+                  <button class="iconbtn" title="复制" aria-label="复制">📋</button>
+                  <span class="u-weak" style="font-size:var(--fs-300);">回答有用吗？</span>
+                  <button class="iconbtn" title="有用" aria-label="有用">👍</button>
+                  <button class="iconbtn" title="没用" aria-label="没用">👎</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 轮次 2：多少钱要上会 → 引导去速查 -->
+            <div class="msg msg--user">
+              <div class="msg__avatar">👤</div>
+              <div class="bubble">那买东西、搞工程，多少钱要上会、要招投标？</div>
+            </div>
+
+            <div class="msg msg--bot">
+              <div class="msg__avatar">资</div>
+              <div class="bubble" style="width:100%;">
+                <div class="answer__verdict">
+                  <span class="verdict-pill verdict-pill--caution">! 需注意</span>
+                  <span>看“金额档位”，按档走程序</span>
+                </div>
+                <p style="margin-bottom:var(--sp-2);">
+                  钱越多，程序越严。简单记：<b>小额理事会定，中额上代表大会，大额要四议两公开 + 招投标</b>。具体金额各地不同，建议直接用「阈值速查」按数字一键判定。
+                </p>
+
+                <div class="answer__seg">
+                  <div class="answer__seg-title">该怎么办</div>
+                  <ul style="margin:0; padding-left:var(--sp-6); line-height:var(--lh-normal);">
+                    <li><b>资产购建</b>：≤5000 元 理事会+监事会定；5000–5万 上代表大会+乡镇备案；&gt;5万 成员大会+公示+备案。</li>
+                    <li><b>工程建设</b>：&lt;4万 成员大会通过；4万–100万 四议两公开+简易招标（先备案后招标）；&gt;100万 按《招标投标法》。</li>
+                  </ul>
+                </div>
+
+                <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+                  <span class="alert__ico">⚠️</span>
+                  <div>以上金额是<b>示例（中方县 2025）</b>，请<b>以本县市最新制度为准</b>，不要拿来硬套别的地方。</div>
+                </div>
+
+                <div class="answer__jump">
+                  <a class="chip chip--active" href="threshold-lookup.html">🔢 去阈值速查（按金额一键判定）</a>
+                  <a class="chip" href="process-guide.html">🪜 四议两公开怎么走</a>
+                  <a class="chip" href="case-learning.html">⚖️ 看违规案例</a>
+                </div>
+
+                <div class="src-list" data-collapsed="true" style="margin-top:var(--sp-4);">
+                  <div class="src-list__head">查看依据（2）</div>
+                  <div class="src-list__body">
+                    <a class="src" href="policy-explain.html">
+                      <span class="src__ico">📑</span>
+                      <span><span class="src__name">本县三资管理实施细则</span>
+                      <span class="src__meta">湖南·中方县 2025 · 金额档位与程序（示例，以最新为准）</span></span>
+                    </a>
+                    <a class="src" href="policy-explain.html">
+                      <span class="src__ico">📑</span>
+                      <span><span class="src__name">《招标投标法》</span>
+                      <span class="src__meta">工程 &gt;100 万元依法招标</span></span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="u-row" style="margin-top:var(--sp-3); gap:var(--sp-2);">
+                  <button class="iconbtn" title="朗读这条回答" aria-label="朗读">🔊</button>
+                  <button class="iconbtn" title="收藏这条回答" aria-label="收藏">⭐</button>
+                  <button class="iconbtn" title="复制" aria-label="复制">📋</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 轮次 3：白条能不能入账 -->
+            <div class="msg msg--user">
+              <div class="msg__avatar">👤</div>
+              <div class="bubble">买东西没拿到发票，先打张白条入账行不行？</div>
+            </div>
+
+            <div class="msg msg--bot">
+              <div class="msg__avatar">资</div>
+              <div class="bubble" style="width:100%;">
+                <div class="answer__verdict">
+                  <span class="verdict-pill verdict-pill--no">✕ 不能</span>
+                  <span>白条不能入账</span>
+                </div>
+                <p style="margin-bottom:var(--sp-2);">
+                  用白条、收据顶替正式发票入账，叫<b>“白条抵库”，是明确的违规行为</b>。必须取得<b>合法正式票据</b>才能记账，否则会被责令整改并追责。
+                </p>
+
+                <div class="answer__seg">
+                  <div class="answer__seg-title">该怎么办</div>
+                  <ol style="margin:0; padding-left:var(--sp-6); line-height:var(--lh-normal);">
+                    <li>先<b>补开正式发票</b>，发票上写清真实事由、用途；</li>
+                    <li>按<b>票据“六有”</b>自检：真实事由、合法票据、经办人签字、验收/证明人、审批人签字、相关附件齐全；</li>
+                    <li>再走七步签字链入账，确实拿不到票的，咨询乡镇代理中心如何处理。</li>
+                  </ol>
+                </div>
+
+                <div class="answer__jump">
+                  <a class="chip" href="process-guide.html">🪜 看票据六有</a>
+                  <a class="chip" href="case-learning.html">⚖️ 看白条抵库案例</a>
+                  <a class="chip" href="policy-explain.html">📖 看政策</a>
+                </div>
+
+                <div class="src-list" data-collapsed="true" style="margin-top:var(--sp-4);">
+                  <div class="src-list__head">查看依据（1）</div>
+                  <div class="src-list__body">
+                    <a class="src" href="policy-explain.html">
+                      <span class="src__ico">📑</span>
+                      <span><span class="src__name">《农村集体经济组织财务制度》</span>
+                      <span class="src__meta">财政部、农业农村部 2022 · 严禁“白条”抵库</span></span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="u-row" style="margin-top:var(--sp-3); gap:var(--sp-2);">
+                  <button class="iconbtn" title="朗读这条回答" aria-label="朗读">🔊</button>
+                  <button class="iconbtn" title="收藏这条回答" aria-label="收藏">⭐</button>
+                  <button class="iconbtn" title="复制" aria-label="复制">📋</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 轮次 4：兜底卡（查不到的问题） -->
+            <div class="msg msg--user">
+              <div class="msg__avatar">👤</div>
+              <div class="bubble">我们村给护林员发的误工补贴，一天最多能发多少钱？</div>
+            </div>
+
+            <div class="msg msg--bot">
+              <div class="msg__avatar">资</div>
+              <div class="bubble" style="width:100%;">
+                <div class="fallback">
+                  <span class="fallback__ico">🔎</span>
+                  <div>
+                    <div class="fallback__title">这个具体标准，我没在资料里查到</div>
+                    <p style="margin-bottom:var(--sp-3);">
+                      “护林员误工补贴每天上限”属于<b>本地具体标准</b>，全国性法规没有统一数字，本助手资料里也没有，为防止给你错的数，<b>这里不编</b>。
+                    </p>
+                    <p style="margin-bottom:var(--sp-3); font-weight:700;">建议这样做：</p>
+                    <ul style="margin:0 0 var(--sp-3); padding-left:var(--sp-6); line-height:var(--lh-normal);">
+                      <li>咨询<b>乡镇农经站</b>或<b>村集体资产委托代理服务中心</b>；</li>
+                      <li>查本县<b>非生产性开支/补贴发放</b>的最新规定，纳入预算、公开。</li>
+                    </ul>
+                    <a class="btn btn--external" href="#" title="跳转主系统">去主系统办理</a>
+                  </div>
+                </div>
+                <div class="u-row" style="margin-top:var(--sp-3); gap:var(--sp-2);">
+                  <button class="iconbtn" title="朗读这条回答" aria-label="朗读">🔊</button>
+                  <button class="iconbtn" title="收藏这条回答" aria-label="收藏">⭐</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 追问气泡 -->
+          <div style="margin-top:var(--sp-6);">
+            <div class="u-weak" style="font-size:var(--fs-400); margin-bottom:var(--sp-2);">💡 接着可以问：</div>
+            <div class="suggest">
+              <a class="suggest__item" href="#">合同最长能签几年？</a>
+              <a class="suggest__item" href="#">村务卡能刷多少？哪些不能刷？</a>
+              <a class="suggest__item" href="#">集体的地能不能换、怎么发包？</a>
+              <a class="suggest__item" href="#">现金收入几天内要存进专户？</a>
+            </div>
+          </div>
+
+          <!-- 吸底输入栏 -->
+          <div style="position:sticky; bottom:0; padding:var(--sp-4) 0 var(--sp-2); background:var(--c-bg); margin-top:var(--sp-5);">
+            <div class="askbar">
+              <input class="askbar__input" placeholder="把问题打在这里，比如：这张油费发票能报吗？" aria-label="提问输入框">
+              <button class="mic" title="语音提问" aria-label="语音提问">🎤</button>
+              <button class="send" title="发送" aria-label="发送">➤</button>
+            </div>
+            <p style="margin-top:var(--sp-2); font-size:var(--fs-300); color:var(--c-text-faint);">👆 不会打字？点话筒按钮，直接说话也能问。回答仅供参考，办理以主系统和本县最新制度为准。</p>
+          </div>
+        </div>
+
+        <!-- 右侧相关推荐 -->
+        <aside style="position:sticky; top:var(--sp-5); min-width:0;">
+          <div class="card card--pad">
+            <div class="card__title" style="font-size:var(--fs-600);">📌 相关推荐</div>
+            <div class="u-col" style="gap:var(--sp-2);">
+              <a class="src" href="threshold-lookup.html" style="width:100%;">
+                <span class="src__ico">🔢</span>
+                <span><span class="src__name">阈值速查</span>
+                <span class="src__meta">按金额一键判定走什么程序</span></span>
+              </a>
+              <a class="src" href="process-guide.html" style="width:100%;">
+                <span class="src__ico">🪜</span>
+                <span><span class="src__name">报销七步签字链</span>
+                <span class="src__meta">每一步谁签、签什么</span></span>
+              </a>
+              <a class="src" href="case-learning.html" style="width:100%;">
+                <span class="src__ico">⚖️</span>
+                <span><span class="src__name">白条抵库 · 警示案例</span>
+                <span class="src__meta">看看错在哪、怎么改</span></span>
+              </a>
+              <a class="src" href="media-library.html" style="width:100%;">
+                <span class="src__ico">🎬</span>
+                <span><span class="src__name">报销“七步流转”自检</span>
+                <span class="src__meta">视频 02:45</span></span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

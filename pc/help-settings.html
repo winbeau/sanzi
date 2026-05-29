@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 帮助与设置（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-shell">
+
+  <!-- 左侧导航 -->
+  <aside class="pc-sidenav">
+    <div class="brand">
+      <div class="brand__logo">资</div>
+      <div>
+        <div class="brand__name">三资管理助手</div>
+        <div class="brand__sub">村集体三资 · 智能问答</div>
+      </div>
+    </div>
+    <nav class="navx">
+      <a class="navx__item" href="home-entry.html"><span class="navx__ico">🏠</span>首页</a>
+      <a class="navx__item" href="qa-chat.html"><span class="navx__ico">💬</span>智能问答</a>
+      <a class="navx__item" href="threshold-lookup.html"><span class="navx__ico">🔢</span>阈值速查</a>
+      <a class="navx__item" href="process-guide.html"><span class="navx__ico">🪜</span>流程指引</a>
+      <a class="navx__item" href="operation-cards.html"><span class="navx__ico">🗂️</span>操作卡片</a>
+      <a class="navx__item" href="policy-explain.html"><span class="navx__ico">📖</span>政策解读</a>
+      <a class="navx__item" href="case-learning.html"><span class="navx__ico">⚖️</span>案例学习</a>
+      <a class="navx__item" href="search.html"><span class="navx__ico">🔍</span>知识检索</a>
+      <a class="navx__item" href="media-library.html"><span class="navx__ico">🎬</span>视频音频</a>
+      <a class="navx__item" href="my-history-fav.html"><span class="navx__ico">⭐</span>我的收藏</a>
+      <a class="navx__item navx__item--active" href="help-settings.html"><span class="navx__ico">⚙️</span>帮助设置</a>
+    </nav>
+    <div class="u-spacer"></div>
+    <a class="navx__item" href="../index.html"><span class="navx__ico">🎨</span>版本预览</a>
+  </aside>
+
+  <!-- 右侧主区 -->
+  <main class="pc-main">
+    <header class="pc-topbar">
+      <div class="pc-topbar__title">帮助与设置</div>
+      <div class="u-spacer"></div>
+      <span class="rolechip"><span class="rolechip__ico">📍</span>湖南 · 中方县</span>
+      <span class="rolechip"><span class="rolechip__ico">👤</span>村报账员 ▾</span>
+    </header>
+
+    <div class="pc-content">
+
+      <!-- 顶部分组导航（锚点） -->
+      <section class="sect">
+        <div class="seg" style="flex-wrap:wrap;">
+          <a class="seg__btn seg__btn--active" href="#sec-look">看得清</a>
+          <a class="seg__btn" href="#sec-role">我是谁</a>
+          <a class="seg__btn" href="#sec-guide">怎么问</a>
+          <a class="seg__btn" href="#sec-bound">能做啥</a>
+          <a class="seg__btn" href="#sec-contact">找帮忙</a>
+        </div>
+      </section>
+
+      <!-- 双栏布局 -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-6); align-items:start;">
+
+        <!-- ========== 左列 ========== -->
+        <div style="display:flex; flex-direction:column; gap:var(--sp-6);">
+
+          <!-- ① 看得清：主题 + 字号 + 语音 -->
+          <section class="sect" id="sec-look" style="margin-bottom:0;">
+            <div class="card card--pad">
+              <h2 class="card__title">① 让屏幕看得更清楚</h2>
+
+              <!-- 主题选择 -->
+              <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-3);">选个颜色（看着舒服就行）</div>
+              <div class="theme-pick">
+                <button class="swatch" data-theme-swatch="green" type="button" aria-label="惠农绿主题">
+                  <span class="swatch__dots">
+                    <span class="swatch__dot" style="background:#1F8A4C;"></span>
+                    <span class="swatch__dot" style="background:#E8852B;"></span>
+                    <span class="swatch__dot" style="background:#EAF5EE;"></span>
+                  </span>
+                  <span class="swatch__name">惠农绿</span>
+                </button>
+                <button class="swatch" data-theme-swatch="blue" type="button" aria-label="政务蓝主题">
+                  <span class="swatch__dots">
+                    <span class="swatch__dot" style="background:#1457A6;"></span>
+                    <span class="swatch__dot" style="background:#E8852B;"></span>
+                    <span class="swatch__dot" style="background:#E9F0F9;"></span>
+                  </span>
+                  <span class="swatch__name">政务蓝</span>
+                </button>
+                <button class="swatch" data-theme-swatch="red" type="button" aria-label="党政红主题">
+                  <span class="swatch__dots">
+                    <span class="swatch__dot" style="background:#C0282D;"></span>
+                    <span class="swatch__dot" style="background:#C8901F;"></span>
+                    <span class="swatch__dot" style="background:#FAEAEA;"></span>
+                  </span>
+                  <span class="swatch__name">党政红</span>
+                </button>
+              </div>
+              <p class="u-weak" style="font-size:var(--fs-400); margin-top:var(--sp-3);">点一下就换颜色，下次打开还是这个颜色。</p>
+
+              <!-- 字号选择 -->
+              <div style="font-size:var(--fs-600); font-weight:800; margin:var(--sp-6) 0 var(--sp-3);">字要大还是要标准？</div>
+              <div class="seg">
+                <button class="seg__btn" data-font-opt="normal" type="button">标准</button>
+                <button class="seg__btn" data-font-opt="large" type="button">大字（推荐）</button>
+              </div>
+              <p class="u-weak" style="font-size:var(--fs-400); margin-top:var(--sp-3);">眼睛累、看不清，就点“大字”，整页字都会变大。</p>
+
+              <!-- 语音播报开关等 -->
+              <div style="font-size:var(--fs-600); font-weight:800; margin:var(--sp-6) 0 var(--sp-1);">声音和帮助</div>
+              <div class="setrow">
+                <span class="setrow__label">🔊 答案语音播报<br><span class="u-weak" style="font-size:var(--fs-400);font-weight:400;">不想看字？让它念给你听</span></span>
+                <label class="switch"><input type="checkbox" checked><span class="switch__track"></span></label>
+              </div>
+              <div class="setrow">
+                <span class="setrow__label">🎤 语音提问按钮<br><span class="u-weak" style="font-size:var(--fs-400);font-weight:400;">不会打字，按住话筒说话就行</span></span>
+                <label class="switch"><input type="checkbox" checked><span class="switch__track"></span></label>
+              </div>
+              <div class="setrow">
+                <span class="setrow__label">💡 大白话解释优先<br><span class="u-weak" style="font-size:var(--fs-400);font-weight:400;">先讲人话，再放政策原文</span></span>
+                <label class="switch"><input type="checkbox" checked><span class="switch__track"></span></label>
+              </div>
+              <div class="setrow" style="border-bottom:none;">
+                <span class="setrow__label">🔔 新政策提醒<br><span class="u-weak" style="font-size:var(--fs-400);font-weight:400;">本地制度更新时提醒你</span></span>
+                <label class="switch"><input type="checkbox"><span class="switch__track"></span></label>
+              </div>
+            </div>
+          </section>
+
+          <!-- ② 角色 + 地区 -->
+          <section class="sect" id="sec-role" style="margin-bottom:0;">
+            <div class="card card--pad">
+              <h2 class="card__title">② 你是干什么的？在哪个村？</h2>
+              <p class="u-weak" style="font-size:var(--fs-400); margin-bottom:var(--sp-4);">选对身份和地区，答案会更贴近你的活儿和你们县的规矩。</p>
+
+              <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-3);">我的岗位</div>
+              <div class="chips">
+                <button class="chip chip--active" type="button">村报账员</button>
+                <button class="chip" type="button">村三资专干</button>
+                <button class="chip" type="button">村会计</button>
+                <button class="chip" type="button">村干部</button>
+              </div>
+              <p class="u-weak" style="font-size:var(--fs-300); margin-top:var(--sp-2);">默认：村报账员</p>
+
+              <div style="font-size:var(--fs-600); font-weight:800; margin:var(--sp-6) 0 var(--sp-3);">我所在的地区</div>
+              <div class="u-row u-row--wrap">
+                <span class="rolechip"><span class="rolechip__ico">📍</span>湖南省 · 怀化市 · 中方县</span>
+                <button class="btn btn--ghost btn--sm" type="button">更换地区 ▾</button>
+              </div>
+
+              <div class="alert alert--warn" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">⚠️</span>
+                <div><span class="alert__title">阈值、时限、权限以本县市最新制度为准。</span>不同县市规定可能不一样，选准地区后看到的金额档位、办事时限才对得上。</div>
+              </div>
+              <div class="src" style="margin-top:var(--sp-3);">
+                <span class="src__ico">📄</span>
+                <span><span class="src__name">本县（市、区）三资管理实施细则</span> <span class="src__meta">示例：湖南·中方县 2025</span></span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ========== 右列 ========== -->
+        <div style="display:flex; flex-direction:column; gap:var(--sp-6);">
+
+          <!-- ③ 新手引导：怎么问 / 看不懂怎么办 -->
+          <section class="sect" id="sec-guide" style="margin-bottom:0;">
+            <div class="card card--pad">
+              <h2 class="card__title">③ 新手引导：怎么问、看不懂怎么办</h2>
+
+              <div class="steps">
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">1</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">🗣️ 用大白话问，就像问人</div>
+                    <p>不用懂术语。比如直接问<b>“这张餐费发票能不能报？”</b>“多少钱要上会？”都行。</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">2</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">🎤 不会打字？点话筒说话</div>
+                    <p>按住话筒按钮，把问题说出来，它会自动转成文字帮你问。</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">3</div><div class="step__line"></div></div>
+                  <div class="step__body">
+                    <div class="step__title">✅ 先看结论，再看出处</div>
+                    <p>答案最上面是<b>“能 / 不能 / 看情况”</b>，下面每条都带 <span class="src" style="padding:2px 8px;"><span class="src__ico">📄</span><span class="src__name">出处</span></span>，点开能看原文。</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__rail"><div class="step__no">4</div></div>
+                  <div class="step__body">
+                    <div class="step__title">❓ 看不懂怎么办</div>
+                    <p>点答案里的“再说得简单点”，或直接 <b>转人工</b>、打电话问乡镇农经站（见下方“找帮忙”）。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="u-row u-row--wrap" style="margin-top:var(--sp-5);">
+                <a class="btn btn--primary" href="qa-chat.html"><span class="btn__ico">💬</span>马上去试一次</a>
+                <a class="btn btn--ghost" href="#sec-guide">重新看引导</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- ④ 产品边界 + 防幻觉 -->
+          <section class="sect" id="sec-bound" style="margin-bottom:0;">
+            <div class="card card--pad">
+              <h2 class="card__title">④ 这个助手能做啥、不能做啥</h2>
+
+              <div class="alert alert--info">
+                <span class="alert__ico">💡</span>
+                <div>
+                  <span class="alert__title">它是“讲解员”，不是“办事窗口”。</span>
+                  本助手只负责讲清楚、教明白、提醒别踩红线；
+                  <b>不经手钱、不替你做合同和台账录入、不办产权交易和审批</b>。
+                  真要报账、签合同、办交易，会带你“去主系统办理”。
+                </div>
+              </div>
+              <div class="src" style="margin-top:var(--sp-3);">
+                <span class="src__ico">📄</span>
+                <span><span class="src__name">产品边界说明</span> <span class="src__meta">解释器，非执行器</span></span>
+              </div>
+
+              <div class="alert alert--info" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">🛡️</span>
+                <div>
+                  <div class="alert__title" style="margin-bottom:var(--sp-1);">它不瞎编：每句话都标出处。</div>
+                  每条政策、每个数字旁边都挂着“法规名称、条款、日期”。
+                  资料里没有的，它会直说“没找到”，绝不替你编一个答案。
+                </div>
+              </div>
+
+              <!-- 引用机制示例 -->
+              <div style="font-size:var(--fs-600); font-weight:800; margin:var(--sp-5) 0 var(--sp-3);">出处长这样（点开看原文）</div>
+              <div class="src-list" data-collapsed="true">
+                <div class="src-list__head">本助手用到的主要依据（点开/收起）</div>
+                <div class="src-list__body">
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📄</span>
+                    <span><span class="src__name">中华人民共和国农村集体经济组织法</span> <span class="src__meta">第44条 · 2025-05-01 施行</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📄</span>
+                    <span><span class="src__name">农村集体经济组织财务制度</span> <span class="src__meta">财政部·农业农村部 2022</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📄</span>
+                    <span><span class="src__name">农村集体经济组织会计制度</span> <span class="src__meta">财会〔2023〕14号 · 2024-01-01 施行</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📄</span>
+                    <span><span class="src__name">农村集体经济组织财务公开规定</span> <span class="src__meta">农业部·监察部</span></span>
+                  </a>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📄</span>
+                    <span><span class="src__name">本县（市、区）三资管理实施细则</span> <span class="src__meta">示例：湖南·中方县 2025</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 兜底卡 -->
+              <div style="font-size:var(--fs-600); font-weight:800; margin:var(--sp-5) 0 var(--sp-3);">查不到时，它会这样回你</div>
+              <div class="fallback">
+                <span class="fallback__ico">🤝</span>
+                <div>
+                  <div class="fallback__title">未在资料中找到，不替你编答案</div>
+                  <p>建议咨询“乡镇农经站”，或联系“村集体财务委托代理服务中心”，以本县市最新制度为准。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ⑤ 转人工 / 留言反馈 -->
+          <section class="sect" id="sec-contact" style="margin-bottom:0;">
+            <div class="card card--pad">
+              <h2 class="card__title">⑤ 还是不放心？找真人帮忙</h2>
+              <p style="margin-bottom:var(--sp-4);">遇到拿不准、答案看不懂、或助手说“没找到”，<b>别硬扛</b>，按下面找人。</p>
+
+              <div class="u-col">
+                <button class="btn btn--primary btn--block" type="button"><span class="btn__ico">🧑‍💼</span>转人工咨询（在线留言，工作日回复）</button>
+                <a class="btn btn--ghost btn--block" href="tel:12316"><span class="btn__ico">📞</span>打电话问乡镇农经站</a>
+              </div>
+
+              <div class="alert alert--info" style="margin-top:var(--sp-5);">
+                <span class="alert__ico">📍</span>
+                <div>
+                  <div class="alert__title" style="margin-bottom:var(--sp-1);">联系乡镇农经站 / 代理服务中心：</div>
+                  财务、报账、合同、交易拿不准，先问“乡镇农经（经管）站”或“村集体财务委托代理服务中心”。
+                  本地阈值、权限、时限，一律以本县市最新制度为准。
+                </div>
+              </div>
+              <div class="src" style="margin-top:var(--sp-3);">
+                <span class="src__ico">📄</span>
+                <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度</span><span class="src__meta">四层管理：成员大会—理事会—监事会—会计</span></span>
+              </div>
+
+              <div style="font-size:var(--fs-600); font-weight:800; margin:var(--sp-6) 0 var(--sp-3);">留个言，帮我们改进</div>
+              <textarea class="textarea" placeholder="哪里看不懂？想加什么功能？写几句，我们会看。"></textarea>
+              <button class="btn btn--accent" type="button" style="margin-top:var(--sp-3);"><span class="btn__ico">✉️</span>提交反馈</button>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

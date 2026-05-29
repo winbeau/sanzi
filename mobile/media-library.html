@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 视频音频（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="m-shell">
+
+  <header class="m-topbar">
+    <a class="iconbtn" href="home-entry.html" aria-label="返回首页">←</a>
+    <div class="m-topbar__title">视频音频</div>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+  </header>
+
+  <main class="m-main">
+
+    <!-- 页头说明 -->
+    <h1 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">看短视频，学易错操作</h1>
+    <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+      视频都很短、大字幕、有误区警示。看完一键“看操作卡 / 去问助手 / 看依据”。
+    </p>
+
+    <!-- 可信度提示 -->
+    <div class="trust-bar" style="margin-bottom:var(--sp-4);">
+      <span class="trust-bar__ico">✅</span>内容依据官方资料，关键结论标出处，没有的不编
+    </div>
+
+    <!-- 分类筛选（横滑） -->
+    <div class="chips chips--scroll" style="margin-bottom:var(--sp-4);">
+      <span class="chip chip--active">全部</span>
+      <span class="chip">资金</span>
+      <span class="chip">资产</span>
+      <span class="chip">资源</span>
+      <span class="chip">合同</span>
+      <span class="chip">财务公开</span>
+    </div>
+
+    <!-- 正在播放：播放器 -->
+    <div class="player" style="margin-bottom:var(--sp-3);">
+      <div style="text-align:center; padding:0 var(--sp-3);">
+        <div class="vcard__play" style="margin:0 auto var(--sp-2);">▶</div>
+        <div style="font-size:var(--fs-600); font-weight:800;">银农直联付款全流程</div>
+        <div style="font-size:var(--fs-300); opacity:.85; margin-top:4px;">点这里播放 · 03:20</div>
+      </div>
+      <!-- 大字幕条（占位） -->
+      <div style="position:absolute; left:0; right:0; bottom:0; padding:var(--sp-3); background:rgba(0,0,0,.55); text-align:center;">
+        <span style="font-size:var(--fs-600); font-weight:800; color:#fff; line-height:var(--lh-tight);">
+          申请人和审核人，不能是同一个人
+        </span>
+      </div>
+    </div>
+
+    <!-- 播放控制：倍速 / 纯音频 / 字号放大 -->
+    <div class="u-row u-row--wrap" style="margin-bottom:var(--sp-4); gap:var(--sp-2);">
+      <div class="seg">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="speed" data-target="s1">正常</button>
+        <button class="seg__btn" type="button" data-seg="speed" data-target="s075">0.75×</button>
+        <button class="seg__btn" type="button" data-seg="speed" data-target="s125">1.25×</button>
+      </div>
+      <span class="chip">🎧 纯音频</span>
+      <span class="chip">🔠 字幕放大</span>
+    </div>
+
+    <!-- 标题与徽标 -->
+    <h2 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">银农直联付款全流程（03:20）</h2>
+    <div class="u-row u-row--wrap" style="margin-bottom:var(--sp-4); gap:var(--sp-2);">
+      <span class="badge badge--new">高频</span>
+      <span class="badge badge--region">分类：资金</span>
+      <span class="badge badge--date">2024-01-01 起施行</span>
+    </div>
+
+    <!-- 误区警示 -->
+    <div class="alert alert--danger" style="margin-bottom:var(--sp-4);">
+      <span class="alert__ico">⚠️</span>
+      <div>
+        <span class="alert__title">常见误区：</span>报账员自己又当申请人又当审核人，或把一笔大额拆成几小笔走村务卡——这两种都违规！申请人与审核人必须分开，村务卡严禁化整为零拆分。
+      </div>
+    </div>
+
+    <!-- 本视频要点 -->
+    <h3 style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-3);">📌 这条视频教你 6 步</h3>
+    <div class="check" style="margin-bottom:var(--sp-4);">
+      <div class="check__item"><span class="check__box"></span><span>报账员平台<b>扫描上传凭证</b>（附件齐全）</span></div>
+      <div class="check__item"><span class="check__box"></span><span><b>一级审核</b>：乡镇经管站</span></div>
+      <div class="check__item"><span class="check__box"></span><span><b>二级审核</b>：代理中心（不合规驳回）</span></div>
+      <div class="check__item"><span class="check__box"></span><span>系统<b>直连银行付款</b>，直达供应商</span></div>
+      <div class="check__item"><span class="check__box"></span><span>自动生成<b>电子凭证</b></span></div>
+      <div class="check__item"><span class="check__box"></span><span>月初打印明细，<b>交会计入账</b></span></div>
+    </div>
+
+    <!-- 阈值/时限提醒 -->
+    <div class="alert alert--warn" style="margin-bottom:var(--sp-4);">
+      <span class="alert__ico">⏱️</span>
+      <div>各环节原则上 2 个工作日内审核；单笔 &gt;1000 元须银行结算。各地时限、限额可能不同，<b>以本县市最新制度为准</b>。</div>
+    </div>
+
+    <!-- 三联跳转 -->
+    <h3 style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-3);">看完去做这些</h3>
+    <a class="btn btn--block btn--lg btn--primary" href="operation-cards.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">🗂️</span>看操作卡</a>
+    <a class="btn btn--block btn--lg btn--soft" href="qa-chat.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">💬</span>去问助手</a>
+    <a class="btn btn--block btn--lg btn--ghost" href="policy-explain.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📖</span>看依据</a>
+    <a class="btn btn--block btn--lg btn--external" href="#" title="跳转主系统" style="margin-bottom:var(--sp-5);">去主系统办理</a>
+
+    <!-- 视频依据（可折叠引用） -->
+    <div class="src-list" data-collapsed="false" style="margin-bottom:var(--sp-6);">
+      <div class="src-list__head">查看本视频依据（2）</div>
+      <div class="src-list__body">
+        <a class="src" href="policy-explain.html" style="width:100%;">
+          <span class="src__ico">📑</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">《农村集体经济组织会计制度》</span>
+          <span class="src__meta">财会〔2023〕14号 · 2024-01-01 施行 · 村会计记账直接依据</span></span>
+        </a>
+        <a class="src" href="process-guide.html" style="width:100%;">
+          <span class="src__ico">📑</span>
+          <span style="display:flex; flex-direction:column;"><span class="src__name">银农直联六步三岗</span>
+          <span class="src__meta">申请人与审核人不得同一人 · 各环节 2 个工作日内审核</span></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 视频列表（竖列） -->
+    <div class="sect__head"><div class="sect__title">更多视频（10）</div></div>
+    <div class="u-col" style="gap:var(--sp-4);">
+
+      <div class="vcard">
+        <a href="#" class="vcard__cover" aria-label="播放：报销签字七步流转自检">
+          <span class="vcard__play">▶</span>
+          <span class="vcard__dur">02:45</span>
+        </a>
+        <div class="vcard__body">
+          <div class="vcard__title">报销签字“七步流转”自检</div>
+          <div class="u-row u-row--wrap" style="margin-top:var(--sp-2); gap:var(--sp-2);">
+            <span class="badge badge--region">资金</span>
+            <span class="badge badge--new">高频易错</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vcard">
+        <a href="#" class="vcard__cover" aria-label="播放：村务卡能刷什么误区警示">
+          <span class="vcard__play">▶</span>
+          <span class="vcard__dur">02:10</span>
+        </a>
+        <div class="vcard__body">
+          <div class="vcard__title">村务卡能刷什么 · 误区警示</div>
+          <div class="u-row u-row--wrap" style="margin-top:var(--sp-2); gap:var(--sp-2);">
+            <span class="badge badge--region">资金</span>
+            <span class="tag tag--risk">警示</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vcard">
+        <a href="#" class="vcard__cover" aria-label="播放：四议两公开怎么上会">
+          <span class="vcard__play">▶</span>
+          <span class="vcard__dur">03:05</span>
+        </a>
+        <div class="vcard__body">
+          <div class="vcard__title">四议两公开怎么上会</div>
+          <div class="u-row u-row--wrap" style="margin-top:var(--sp-2); gap:var(--sp-2);">
+            <span class="badge badge--region">资产</span>
+            <span class="badge badge--new">高频</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vcard">
+        <a href="#" class="vcard__cover" aria-label="播放：清产核资九步">
+          <span class="vcard__play">▶</span>
+          <span class="vcard__dur">04:00</span>
+        </a>
+        <div class="vcard__body">
+          <div class="vcard__title">清产核资九步</div>
+          <div class="u-row u-row--wrap" style="margin-top:var(--sp-2); gap:var(--sp-2);">
+            <span class="badge badge--region">资产</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vcard">
+        <a href="#" class="vcard__cover" aria-label="播放：金额阈值速记">
+          <span class="vcard__play">▶</span>
+          <span class="vcard__dur">01:50</span>
+        </a>
+        <div class="vcard__body">
+          <div class="vcard__title">金额阈值速记</div>
+          <div class="u-row u-row--wrap" style="margin-top:var(--sp-2); gap:var(--sp-2);">
+            <span class="badge badge--region">资产</span>
+            <span class="badge badge--new">高频</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vcard">
+        <a href="#" class="vcard__cover" aria-label="播放：典型违规警示集">
+          <span class="vcard__play">▶</span>
+          <span class="vcard__dur">03:30</span>
+        </a>
+        <div class="vcard__body">
+          <div class="vcard__title">典型违规警示集</div>
+          <div class="u-row u-row--wrap" style="margin-top:var(--sp-2); gap:var(--sp-2);">
+            <span class="badge badge--region">合同</span>
+            <span class="tag tag--risk">警示</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 兜底卡 -->
+    <div class="fallback" style="margin-top:var(--sp-6);">
+      <span class="fallback__ico">🔎</span>
+      <div>
+        <div class="fallback__title">没找到想看的内容？</div>
+        <p style="margin-bottom:var(--sp-3);">
+          视频库还在补充。这里暂时没有的操作，别凭印象瞎做——先去“智能问答”问清楚，或咨询<b>乡镇农经站 / 委托代理服务中心</b>。
+        </p>
+        <a class="btn btn--block btn--lg btn--soft" href="qa-chat.html"><span class="btn__ico">💬</span>去智能问答</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 底部 Tab（视频不在 5 个 tab 内，均不高亮） -->
+  <nav class="m-tabbar">
+    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
+    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
+    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
+    <a class="m-tab" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+  </nav>
+</div>
+</body>
+</html>

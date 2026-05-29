@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 首页（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="m-shell">
+
+  <header class="m-topbar">
+    <span class="rolechip" style="height:38px;padding:0 12px;font-size:var(--fs-300);"><span class="rolechip__ico">📍</span>中方县</span>
+    <div class="m-topbar__title">三资管理助手</div>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+  </header>
+
+  <main class="m-main">
+
+    <!-- Hero 提问 -->
+    <section class="card card--pad" style="background:var(--grad-hero);border:none;color:#fff;margin-bottom:var(--sp-4);">
+      <h1 style="font-size:var(--fs-800);margin-bottom:var(--sp-2);">有问题，直接问</h1>
+      <p style="font-size:var(--fs-500);opacity:.95;margin-bottom:var(--sp-4);">政策、流程、操作不清楚，用大白话问就行</p>
+      <a class="btn btn--block btn--lg" href="qa-chat.html" style="background:#fff;color:var(--c-primary-700);">
+        <span class="btn__ico">✏️</span>点这里打字提问
+      </a>
+      <a class="btn btn--block btn--lg" href="qa-chat.html" style="margin-top:var(--sp-3);background:var(--c-accent);color:#fff;">
+        <span class="btn__ico">🎤</span>不会打字？按住说话
+      </a>
+    </section>
+
+    <div class="trust-bar" style="margin-bottom:var(--sp-5);">
+      <span class="trust-bar__ico">✅</span>回答都来自官方资料并标注出处，没有的绝不编造
+    </div>
+
+    <!-- 高频提问 -->
+    <div class="sect__head"><div class="sect__title">大家都在问</div></div>
+    <div class="qgrid" style="grid-template-columns:repeat(2,1fr);margin-bottom:var(--sp-6);">
+      <a class="qcard" href="qa-chat.html" style="flex-direction:column;align-items:flex-start;gap:var(--sp-2);min-height:120px;"><span class="qcard__ico">🧾</span>这张票能不能报？</a>
+      <a class="qcard" href="threshold-lookup.html" style="flex-direction:column;align-items:flex-start;gap:var(--sp-2);min-height:120px;"><span class="qcard__ico">💰</span>多少钱要上会？</a>
+      <a class="qcard" href="qa-chat.html" style="flex-direction:column;align-items:flex-start;gap:var(--sp-2);min-height:120px;"><span class="qcard__ico">🌾</span>地能不能换、怎么发包？</a>
+      <a class="qcard" href="process-guide.html" style="flex-direction:column;align-items:flex-start;gap:var(--sp-2);min-height:120px;"><span class="qcard__ico">🗳️</span>四议两公开怎么走？</a>
+    </div>
+
+    <!-- 学习入口 -->
+    <div class="sect__head"><div class="sect__title">还能这样学</div></div>
+    <div class="qgrid" style="grid-template-columns:repeat(2,1fr);">
+      <a class="qcard" href="process-guide.html"><span class="qcard__ico">🪜</span>流程指引</a>
+      <a class="qcard" href="case-learning.html"><span class="qcard__ico">⚖️</span>案例学习</a>
+      <a class="qcard" href="policy-explain.html"><span class="qcard__ico">📖</span>政策解读</a>
+      <a class="qcard" href="media-library.html"><span class="qcard__ico">🎬</span>学习视频</a>
+    </div>
+
+    <div class="alert alert--info" style="margin-top:var(--sp-6);">
+      <span class="alert__ico">💡</span>
+      <div>本助手只“讲清楚、教明白”，不经手钱、不替你办。要办理时会带你“去主系统办理”。</div>
+    </div>
+
+  </main>
+
+  <!-- 底部 Tab -->
+  <nav class="m-tabbar">
+    <a class="m-tab m-tab--active" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
+    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
+    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
+    <a class="m-tab" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+  </nav>
+</div>
+</body>
+</html>

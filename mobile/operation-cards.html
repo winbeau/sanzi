@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 操作卡片（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="m-shell">
+
+  <header class="m-topbar">
+    <a class="iconbtn" href="home-entry.html" aria-label="返回首页">←</a>
+    <div class="m-topbar__title">操作卡片</div>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+  </header>
+
+  <main class="m-main">
+
+    <!-- 页头说明 -->
+    <h1 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">照着卡片做，一步不漏</h1>
+    <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+      正面是“怎么做”的步骤，背面是“别踩坑”的红线和要准备的材料。点卡片里的按钮翻到背面。
+    </p>
+    <div class="trust-bar" style="margin-bottom:var(--sp-4);">
+      <span class="trust-bar__ico">✅</span>每张卡都标了出处；阈值时限以本县市最新制度为准
+    </div>
+
+    <!-- 标签筛选：2列 -->
+    <div class="sect__head"><div class="sect__title">按类别挑卡片</div></div>
+    <div class="qgrid" style="grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--sp-2); margin-bottom:var(--sp-5);">
+      <button class="chip chip--active" type="button" style="height:48px; justify-content:center;">全部</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">💰 资金</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">📦 资产</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">🌾 资源</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">📝 合同</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">📢 财务公开</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">👥 成员股权</button>
+      <button class="chip" type="button" style="height:48px; justify-content:center;">🧮 全清单</button>
+    </div>
+
+    <!-- 单列大卡 -->
+
+    <!-- 卡1：资产盘点 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">📦</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">资产盘点 · 账实不符怎么办</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">资产</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m1" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m1" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m1" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>盘盈（账没有、实物有）：按市价估值入账</div>
+          <div class="check__item"><span class="check__box"></span>盘亏（账有、实物没有）：先查明原因</div>
+          <div class="check__item"><span class="check__box"></span>盘亏按金额分级核销，须经会议同意</div>
+          <div class="check__item"><span class="check__box"></span>结果记入台账、纳入监管平台</div>
+        </div>
+      </div>
+      <div data-panel-group="m1" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>不得不查原因就销账、不得把盘亏私自处理。</div>
+        </div>
+        <p style="font-weight:700; margin-bottom:var(--sp-2);">要准备：盘点表、实物照片、原因说明、会议记录。</p>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📘</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织会计制度</span>
+        <span class="src__meta">财会〔2023〕14号 · 2024-01-01 施行</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡2：清产核资九步 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">🧮</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">清产核资 · 九步走</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">资产</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m2" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m2" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m2" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>1 清查 → 2 登记 → 3 核实</div>
+          <div class="check__item"><span class="check__box"></span>4 公示 → 5 确认 → 6 建台账</div>
+          <div class="check__item"><span class="check__box"></span>7 审核备案 → 8 汇总上报</div>
+          <div class="check__item"><span class="check__box"></span>9 纳入全国监管平台</div>
+        </div>
+      </div>
+      <div data-panel-group="m2" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>资产分三类建账（资源性/经营性/非经营性），不得漏登、不得不公示就确认。</div>
+        </div>
+        <p style="font-weight:700; margin-bottom:var(--sp-2);">要准备：清查表、权属证明、公示照片、确认签字。</p>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📗</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">九部门清产核资通知（2017）</span>
+        <span class="src__meta">资产三类登记建账</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡3：报销票据六有 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">🧾</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">报销票据 · “六有”自检</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">资金</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m3" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m3" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m3" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>有真实事由、有合法正式票据</div>
+          <div class="check__item"><span class="check__box"></span>有经办人签字、有验收/证明人</div>
+          <div class="check__item"><span class="check__box"></span>有审批人签字</div>
+          <div class="check__item"><span class="check__box"></span>有相关附件（合同/会议记录等）</div>
+        </div>
+      </div>
+      <div data-panel-group="m3" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>白条不能入账、不准虚报冒领、不准超标准开支。</div>
+        </div>
+        <p style="font-weight:700; margin-bottom:var(--sp-2);">要准备：正式发票/财政票据、验收单、审批单、合同。</p>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📙</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织财务制度</span>
+        <span class="src__meta">财政部、农业农村部 2022 · 严禁白条抵库</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡4：银农直联六步 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">🏦</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">银农直联 · 六步三岗</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">资金</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m4" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m4" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m4" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>1 报账员平台扫描上传凭证</div>
+          <div class="check__item"><span class="check__box"></span>2 一级审核（乡镇经管站）→ 3 二级审核（代理中心）</div>
+          <div class="check__item"><span class="check__box"></span>4 系统直连银行付款 → 5 自动生成电子凭证</div>
+          <div class="check__item"><span class="check__box"></span>6 月初打印上月明细交会计入账</div>
+        </div>
+      </div>
+      <div data-panel-group="m4" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>申请人与审核人不得同一人；原则上禁现金、禁化整为零拆分。</div>
+        </div>
+        <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">⚠️</span>
+          <div>各环节 2 个工作日内审核，<span class="u-bold">时限以本县市最新制度为准</span>。</div>
+        </div>
+        <a class="btn btn--external btn--block btn--lg" href="#">去主系统办理</a>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📘</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织财务制度</span>
+        <span class="src__meta">公款私存、坐收坐支属红线 · 2022</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡5：村务卡使用 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">💳</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">村务卡 · 能刷什么</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">资金</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m5" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m5" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m5" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>日常零星支出可用村务卡</div>
+          <div class="check__item"><span class="check__box"></span>留好刷卡小票和正式票据</div>
+          <div class="check__item"><span class="check__box"></span>按报销签字链审批入账</div>
+          <div class="check__item"><span class="check__box"></span>大额支出走银农直联银行结算</div>
+        </div>
+      </div>
+      <div data-panel-group="m5" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>严禁化整为零拆分刷卡、严禁违规消费（烟酒、娱乐、私人开支）。</div>
+        </div>
+        <div class="alert alert--warn">
+          <span class="alert__ico">⚠️</span>
+          <div>单笔限额、可刷范围<span class="u-bold">以本县市最新制度为准</span>。</div>
+        </div>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📗</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织财务制度</span>
+        <span class="src__meta">非生产性开支限额、纳入预算 · 2022</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡6：财务公开三要素 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">📢</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">财务公开 · 三要素</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">财务公开</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m6" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m6" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m6" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>一般财务每月公开、重大事项及时公开</div>
+          <div class="check__item"><span class="check__box"></span>公开前由民主理财小组/监事会（3–5人）审核签字</div>
+          <div class="check__item"><span class="check__box"></span>报乡镇农经部门备案后张贴</div>
+          <div class="check__item"><span class="check__box"></span>公开栏张贴一般不少于 7 天</div>
+        </div>
+      </div>
+      <div data-panel-group="m6" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>不得不公开、不得只公开“好看的”、不得公示天数不够就撤。</div>
+        </div>
+        <div class="alert alert--warn">
+          <span class="alert__ico">⚠️</span>
+          <div>张贴天数、公开频次<span class="u-bold">以本县市最新制度为准</span>。</div>
+        </div>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📙</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织财务公开规定</span>
+        <span class="src__meta">公开栏张贴一般不少于 7 天</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡7：成员认定三公示 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">👥</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">成员认定 · 三要件三公示</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">成员股权</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m7" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m7" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m7" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>三要件：户籍在/曾在本集体</div>
+          <div class="check__item"><span class="check__box"></span>有稳定权利义务关系</div>
+          <div class="check__item"><span class="check__box"></span>以集体土地等为基本生活保障</div>
+          <div class="check__item"><span class="check__box"></span>三榜公示每榜 ≥ 5 天 + 成员大会表决</div>
+        </div>
+      </div>
+      <div data-panel-group="m7" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>不得不公示就定、不得随意增减成员、八类集体财产不得分割到个人。</div>
+        </div>
+        <div class="alert alert--warn">
+          <span class="alert__ico">⚠️</span>
+          <div>公示天数、认定细则<span class="u-bold">以本县市最新制度为准</span>。</div>
+        </div>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📘</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织法 第36条</span>
+        <span class="src__meta">八类财产不得分割 · 2025-05-01 施行</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡8：资源台账六步 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-4);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">🌾</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">资源台账 · 六步</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">资源</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m8" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m8" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m8" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>1 分类（土地/林地/草地/荒地/滩涂）</div>
+          <div class="check__item"><span class="check__box"></span>2 逐项登记（名称/类别/坐落/面积）→ 3 关联合同</div>
+          <div class="check__item"><span class="check__box"></span>4 录入平台 → 5 动态更新</div>
+          <div class="check__item"><span class="check__box"></span>6 定期清理</div>
+        </div>
+      </div>
+      <div data-panel-group="m8" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>不得漏登资源、不得台账与合同对不上、不得无合同发包。</div>
+        </div>
+        <p style="font-weight:700; margin-bottom:var(--sp-2);">要准备：权属/坐落证明、测绘面积、承包租赁书面合同。</p>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📗</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">关于稳步推进农村集体产权制度改革的意见</span>
+        <span class="src__meta">资源性资产登记建账 · 2016</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 卡9：承包租赁招标 -->
+    <div class="card card--pad" style="display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-5);">
+      <div class="u-row" style="gap:var(--sp-3);">
+        <span style="font-size:30px;">📝</span>
+        <h2 style="font-size:var(--fs-600); font-weight:800;">承包租赁 · 发包招标</h2>
+      </div>
+      <span class="badge badge--region" style="align-self:flex-start;">合同</span>
+      <div class="seg" style="align-self:stretch;">
+        <button class="seg__btn seg__btn--active" type="button" data-seg="m9" data-target="front">怎么做</button>
+        <button class="seg__btn" type="button" data-seg="m9" data-target="back">红线/材料</button>
+      </div>
+      <div data-panel-group="m9" data-panel="front">
+        <div class="check">
+          <div class="check__item"><span class="check__box"></span>定方案 → 四议两公开（2/3 出席、半数以上通过）</div>
+          <div class="check__item"><span class="check__box"></span>进农村产权交易平台公开竞价（应进必进）</div>
+          <div class="check__item"><span class="check__box"></span>签书面合同、明确违约责任</div>
+          <div class="check__item"><span class="check__box"></span>10 日内报乡镇备案</div>
+        </div>
+      </div>
+      <div data-panel-group="m9" data-panel="back" class="u-hide">
+        <div class="alert alert--danger" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">🚫</span>
+          <div><span class="alert__title">红线：</span>不得口头/低价发包、不得场外私下交易、不得显失公平、同等条件本集体成员优先。</div>
+        </div>
+        <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
+          <span class="alert__ico">⚠️</span>
+          <div>土地流转不得超过承包剩余期限；进场门槛、租期<span class="u-bold">以本县市最新制度为准</span>。</div>
+        </div>
+        <a class="btn btn--external btn--block btn--lg" href="#">去主系统办理</a>
+      </div>
+      <a class="src" href="policy-explain.html">
+        <span class="src__ico">📙</span>
+        <span style="display:flex; flex-direction:column; min-width:0;"><span class="src__name">农村集体经济组织法 / 产权流转交易办法</span>
+        <span class="src__meta">四议两公开、应进必进 · 2025-05-01</span></span>
+      </a>
+      <div class="u-row" style="gap:var(--sp-2);">
+        <a class="btn btn--soft btn--sm" href="media-library.html">▶ 看视频</a>
+        <a class="btn btn--ghost btn--sm" href="#">⬇ 下载模板</a>
+      </div>
+    </div>
+
+    <!-- 兜底卡 -->
+    <div class="fallback" style="margin-bottom:var(--sp-4);">
+      <span class="fallback__ico">🤔</span>
+      <div>
+        <div class="fallback__title">没找到你要的操作卡片？</div>
+        资料里没有对应步骤卡时，建议咨询乡镇农经站或县代理服务中心；也可“去问助手”说清楚情况，我们绝不替你编步骤。
+      </div>
+    </div>
+    <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html" style="margin-bottom:var(--sp-3);">💬 去问助手</a>
+    <a class="btn btn--ghost btn--block btn--lg" href="search.html" style="margin-bottom:var(--sp-5);">🔍 知识检索</a>
+
+    <!-- 边界说明 -->
+    <div class="alert alert--info">
+      <span class="alert__ico">💡</span>
+      <div>这些卡片只“教你怎么做”，本助手不经手钱、不替你录台账、不替你签合同。要办理时点“去主系统办理”。</div>
+    </div>
+
+  </main>
+
+  <!-- 底部 Tab（非 tab 页，不高亮） -->
+  <nav class="m-tabbar">
+    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
+    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
+    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
+    <a class="m-tab" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+  </nav>
+</div>
+</body>
+</html>

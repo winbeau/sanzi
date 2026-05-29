@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 首页（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-shell">
+
+  <!-- 左侧导航 -->
+  <aside class="pc-sidenav">
+    <div class="brand">
+      <div class="brand__logo">资</div>
+      <div>
+        <div class="brand__name">三资管理助手</div>
+        <div class="brand__sub">村集体三资 · 智能问答</div>
+      </div>
+    </div>
+    <nav class="navx">
+      <a class="navx__item navx__item--active" href="home-entry.html"><span class="navx__ico">🏠</span>首页</a>
+      <a class="navx__item" href="qa-chat.html"><span class="navx__ico">💬</span>智能问答</a>
+      <a class="navx__item" href="threshold-lookup.html"><span class="navx__ico">🔢</span>阈值速查</a>
+      <a class="navx__item" href="process-guide.html"><span class="navx__ico">🪜</span>流程指引</a>
+      <a class="navx__item" href="operation-cards.html"><span class="navx__ico">🗂️</span>操作卡片</a>
+      <a class="navx__item" href="policy-explain.html"><span class="navx__ico">📖</span>政策解读</a>
+      <a class="navx__item" href="case-learning.html"><span class="navx__ico">⚖️</span>案例学习</a>
+      <a class="navx__item" href="search.html"><span class="navx__ico">🔍</span>知识检索</a>
+      <a class="navx__item" href="media-library.html"><span class="navx__ico">🎬</span>视频音频</a>
+      <a class="navx__item" href="my-history-fav.html"><span class="navx__ico">⭐</span>我的收藏</a>
+      <a class="navx__item" href="help-settings.html"><span class="navx__ico">⚙️</span>帮助设置</a>
+    </nav>
+    <div class="u-spacer"></div>
+    <a class="navx__item" href="../index.html"><span class="navx__ico">🎨</span>版本预览</a>
+  </aside>
+
+  <!-- 右侧主区 -->
+  <main class="pc-main">
+    <header class="pc-topbar">
+      <div class="pc-topbar__title">首页</div>
+      <div class="u-spacer"></div>
+      <span class="rolechip"><span class="rolechip__ico">📍</span>湖南 · 中方县</span>
+      <span class="rolechip"><span class="rolechip__ico">👤</span>村报账员 ▾</span>
+      <a class="iconbtn" href="help-settings.html" title="帮助">❓</a>
+    </header>
+
+    <div class="pc-content">
+
+      <!-- Hero 提问区 -->
+      <section class="sect">
+        <div class="card card--pad" style="background:var(--grad-hero); border:none; color:#fff;">
+          <h1 style="font-size:var(--fs-900); margin-bottom:var(--sp-3);">有问题，直接问</h1>
+          <p style="font-size:var(--fs-600); opacity:.95; margin-bottom:var(--sp-5);">
+            政策不清楚、流程不清楚、操作不清楚？用大白话问，答案都来自官方资料并标注出处。
+          </p>
+          <div class="askbar">
+            <input class="askbar__input" placeholder="例如：这张餐费发票能不能报账？" aria-label="提问输入框">
+            <button class="mic mic--lg" title="语音提问" aria-label="语音提问">🎤</button>
+            <button class="send" title="发送" aria-label="发送">➤</button>
+          </div>
+          <p style="margin-top:var(--sp-3); font-size:var(--fs-400); opacity:.9;">👆 不会打字？点话筒按钮，直接说话也能问</p>
+        </div>
+      </section>
+
+      <!-- 可信度提示 -->
+      <div class="trust-bar" style="margin-bottom:var(--sp-6);">
+        <span class="trust-bar__ico">✅</span>
+        所有回答均来自官方政策法规与业务资料，并标注出处；资料中没有的，绝不编造。
+      </div>
+
+      <!-- 高频快捷提问 -->
+      <section class="sect">
+        <div class="sect__head">
+          <div class="sect__title">大家都在问</div>
+          <a class="sect__more" href="qa-chat.html">进入问答 →</a>
+        </div>
+        <div class="qgrid" style="grid-template-columns:repeat(3,1fr);">
+          <a class="qcard" href="qa-chat.html"><span class="qcard__ico">🧾</span>这笔钱 / 这张票能不能报？</a>
+          <a class="qcard" href="threshold-lookup.html"><span class="qcard__ico">💰</span>多少钱要上会、要招投标？</a>
+          <a class="qcard" href="qa-chat.html"><span class="qcard__ico">🌾</span>集体的地能不能换、怎么发包？</a>
+          <a class="qcard" href="process-guide.html"><span class="qcard__ico">🗳️</span>四议两公开怎么一步步走？</a>
+          <a class="qcard" href="qa-chat.html"><span class="qcard__ico">📝</span>合同最多能签几年？写哪些条款？</a>
+          <a class="qcard" href="process-guide.html"><span class="qcard__ico">🏦</span>银农直联付款怎么操作？</a>
+        </div>
+      </section>
+
+      <!-- 功能入口 -->
+      <section class="sect">
+        <div class="sect__head"><div class="sect__title">还能这样学</div></div>
+        <div class="qgrid" style="grid-template-columns:repeat(4,1fr);">
+          <a class="qcard" href="process-guide.html"><span class="qcard__ico">🪜</span>流程指引</a>
+          <a class="qcard" href="case-learning.html"><span class="qcard__ico">⚖️</span>案例学习</a>
+          <a class="qcard" href="policy-explain.html"><span class="qcard__ico">📖</span>政策解读</a>
+          <a class="qcard" href="media-library.html"><span class="qcard__ico">🎬</span>学习视频</a>
+        </div>
+      </section>
+
+      <!-- 边界说明 -->
+      <div class="alert alert--info">
+        <span class="alert__ico">💡</span>
+        <div><span class="alert__title">温馨提示：</span>本助手只负责“讲清楚、教明白”，不直接经手钱、不替你办理。真正要报账、签合同、办交易时，会带你“去主系统办理”。</div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

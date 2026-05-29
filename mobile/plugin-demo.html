@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>三资管理助手 · 悬浮助手插件演示（移动）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+
+<!-- ============ 模拟「别的系统」：移动端报账填报（全屏） ============ -->
+<div style="min-height:100vh; display:flex; flex-direction:column; background:var(--c-bg);">
+
+  <!-- 模拟主系统顶栏：左上 ← 返回 home-entry.html -->
+  <header class="mock-top" style="gap:var(--sp-2); padding:0 var(--sp-3);">
+    <a class="iconbtn" href="home-entry.html" aria-label="返回首页" style="color:#fff;">←</a>
+    <span class="mock-top__logo" style="font-size:var(--fs-400);">🏛️ XX县三资管理平台</span>
+    <span class="u-spacer"></span>
+    <span style="color:#aab4c4; font-size:var(--fs-300);">报账填报</span>
+  </header>
+
+  <!-- 模拟主系统业务主体（全屏表单） -->
+  <main style="flex:1; padding:var(--sp-4); padding-bottom:var(--sp-9);">
+
+    <!-- 这是“别的系统”的提示 -->
+    <div class="alert" style="border-left-color:#4a90d9; background:var(--c-surface); margin-bottom:var(--sp-4);">
+      <span class="alert__ico">🧩</span>
+      <div>您在「报账填报」页。右下角圆按钮是<b>浮在本系统上的助手插件</b>，随处可点，就地帮您看。</div>
+    </div>
+
+    <div class="card card--pad">
+      <h1 class="card__title" style="font-size:var(--fs-700);">📝 报账单填报</h1>
+
+      <div class="field" style="margin-bottom:var(--sp-4);">
+        <label class="field__label">报账日期</label>
+        <input class="input" type="text" value="2026-05-29" aria-label="报账日期">
+      </div>
+
+      <div class="field" style="margin-bottom:var(--sp-4);">
+        <label class="field__label">事由</label>
+        <input class="input" type="text" value="接待上级检查组午餐" aria-label="事由">
+      </div>
+
+      <div class="field" style="margin-bottom:var(--sp-4);">
+        <label class="field__label">开支类型</label>
+        <select class="input" aria-label="开支类型">
+          <option>办公费</option>
+          <option>水电费</option>
+          <option selected>非生产性开支 — 招待费</option>
+          <option>差旅费</option>
+          <option>维修费</option>
+        </select>
+      </div>
+
+      <div class="field" style="margin-bottom:var(--sp-4);">
+        <label class="field__label">金额（元）</label>
+        <input class="input" type="text" value="1280.00" aria-label="金额">
+      </div>
+
+      <div class="field" style="margin-bottom:var(--sp-4);">
+        <label class="field__label">附件（发票）</label>
+        <div style="border:2px dashed var(--c-border-strong); border-radius:var(--r-md); padding:var(--sp-5); text-align:center; color:var(--c-text-weak);">
+          📎 点击上传发票<br>
+          <span style="font-size:var(--fs-300);">（已上传：餐饮发票.jpg）</span>
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:var(--sp-5);">
+        <label class="field__label">经办人</label>
+        <input class="input" type="text" value="张报账员" aria-label="经办人">
+      </div>
+
+      <!-- 主系统自己的按钮 -->
+      <button class="btn btn--primary btn--block btn--lg">提交审批</button>
+    </div>
+
+  </main>
+</div>
+
+<!-- ============ 悬浮助手插件 ============ -->
+
+<!-- 右下角圆按钮 -->
+<button class="fab fab--round" data-assist-open aria-label="打开三资管理助手"
+        style="bottom:var(--sp-5); right:var(--sp-4);">
+  <span class="fab__ico">🎤</span>
+</button>
+
+<!-- 遮罩（原型里随抽屉默认展示） -->
+<div class="sheet-mask" id="assist-mask" data-assist-close></div>
+
+<!-- 底部抽屉助手会话：原型里默认展开（不加 u-hide），方便截图 -->
+<div class="sheet" id="assist">
+  <div class="sheet__grip"></div>
+
+  <div class="assist__head">
+    <span style="font-size:24px;">🤝</span>
+    <div class="assist__title">三资管理助手 · 就地帮您看</div>
+    <button class="iconbtn" data-assist-close aria-label="收起助手" style="color:#fff;">✕</button>
+  </div>
+
+  <div class="assist__body">
+
+    <!-- 只读说明 -->
+    <div class="alert alert--info" style="padding:var(--sp-3);">
+      <span class="alert__ico">👀</span>
+      <div>助手只读取当前页信息做解释与合规提醒，<b>不替你提交</b>。</div>
+    </div>
+
+    <!-- 识别到的当前上下文 -->
+    <div class="card card--flat" style="background:var(--c-surface-2); border:1px solid var(--c-border); padding:var(--sp-3) var(--sp-4);">
+      <div style="font-size:var(--fs-400); color:var(--c-text-weak);">📄 我看到您正在填这一笔：</div>
+      <div class="u-bold" style="margin-top:var(--sp-1);">招待费 · 1280元 · “接待上级检查组午餐”</div>
+    </div>
+
+    <!-- 用户的就地提问 -->
+    <div class="msg msg--user">
+      <div class="msg__avatar">👤</div>
+      <div class="bubble">这个招待费能不能直接报？</div>
+    </div>
+
+    <!-- 三段式答案 -->
+    <div class="msg msg--bot">
+      <div class="msg__avatar">🤝</div>
+      <div class="bubble">
+        <div class="answer__verdict">
+          <span class="verdict-pill verdict-pill--no">不能直接报</span>
+        </div>
+        <p>招待费属于<b>非生产性开支</b>，不能见票就报。要先满足限额、走完审批，确属公务且在限额内才可入账。</p>
+
+        <div class="answer__seg">
+          <div class="answer__seg-title">该怎么做（简版）</div>
+          <ol style="margin:0; padding-left:1.4em; line-height:var(--lh-normal);">
+            <li>核对是否<b>确属公务</b>、是否在<b>预算与限额</b>内；</li>
+            <li>票据“六有”齐全：事由 + 正式发票 + 经办签字 + 证明人 + 审批 + 附件；</li>
+            <li>按<b>七步签字链</b>报账，逐级签字。</li>
+          </ol>
+        </div>
+
+        <div class="alert alert--warn" style="margin-top:var(--sp-3); padding:var(--sp-3);">
+          <span class="alert__ico">⚠️</span>
+          <div>限额与单笔结算门槛各地不同，<b>以本县市最新制度为准</b>；单笔超 1000 元须银行结算、直达供应商。</div>
+        </div>
+
+        <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-3);">
+          <div class="src-list__head">依据这些资料（点我收起/展开）</div>
+          <div class="src-list__body">
+            <a class="src" href="policy-explain.html">
+              <span class="src__ico">📑</span>
+              <span><span class="src__name">《农村集体经济组织财务制度》</span><span class="src__meta">财政部、农业农村部 2022 · 非生产性开支限额管理</span></span>
+            </a>
+            <a class="src" href="threshold-lookup.html">
+              <span class="src__ico">📑</span>
+              <span><span class="src__name">本县三资管理实施细则（中方县 2025）</span><span class="src__meta">单笔&gt;1000元须银行结算</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="fallback" style="margin-top:var(--sp-3); padding:var(--sp-4);">
+          <span class="fallback__ico">🛟</span>
+          <div>
+            <div class="fallback__title">拿不准限额数？</div>
+            资料里没有您村确切数字，建议咨询乡镇农经站 / 代理服务中心。
+          </div>
+        </div>
+
+        <div class="answer__jump" style="margin-top:var(--sp-4);">
+          <a class="btn btn--external btn--block btn--lg" href="#">去主系统对应步骤办理</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部迷你输入栏 -->
+    <div class="askbar" style="padding:var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-4); box-shadow:none; margin-bottom:var(--sp-4);">
+      <input class="askbar__input" style="font-size:var(--fs-500); min-height:44px;" placeholder="继续问：能报多少？" aria-label="继续提问">
+      <button class="mic" aria-label="语音提问">🎤</button>
+      <button class="send" aria-label="发送">➤</button>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

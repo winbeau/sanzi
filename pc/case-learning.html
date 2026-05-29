@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三资管理助手 · 案例学习（PC）</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <script src="../shared/app.js"></script>
+</head>
+<body>
+<div class="pc-shell">
+
+  <!-- 左侧导航 -->
+  <aside class="pc-sidenav">
+    <div class="brand">
+      <div class="brand__logo">资</div>
+      <div>
+        <div class="brand__name">三资管理助手</div>
+        <div class="brand__sub">村集体三资 · 智能问答</div>
+      </div>
+    </div>
+    <nav class="navx">
+      <a class="navx__item" href="home-entry.html"><span class="navx__ico">🏠</span>首页</a>
+      <a class="navx__item" href="qa-chat.html"><span class="navx__ico">💬</span>智能问答</a>
+      <a class="navx__item" href="threshold-lookup.html"><span class="navx__ico">🔢</span>阈值速查</a>
+      <a class="navx__item" href="process-guide.html"><span class="navx__ico">🪜</span>流程指引</a>
+      <a class="navx__item" href="operation-cards.html"><span class="navx__ico">🗂️</span>操作卡片</a>
+      <a class="navx__item" href="policy-explain.html"><span class="navx__ico">📖</span>政策解读</a>
+      <a class="navx__item navx__item--active" href="case-learning.html"><span class="navx__ico">⚖️</span>案例学习</a>
+      <a class="navx__item" href="search.html"><span class="navx__ico">🔍</span>知识检索</a>
+      <a class="navx__item" href="media-library.html"><span class="navx__ico">🎬</span>视频音频</a>
+      <a class="navx__item" href="my-history-fav.html"><span class="navx__ico">⭐</span>我的收藏</a>
+      <a class="navx__item" href="help-settings.html"><span class="navx__ico">⚙️</span>帮助设置</a>
+    </nav>
+    <div class="u-spacer"></div>
+    <a class="navx__item" href="../index.html"><span class="navx__ico">🎨</span>版本预览</a>
+  </aside>
+
+  <!-- 右侧主区 -->
+  <main class="pc-main">
+    <header class="pc-topbar">
+      <div class="pc-topbar__title">案例学习</div>
+      <div class="u-spacer"></div>
+      <span class="rolechip"><span class="rolechip__ico">📍</span>湖南 · 中方县</span>
+      <span class="rolechip"><span class="rolechip__ico">👤</span>村报账员 ▾</span>
+      <a class="iconbtn" href="help-settings.html" title="帮助">❓</a>
+    </header>
+
+    <div class="pc-content">
+
+      <!-- 页头说明 -->
+      <section class="sect">
+        <h1 style="font-size:var(--fs-800); margin-bottom:var(--sp-3);">真实案例看明白：什么是错的、应该怎么做</h1>
+        <p style="font-size:var(--fs-500); color:var(--c-text-weak); margin-bottom:var(--sp-4);">
+          每个案例都分四段看：哪里违纪了、属于啥问题、最后怎么处理、踩了哪条红线。左右一对照，红线就记牢了。
+        </p>
+        <div class="trust-bar">
+          <span class="trust-bar__ico">✅</span>
+          案例与处理结果均标注出处；金额/时限以本县市最新制度为准。看懂了，照着对的做、别踩错的。
+        </div>
+      </section>
+
+      <!-- 吉林专项整治数据 -->
+      <section class="sect">
+        <div class="card card--pad" style="background:var(--grad-hero); border:none; color:#fff;">
+          <div class="u-row" style="gap:var(--sp-4); flex-wrap:wrap; align-items:center;">
+            <div style="font-size:40px; line-height:1;">📊</div>
+            <div style="flex:1; min-width:0;">
+              <div style="font-size:var(--fs-700); font-weight:800; margin-bottom:var(--sp-2);">专项整治不是吓唬人，是真查真纠</div>
+              <p style="font-size:var(--fs-500); opacity:.96;">
+                一次专项整治中，清查合同 <b style="font-size:var(--fs-700);">49044</b> 份，纠正显失公平合同 <b style="font-size:var(--fs-700);">2684</b> 份，挽回集体经济损失 <b style="font-size:var(--fs-700);">1387 万</b> 余元。
+              </p>
+            </div>
+          </div>
+          <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4); background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.3); color:#fff;">
+            <span class="src__ico" style="color:#fff;">📊</span>
+            <span style="display:flex; flex-direction:column;"><span class="src__name">吉林省农村集体资产专项整治数据</span>
+            <span class="src__meta" style="color:rgba(255,255,255,.85);">F节 · 全国性案例数据示例</span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 10 类违纪手法分类 -->
+      <section class="sect">
+        <div class="sect__head"><div class="sect__title">先看一眼：10 类常见违纪手法</div></div>
+        <div class="chips chips--scroll">
+          <button class="chip chip--active" type="button">全部</button>
+          <button class="chip" type="button">坐收坐支</button>
+          <button class="chip" type="button">白条抵库</button>
+          <button class="chip" type="button">公款私存</button>
+          <button class="chip" type="button">私设小金库</button>
+          <button class="chip" type="button">违规出借资金</button>
+          <button class="chip" type="button">资产低价处置</button>
+          <button class="chip" type="button">违规发包</button>
+          <button class="chip" type="button">虚报冒领</button>
+          <button class="chip" type="button">超标准开支</button>
+          <button class="chip" type="button">合同显失公平</button>
+        </div>
+      </section>
+
+      <!-- 主体：左案例列表 + 右正反对照 -->
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:var(--sp-6); align-items:start;">
+
+        <!-- 左：案例卡列表 -->
+        <section>
+          <div class="sect__head"><div class="sect__title">违规警示案例（4 例）</div></div>
+          <div class="u-col" style="gap:var(--sp-5);">
+
+            <!-- 案例 1 -->
+            <div class="case">
+              <div class="case__head">
+                <span class="tag tag--risk">违规发包 · 合同显失公平</span>
+                <div class="u-spacer"></div>
+                <span class="badge badge--region">案例 1</span>
+              </div>
+              <div class="case__body">
+                <div class="case__row"><span class="case__k">违纪事实</span>
+                  <span>村干部把集体鱼塘<b>口头决定</b>低价发包给亲属，没公开、没进场交易，承包价明显低于市场价，属显失公平。</span></div>
+                <div class="case__row"><span class="case__k">问题类型</span>
+                  <span><span class="tag tag--risk">违规发包</span> <span class="tag tag--risk">合同显失公平</span></span></div>
+                <div class="case__row"><span class="case__k">处理结果</span>
+                  <span>给予通报批评、追责，发包合同被<b>撤销</b>，重新进场公开发包。</span></div>
+                <div class="case__row"><span class="case__k">涉及条款</span>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第26–27条</span>
+                    <span class="src__meta">重大事项须成员大会表决 · 2025-05-01 施行</span></span>
+                  </a></div>
+                <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-2);">
+                  <a class="btn btn--soft btn--sm" href="#">👀 查看正反对照</a>
+                  <a class="btn btn--ghost btn--sm" href="threshold-lookup.html">🔢 多少钱要进场？</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 案例 2 -->
+            <div class="case">
+              <div class="case__head">
+                <span class="tag tag--risk">白条抵库</span>
+                <div class="u-spacer"></div>
+                <span class="badge badge--region">案例 2</span>
+              </div>
+              <div class="case__body">
+                <div class="case__row"><span class="case__k">违纪事实</span>
+                  <span>报账时用<b>白条、手写收据</b>顶替正式发票入账，没有合法票据、没有附件，属“白条抵库”。</span></div>
+                <div class="case__row"><span class="case__k">问题类型</span>
+                  <span><span class="tag tag--risk">白条抵库</span></span></div>
+                <div class="case__row"><span class="case__k">处理结果</span>
+                  <span>责令限期整改、补齐合法票据，相关责任人被追责。</span></div>
+                <div class="case__row"><span class="case__k">涉及条款</span>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📗</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度（2022）</span>
+                    <span class="src__meta">严禁白条抵库 · 财政部、农业农村部</span></span>
+                  </a></div>
+                <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-2);">
+                  <a class="btn btn--soft btn--sm" href="#">👀 查看正反对照</a>
+                  <a class="btn btn--ghost btn--sm" href="process-guide.html">🪜 报销七步签字链</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 案例 3 -->
+            <div class="case">
+              <div class="case__head">
+                <span class="tag tag--risk">坐收坐支</span>
+                <div class="u-spacer"></div>
+                <span class="badge badge--region">案例 3</span>
+              </div>
+              <div class="case__body">
+                <div class="case__row"><span class="case__k">违纪事实</span>
+                  <span>收到的现金<b>不入账、直接拿去开支</b>，账上看不到这笔钱的来龙去脉，属“坐收坐支”。</span></div>
+                <div class="case__row"><span class="case__k">问题类型</span>
+                  <span><span class="tag tag--risk">坐收坐支</span></span></div>
+                <div class="case__row"><span class="case__k">处理结果</span>
+                  <span>按违纪追责，责令把收支全部入账、规范现金管理。</span></div>
+                <div class="case__row"><span class="case__k">涉及条款</span>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📗</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度（2022）</span>
+                    <span class="src__meta">严禁坐收坐支 · 收入应收尽收</span></span>
+                  </a></div>
+                <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-2);">
+                  <a class="btn btn--soft btn--sm" href="#">👀 查看正反对照</a>
+                  <a class="btn btn--ghost btn--sm" href="media-library.html">🎬 看视频</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 案例 4 -->
+            <div class="case">
+              <div class="case__head">
+                <span class="tag tag--risk">私设小金库 · 公款私存</span>
+                <div class="u-spacer"></div>
+                <span class="badge badge--region">案例 4</span>
+              </div>
+              <div class="case__body">
+                <div class="case__row"><span class="case__k">违纪事实</span>
+                  <span>把集体的钱<b>存进个人账户</b>、账外另设一本账（小金库），逃避监督。</span></div>
+                <div class="case__row"><span class="case__k">问题类型</span>
+                  <span><span class="tag tag--risk">私设小金库</span> <span class="tag tag--risk">公款私存</span></span></div>
+                <div class="case__row"><span class="case__k">处理结果</span>
+                  <span>严肃处理、清退资金归入专户，相关责任人被追责。</span></div>
+                <div class="case__row"><span class="case__k">涉及条款</span>
+                  <a class="src" href="policy-explain.html">
+                    <span class="src__ico">📕</span>
+                    <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第44条</span>
+                    <span class="src__meta">集体资金不得存入个人账户 · 2025-05-01 施行</span></span>
+                  </a></div>
+                <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-2);">
+                  <a class="btn btn--soft btn--sm" href="#">👀 查看正反对照</a>
+                  <a class="btn btn--ghost btn--sm" href="policy-explain.html">📖 政策解读</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 兜底卡 -->
+          <div class="fallback" style="margin-top:var(--sp-5);">
+            <span class="fallback__ico">🤔</span>
+            <div>
+              <div class="fallback__title">没找到和你村情况一样的案例？</div>
+              未在资料中找到对应案例时，建议咨询乡镇农经站或县委托代理服务中心；也可以“去问助手”，把情况说清楚，它会帮你判断红线。
+            </div>
+          </div>
+        </section>
+
+        <!-- 右：详情正反对照 + 自查（吸顶） -->
+        <aside style="position:sticky; top:calc(var(--topbar-h) + var(--sp-5));">
+
+          <!-- 详情：正反对照 -->
+          <div class="card card--pad" style="margin-bottom:var(--sp-5);">
+            <div class="u-row" style="justify-content:space-between; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-3);">
+              <h2 style="font-size:var(--fs-700);">案例 1 详情 · 正反对照</h2>
+              <span class="tag tag--risk">违规发包</span>
+            </div>
+            <p style="color:var(--c-text-weak); margin-bottom:var(--sp-4);">同一件事——发包集体鱼塘，左边是错的做法、右边是对的做法。照右边走就稳。</p>
+
+            <div class="compare">
+              <div class="compare__col compare__col--bad">
+                <div class="compare__label">❌ 错误做法</div>
+                <div class="u-col" style="gap:var(--sp-3);">
+                  <div>口头决定，没开会、没记录</div>
+                  <div>没公开、没进农村产权交易平台</div>
+                  <div>低价发包给亲属，显失公平</div>
+                  <div>没签书面合同 / 没及时备案</div>
+                </div>
+                <div class="alert alert--danger" style="margin-top:var(--sp-4);">
+                  <span class="alert__ico">⚖️</span>
+                  <div><span class="alert__title">后果：</span>通报批评 + 追责，合同被撤销，集体利益受损还得返工。</div>
+                </div>
+              </div>
+              <div class="compare__col compare__col--good">
+                <div class="compare__label">✅ 示范做法</div>
+                <div class="u-col" style="gap:var(--sp-3);">
+                  <div>① 理事会提方案</div>
+                  <div>② 走四议两公开（2/3 出席、半数以上通过）</div>
+                  <div>③ 进场公开竞价（应进必进）</div>
+                  <div>④ 签书面合同，10 日内备案</div>
+                </div>
+                <div class="alert alert--info" style="margin-top:var(--sp-4);">
+                  <span class="alert__ico">👍</span>
+                  <div><span class="alert__title">效果：</span>价格公道、程序合规、有据可查，谁也挑不出毛病。</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 阈值提醒 -->
+            <div class="alert alert--warn" style="margin-top:var(--sp-5);">
+              <span class="alert__ico">⚠️</span>
+              <div>
+                <span class="alert__title">多大金额要进场、要四议两公开，以本县市最新制度为准。</span>
+                示例口径：资产处置 &gt; 5000 元须四议两公开 + 公开拍卖/进场 + 乡镇备案。
+                <a class="src" href="threshold-lookup.html" style="margin-top:var(--sp-2);">
+                  <span class="src__ico">🔢</span>
+                  <span style="display:flex; flex-direction:column;"><span class="src__name">本县三资管理实施细则（示例·中方县 2025）</span>
+                  <span class="src__meta">资产处置 / 进场交易阈值 · D节</span></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 出处折叠 -->
+            <div class="src-list" data-collapsed="false" style="margin-top:var(--sp-4);">
+              <div class="src-list__head">这个案例的依据出处（点这里收起/展开）</div>
+              <div class="src-list__body">
+                <a class="src" href="policy-explain.html">
+                  <span class="src__ico">📕</span>
+                  <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织法 第26–27条</span>
+                  <span class="src__meta">成员大会 2/3 出席、2/3 同意 · 2025-05-01 施行</span></span>
+                </a>
+                <a class="src" href="policy-explain.html">
+                  <span class="src__ico">📙</span>
+                  <span style="display:flex; flex-direction:column;"><span class="src__name">各地农村产权流转交易管理办法</span>
+                  <span class="src__meta">应进必进、严禁场外私下交易</span></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="u-row u-row--wrap" style="gap:var(--sp-3); margin-top:var(--sp-5);">
+              <a class="btn btn--external" href="#">去主系统办理</a>
+              <a class="btn btn--soft" href="process-guide.html">🪜 看四议两公开流程</a>
+            </div>
+          </div>
+
+          <!-- 风险自查问题库 -->
+          <div class="card card--pad">
+            <h2 style="font-size:var(--fs-700); margin-bottom:var(--sp-2);">🛡️ 风险自查：你村有没有踩线？</h2>
+            <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-4);">
+              逐条对照打勾。打了勾的是“做到了”，没打勾的就是<b>风险点</b>，往下看整改建议。
+            </p>
+            <div class="check">
+              <div class="check__item"><span class="check__box"></span><span>所有现金收入都及时入账、3 日内存入专户（没坐收坐支）</span></div>
+              <div class="check__item"><span class="check__box"></span><span>报账全是正规发票，没有白条、收据抵库</span></div>
+              <div class="check__item"><span class="check__box"></span><span>集体的钱都在专户里，没存进任何个人账户</span></div>
+              <div class="check__item"><span class="check__box"></span><span>没有账外账、没有小金库</span></div>
+              <div class="check__item"><span class="check__box"></span><span>资产处置、资源发包都走了四议两公开 + 进场</span></div>
+              <div class="check__item"><span class="check__box"></span><span>合同价格公道、有书面合同、按时备案</span></div>
+            </div>
+
+            <!-- 整改建议 -->
+            <div class="alert alert--warn" style="margin-top:var(--sp-4);">
+              <span class="alert__ico">📋</span>
+              <div>
+                <span class="alert__title">整改建议：</span>有一条没打勾，就要马上处理——立即停止该做法、把资金/账目归位、补走合规程序，并报乡镇经管站。
+                金额/时限以本县市最新制度为准。
+              </div>
+            </div>
+            <a class="src" href="policy-explain.html" style="margin-top:var(--sp-4);">
+              <span class="src__ico">📗</span>
+              <span style="display:flex; flex-direction:column;"><span class="src__name">农村集体经济组织财务制度（2022）</span>
+              <span class="src__meta">十类红线 · B节红线/边界</span></span>
+            </a>
+          </div>
+
+        </aside>
+      </div>
+
+      <!-- 边界说明 -->
+      <div class="alert alert--info" style="margin-top:var(--sp-7);">
+        <span class="alert__ico">💡</span>
+        <div><span class="alert__title">温馨提示：</span>本助手只“讲清楚、教明白”，不直接经手钱、不替你办理。真正要发包、签合同、办交易时，请“去主系统办理”。</div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

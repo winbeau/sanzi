@@ -1,0 +1,4 @@
+node_modules/
+tools/report/screenshots/
+tools/report/report.json
+.DS_Store
