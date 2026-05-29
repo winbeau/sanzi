@@ -8,22 +8,22 @@
   <link rel="stylesheet" href="shared/components.css">
   <script src="shared/app.js"></script>
   <style>
-    .wrap { width: 100%; margin: 0; padding: var(--sp-6) var(--sp-8); }
+    .wrap { width: 100%; margin: 0; padding: var(--sp-7) clamp(24px, 7vw, 120px); }
     .hero-head { background: var(--grad-hero); color:#fff; border-radius: var(--r-xl); padding: var(--sp-7); margin-bottom: var(--sp-6); }
     .preview-grid { display:grid; grid-template-columns: 1fr; gap: var(--sp-6); }
-    @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,1fr) 440px; } }
-    /* PC 预览：等比缩放真实页面 */
-    .pcframe-shell{ border:1px solid var(--c-border); border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--sh-2); background:var(--c-surface); }
+    @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,1fr) 500px; } }
+    /* PC 预览：等比缩放真实页面（宽度收小） */
+    .pcframe-shell{ border:1px solid var(--c-border); border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--sh-2); background:var(--c-surface); max-width:700px; }
     .pcframe-bar{ height:38px; display:flex; align-items:center; gap:8px; padding:0 14px; background:var(--c-surface-2); border-bottom:1px solid var(--c-border); }
     .dot{ width:11px;height:11px;border-radius:50%; } .dot.r{background:#ec6a5e}.dot.y{background:#f4bf4f}.dot.g{background:#61c454}
     .pcframe-url{ flex:1; height:22px; background:var(--c-surface); border-radius:var(--r-pill); border:1px solid var(--c-border); font-size:12px; color:var(--c-text-faint); display:flex; align-items:center; padding:0 12px; }
-    .pcframe-view{ position:relative; width:100%; aspect-ratio: 1280/760; overflow:hidden; }
-    .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:760px; border:0; transform-origin: top left; pointer-events:none; }
-    /* 手机预览 */
-    .phone{ width:380px; max-width:100%; margin:0 auto; }
+    .pcframe-view{ position:relative; width:100%; aspect-ratio: 1280/940; overflow:hidden; }
+    .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:940px; border:0; transform-origin: top left; }
+    /* 手机预览（放大） */
+    .phone{ width:440px; max-width:100%; margin:0 auto; }
     .phone-shell{ border:10px solid #1c2530; border-radius:30px; overflow:hidden; box-shadow:var(--sh-3); background:#1c2530; position:relative; }
-    .phone-view{ position:relative; width:360px; height:700px; overflow:hidden; background:#fff; }
-    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:759px; border:0; transform-origin: top left; transform: scale(.923); pointer-events:none; }
+    .phone-view{ position:relative; width:420px; height:520px; overflow:hidden; background:#fff; }
+    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:483px; border:0; transform-origin: top left; transform: scale(1.0769); }
     .dir-grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: var(--sp-3); }
     .dir-item{ display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-3) var(--sp-4); border:1px solid var(--c-border); border-radius:var(--r-md); background:var(--c-surface); }
     .dir-item__name{ flex:1; font-weight:700; font-size:var(--fs-400); }
