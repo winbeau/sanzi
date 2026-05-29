@@ -14,7 +14,7 @@
   <header class="m-topbar">
     <a class="iconbtn" href="home-entry.html" aria-label="返回首页">←</a>
     <div class="m-topbar__title">我的</div>
-    <a class="iconbtn" href="help-settings.html" aria-label="帮助">❓</a>
+    <a class="iconbtn" href="help-settings.html" aria-label="帮助"><i class="ico ico-help"></i></a>
   </header>
 
   <main class="m-main">
@@ -28,21 +28,21 @@
         </div>
       </div>
       <div class="u-row u-row--wrap" style="gap:var(--sp-2);">
-        <span class="rolechip" style="height:38px; padding:0 12px; font-size:var(--fs-300);"><span class="rolechip__ico">👤</span>村报账员</span>
-        <span class="rolechip" style="height:38px; padding:0 12px; font-size:var(--fs-300);"><span class="rolechip__ico">📍</span>中方县</span>
-        <span class="badge badge--date">📚 历史 12</span>
-        <span class="badge badge--new">⭐ 收藏 8</span>
+        <span class="rolechip" style="height:38px; padding:0 12px; font-size:var(--fs-300);"><i class="ico ico-user rolechip__ico"></i>村报账员</span>
+        <span class="rolechip" style="height:38px; padding:0 12px; font-size:var(--fs-300);"><i class="ico ico-pin rolechip__ico"></i>中方县</span>
+        <span class="badge badge--date"><i class="ico ico-docs"></i> 历史 12</span>
+        <span class="badge badge--new"><i class="ico ico-star"></i> 收藏 8</span>
       </div>
     </section>
 
     <div class="trust-bar" style="margin-bottom:var(--sp-4);">
-      <span class="trust-bar__ico">✅</span>收藏都带出处；标「离线可查」的没网也能看。
+      <i class="ico ico-check trust-bar__ico"></i>收藏都带出处；标「离线可查」的没网也能看。
     </div>
 
     <!-- 顶部分段：历史问答 / 我的收藏 -->
     <div class="seg" style="display:flex; width:100%; margin-bottom:var(--sp-4);">
-      <button class="seg__btn seg__btn--active" type="button" data-seg="mhf" data-target="history" style="flex:1;">📚 历史问答</button>
-      <button class="seg__btn" type="button" data-seg="mhf" data-target="fav" style="flex:1;">⭐ 我的收藏</button>
+      <button class="seg__btn seg__btn--active" type="button" data-seg="mhf" data-target="history" style="flex:1;"><i class="ico ico-docs"></i> 历史问答</button>
+      <button class="seg__btn" type="button" data-seg="mhf" data-target="fav" style="flex:1;"><i class="ico ico-star"></i> 我的收藏</button>
     </div>
 
     <!-- ========== 面板一：历史问答 ========== -->
@@ -53,78 +53,78 @@
       <!-- 历史 1 -->
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--region">🗓️ 今天 09:14</span>
+          <span class="badge badge--region"><i class="ico ico-calendar"></i> 今天 09:14</span>
           <span class="tag tag--ok">已答复</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">这张餐费发票能不能报账？</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           结论：不能直接报。招待餐费属非生产性开支，须限额、纳入预算。
         </p>
-        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><span class="btn__ico">🔁</span>再次提问</a>
+        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><i class="ico ico-refresh btn__ico"></i>再次提问</a>
       </div>
 
       <!-- 历史 2 -->
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--region">🗓️ 今天 08:50</span>
+          <span class="badge badge--region"><i class="ico ico-calendar"></i> 今天 08:50</span>
           <span class="tag tag--ok">已答复</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">多少钱要上会、要招投标？</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           结论：按金额分档走程序，已为您跳到「阈值速查」。
         </p>
-        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><span class="btn__ico">🔁</span>再次提问</a>
+        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><i class="ico ico-refresh btn__ico"></i>再次提问</a>
       </div>
 
       <!-- 历史 3 -->
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--region">🗓️ 昨天 16:32</span>
+          <span class="badge badge--region"><i class="ico ico-calendar"></i> 昨天 16:32</span>
           <span class="tag tag--ok">已答复</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">集体的地能不能换、怎么发包？</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           结论：可依法发包，但须四议两公开 + 进场 + 书面合同 + 10 日内备案。
         </p>
-        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><span class="btn__ico">🔁</span>再次提问</a>
+        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><i class="ico ico-refresh btn__ico"></i>再次提问</a>
       </div>
 
       <!-- 历史 4 -->
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--region">🗓️ 昨天 10:05</span>
+          <span class="badge badge--region"><i class="ico ico-calendar"></i> 昨天 10:05</span>
           <span class="tag tag--ok">已答复</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">白条能不能入账？</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           结论：不能。「白条抵库」属违规，须取得合法正式票据。
         </p>
-        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><span class="btn__ico">🔁</span>再次提问</a>
+        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><i class="ico ico-refresh btn__ico"></i>再次提问</a>
       </div>
 
       <!-- 历史 5 -->
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--region">🗓️ 5 月 26 日</span>
+          <span class="badge badge--region"><i class="ico ico-calendar"></i> 5 月 26 日</span>
           <span class="tag tag--ok">已答复</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">村务卡能刷多少？哪些不能刷？</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           结论：零星支出可用，严禁化整为零拆分；大额走银农直联。
         </p>
-        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><span class="btn__ico">🔁</span>再次提问</a>
+        <a class="btn btn--soft btn--block btn--lg" href="qa-chat.html"><i class="ico ico-refresh btn__ico"></i>再次提问</a>
       </div>
 
       <!-- 兜底卡 -->
       <div class="fallback" style="margin-bottom:var(--sp-4);">
-        <span class="fallback__ico">🤔</span>
+        <span class="fallback__ico"><i class="ico ico-help"></i></span>
         <div>
           <div class="fallback__title">想找的没问过？</div>
           直接去「智能问答」重新问；资料里查不到时，建议咨询乡镇农经站或县委托代理服务中心。
         </div>
       </div>
 
-      <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html"><span class="btn__ico">💬</span>去提新问题</a>
+      <a class="btn btn--primary btn--block btn--lg" href="qa-chat.html"><i class="ico ico-chat btn__ico"></i>去提新问题</a>
     </div>
 
     <!-- ========== 面板二：我的收藏 ========== -->
@@ -134,135 +134,135 @@
       <div class="sect__head"><div class="sect__title">按分组看收藏</div></div>
       <div class="chips chips--scroll" style="margin-bottom:var(--sp-4);">
         <button class="chip chip--active" type="button">全部（8）</button>
-        <button class="chip" type="button">🪜 流程（3）</button>
-        <button class="chip" type="button">🔢 速查（2）</button>
-        <button class="chip" type="button">⚖️ 案例（2）</button>
-        <button class="chip" type="button">🎬 视频（1）</button>
+        <button class="chip" type="button"><i class="ico ico-steps"></i> 流程（3）</button>
+        <button class="chip" type="button"><i class="ico ico-calc"></i> 速查（2）</button>
+        <button class="chip" type="button"><i class="ico ico-scale"></i> 案例（2）</button>
+        <button class="chip" type="button"><i class="ico ico-video"></i> 视频（1）</button>
       </div>
 
       <!-- 分组：常用流程 -->
-      <div class="sect__head"><div class="sect__title">🪜 常用流程</div></div>
+      <div class="sect__head"><div class="sect__title"><i class="ico ico-steps"></i> 常用流程</div></div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">🪜 流程</span>
-          <span class="badge badge--region">📵 离线可查</span>
+          <span class="badge badge--date"><i class="ico ico-steps"></i> 流程</span>
+          <span class="badge badge--region"><i class="ico ico-ban"></i> 离线可查</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">报销七步签字链</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           取票签字 → 出纳审核 → 监事会审查 → 一支笔审批 → 代理中心审核 → 记账 → 归档。
         </p>
         <a class="src" href="process-guide.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">📗</span>
+          <span class="src__ico"><i class="ico ico-book"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
           <span class="src__meta">报销签字链 · C节</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">🪜 流程</span>
-          <span class="badge badge--region">📵 离线可查</span>
+          <span class="badge badge--date"><i class="ico ico-steps"></i> 流程</span>
+          <span class="badge badge--region"><i class="ico ico-ban"></i> 离线可查</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">四议两公开 六步走</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           提议 → 商议 → 审议 → 成员大会决议（2/3 出席、半数通过）→ 决议公开 → 结果公开。
         </p>
         <a class="src" href="policy-explain.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">📕</span>
+          <span class="src__ico"><i class="ico ico-book"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">集体经济组织法 第26–27条</span>
           <span class="src__meta">成员大会表决 · 2025-05-01</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-5);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">🪜 流程</span>
+          <span class="badge badge--date"><i class="ico ico-steps"></i> 流程</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">银农直联付款 六步三岗</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           上传 → 一级审核 → 二级审核 → 银行直付 → 生成凭证 → 月初打印。申请人与审核人不得同一人。
         </p>
         <a class="src" href="process-guide.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">📗</span>
+          <span class="src__ico"><i class="ico ico-book"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
           <span class="src__meta">银农直联 · 各环节 2 个工作日</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="process-guide.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <!-- 分组：速查 -->
-      <div class="sect__head"><div class="sect__title">🔢 速查</div></div>
+      <div class="sect__head"><div class="sect__title"><i class="ico ico-calc"></i> 速查</div></div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">🔢 速查</span>
-          <span class="badge badge--region">📵 离线可查</span>
+          <span class="badge badge--date"><i class="ico ico-calc"></i> 速查</span>
+          <span class="badge badge--region"><i class="ico ico-ban"></i> 离线可查</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">资产购建 / 处置 金额阈值</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           购建 ≤5000 元理事会+监事会定；5000–5 万上会+备案；&gt;5 万上会+公示+备案。
         </p>
         <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
-          <span class="alert__ico">⚠️</span>
+          <i class="ico ico-warn alert__ico"></i>
           <div><span class="alert__title">金额档位以本县市最新制度为准。</span></div>
         </div>
         <a class="src" href="threshold-lookup.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">🔢</span>
+          <span class="src__ico"><i class="ico ico-calc"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">本县三资细则（示例·中方县 2025）</span>
           <span class="src__meta">资产购建 / 处置阈值 · D节</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="threshold-lookup.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="threshold-lookup.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-5);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">🔢 速查</span>
+          <span class="badge badge--date"><i class="ico ico-calc"></i> 速查</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">现金 / 进场交易 阈值</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           单笔 &gt;1000 元须银行结算、资金直达供应商；收款 3 日内存专户；达门槛「应进必进」。
         </p>
         <div class="alert alert--warn" style="margin-bottom:var(--sp-3);">
-          <span class="alert__ico">⚠️</span>
+          <i class="ico ico-warn alert__ico"></i>
           <div><span class="alert__title">进场门槛各地不同，以本县市最新制度为准。</span></div>
         </div>
         <a class="src" href="threshold-lookup.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">🔢</span>
+          <span class="src__ico"><i class="ico ico-calc"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">本县三资细则（示例·中方县 2025）</span>
           <span class="src__meta">现金结算 / 进场门槛 · D节</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="threshold-lookup.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="threshold-lookup.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <!-- 分组：案例 -->
-      <div class="sect__head"><div class="sect__title">⚖️ 案例</div></div>
+      <div class="sect__head"><div class="sect__title"><i class="ico ico-scale"></i> 案例</div></div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">⚖️ 案例</span>
+          <span class="badge badge--date"><i class="ico ico-scale"></i> 案例</span>
           <span class="tag tag--risk">违规发包</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">低价发包鱼塘给亲属</div>
@@ -270,20 +270,20 @@
           口头决定、未公开未进场、显失公平 → 通报 + 追责，合同撤销。正确：方案 → 四议两公开 → 进场竞价 → 书面合同备案。
         </p>
         <a class="src" href="case-learning.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">📕</span>
+          <span class="src__ico"><i class="ico ico-book"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">集体经济组织法 第26–27条</span>
           <span class="src__meta">重大事项须表决 · 2025-05-01</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="case-learning.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="case-learning.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-5);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">⚖️ 案例</span>
+          <span class="badge badge--date"><i class="ico ico-scale"></i> 案例</span>
           <span class="tag tag--risk">白条抵库</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">白条抵库顶替发票入账</div>
@@ -291,62 +291,62 @@
           用白条 / 收据顶替正式发票入账 → 责令整改、追责。正确：取得合法票据、票据六有、七步签字。
         </p>
         <a class="src" href="case-learning.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">📗</span>
+          <span class="src__ico"><i class="ico ico-book"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">财务制度（2022）</span>
           <span class="src__meta">严禁白条抵库</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="case-learning.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">📂</span>打开</a>
+        <a class="btn btn--soft btn--block btn--lg" href="case-learning.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-folder btn__ico"></i>打开</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <!-- 分组：视频 -->
-      <div class="sect__head"><div class="sect__title">🎬 视频</div></div>
+      <div class="sect__head"><div class="sect__title"><i class="ico ico-video"></i> 视频</div></div>
 
       <div class="card card--pad" style="margin-bottom:var(--sp-5);">
         <div class="u-row u-row--wrap" style="gap:var(--sp-2); margin-bottom:var(--sp-2);">
-          <span class="badge badge--date">🎬 视频</span>
-          <span class="badge badge--region">⏱️ 03:20</span>
-          <span class="badge badge--region">📵 离线可查</span>
+          <span class="badge badge--date"><i class="ico ico-video"></i> 视频</span>
+          <span class="badge badge--region"><i class="ico ico-time"></i> 03:20</span>
+          <span class="badge badge--region"><i class="ico ico-ban"></i> 离线可查</span>
         </div>
         <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">银农直联付款全流程</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           大字幕 + 倍速讲解，从扫描上传到银行直付一步步看明白，配纯音频模式也能听。
         </p>
         <a class="src" href="media-library.html" style="margin-bottom:var(--sp-3);">
-          <span class="src__ico">🎬</span>
+          <span class="src__ico"><i class="ico ico-video"></i></span>
           <span style="display:flex; flex-direction:column;"><span class="src__name">学习视频 · 银农直联付款全流程</span>
           <span class="src__meta">H节选题 · 03:20</span></span>
         </a>
-        <a class="btn btn--soft btn--block btn--lg" href="media-library.html" style="margin-bottom:var(--sp-3);"><span class="btn__ico">▶️</span>打开播放</a>
+        <a class="btn btn--soft btn--block btn--lg" href="media-library.html" style="margin-bottom:var(--sp-3);"><i class="ico ico-play btn__ico"></i>打开播放</a>
         <div class="u-row" style="gap:var(--sp-3);">
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">📤</span>导出</a>
-          <a class="btn btn--ghost" href="#" style="flex:1;"><span class="btn__ico">💔</span>取消收藏</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-upload btn__ico"></i>导出</a>
+          <a class="btn btn--ghost" href="#" style="flex:1;"><i class="ico ico-warn btn__ico"></i>取消收藏</a>
         </div>
       </div>
 
       <!-- 离线可查说明 -->
       <div class="card card--pad" style="margin-bottom:var(--sp-4);">
-        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);">📵 离线可查是什么</div>
+        <div style="font-size:var(--fs-600); font-weight:800; margin-bottom:var(--sp-2);"><i class="ico ico-ban"></i> 离线可查是什么</div>
         <p style="color:var(--c-text-weak); font-size:var(--fs-400); margin-bottom:var(--sp-3);">
           带这个标记的内容已存到本机，下乡没网也能打开看。没标记的需要联网。
         </p>
-        <a class="btn btn--ghost btn--block btn--lg" href="#"><span class="btn__ico">⬇️</span>把全部收藏存为离线</a>
+        <a class="btn btn--ghost btn--block btn--lg" href="#"><i class="ico ico-download btn__ico"></i>把全部收藏存为离线</a>
       </div>
 
       <!-- 兜底卡 -->
       <div class="fallback" style="margin-bottom:var(--sp-4);">
-        <span class="fallback__ico">🤔</span>
+        <span class="fallback__ico"><i class="ico ico-help"></i></span>
         <div>
           <div class="fallback__title">想收藏的还没存进来？</div>
-          在流程 / 速查 / 案例 / 视频页面点 ⭐ 收藏即可加进来；找不到资料时，建议咨询乡镇农经站或县委托代理服务中心。
+          在流程 / 速查 / 案例 / 视频页面点 <i class="ico ico-star"></i> 收藏即可加进来；找不到资料时，建议咨询乡镇农经站或县委托代理服务中心。
         </div>
       </div>
 
       <div class="alert alert--info">
-        <span class="alert__ico">💡</span>
+        <i class="ico ico-bulb alert__ico"></i>
         <div><span class="alert__title">温馨提示：</span>收藏只帮你「存资料、随时翻」。要报账、签合同、办交易时，请「去主系统办理」。</div>
       </div>
     </div>
@@ -355,11 +355,11 @@
 
   <!-- 底部 Tab -->
   <nav class="m-tabbar">
-    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico">🏠</span>首页</a>
-    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico">🪜</span>流程</a>
-    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico">🔢</span>速查</a>
-    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico">⚖️</span>案例</a>
-    <a class="m-tab m-tab--active" href="my-history-fav.html"><span class="m-tab__ico">⭐</span>我的</a>
+    <a class="m-tab" href="home-entry.html"><span class="m-tab__ico"><i class="ico ico-home"></i></span>首页</a>
+    <a class="m-tab" href="process-guide.html"><span class="m-tab__ico"><i class="ico ico-steps"></i></span>流程</a>
+    <a class="m-tab" href="threshold-lookup.html"><span class="m-tab__ico"><i class="ico ico-calc"></i></span>速查</a>
+    <a class="m-tab" href="case-learning.html"><span class="m-tab__ico"><i class="ico ico-scale"></i></span>案例</a>
+    <a class="m-tab m-tab--active" href="my-history-fav.html"><span class="m-tab__ico"><i class="ico ico-star"></i></span>我的</a>
   </nav>
 </div>
 </body>

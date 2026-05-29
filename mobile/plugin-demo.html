@@ -16,7 +16,7 @@
   <!-- 模拟主系统顶栏：左上 ← 返回 home-entry.html -->
   <header class="mock-top" style="gap:var(--sp-2); padding:0 var(--sp-3);">
     <a class="iconbtn" href="home-entry.html" aria-label="返回首页" style="color:#fff;">←</a>
-    <span class="mock-top__logo" style="font-size:var(--fs-400);">🏛️ XX县三资管理平台</span>
+    <span class="mock-top__logo" style="font-size:var(--fs-400);"><i class="ico ico-building"></i> XX县三资管理平台</span>
     <span class="u-spacer"></span>
     <span style="color:#aab4c4; font-size:var(--fs-300);">报账填报</span>
   </header>
@@ -26,12 +26,12 @@
 
     <!-- 这是“别的系统”的提示 -->
     <div class="alert" style="border-left-color:#4a90d9; background:var(--c-surface); margin-bottom:var(--sp-4);">
-      <span class="alert__ico">🧩</span>
+      <span class="alert__ico"><i class="ico ico-puzzle"></i></span>
       <div>您在「报账填报」页。右下角圆按钮是<b>浮在本系统上的助手插件</b>，随处可点，就地帮您看。</div>
     </div>
 
     <div class="card card--pad">
-      <h1 class="card__title" style="font-size:var(--fs-700);">📝 报账单填报</h1>
+      <h1 class="card__title" style="font-size:var(--fs-700);"><i class="ico ico-edit"></i> 报账单填报</h1>
 
       <div class="field" style="margin-bottom:var(--sp-4);">
         <label class="field__label">报账日期</label>
@@ -62,7 +62,7 @@
       <div class="field" style="margin-bottom:var(--sp-4);">
         <label class="field__label">附件（发票）</label>
         <div style="border:2px dashed var(--c-border-strong); border-radius:var(--r-md); padding:var(--sp-5); text-align:center; color:var(--c-text-weak);">
-          📎 点击上传发票<br>
+          <i class="ico ico-attach"></i> 点击上传发票<br>
           <span style="font-size:var(--fs-300);">（已上传：餐饮发票.jpg）</span>
         </div>
       </div>
@@ -84,7 +84,7 @@
 <!-- 右下角圆按钮 -->
 <button class="fab fab--round" data-assist-open aria-label="打开三资管理助手"
         style="bottom:var(--sp-5); right:var(--sp-4);">
-  <span class="fab__ico">🎤</span>
+  <span class="fab__ico"><i class="ico ico-sound"></i></span>
 </button>
 
 <!-- 遮罩（原型里随抽屉默认展示） -->
@@ -95,37 +95,37 @@
   <div class="sheet__grip"></div>
 
   <div class="assist__head">
-    <span style="font-size:24px;">🤝</span>
+    <span style="font-size:24px;"><i class="ico ico-handshake"></i></span>
     <div class="assist__title">三资管理助手 · 就地帮您看</div>
-    <button class="iconbtn" data-assist-close aria-label="收起助手" style="color:#fff;">✕</button>
+    <button class="iconbtn" data-assist-close aria-label="收起助手" style="color:#fff;"><i class="ico ico-close"></i></button>
   </div>
 
   <div class="assist__body">
 
     <!-- 只读说明 -->
     <div class="alert alert--info" style="padding:var(--sp-3);">
-      <span class="alert__ico">👀</span>
+      <span class="alert__ico"><i class="ico ico-eye"></i></span>
       <div>助手只读取当前页信息做解释与合规提醒，<b>不替你提交</b>。</div>
     </div>
 
     <!-- 识别到的当前上下文 -->
     <div class="card card--flat" style="background:var(--c-surface-2); border:1px solid var(--c-border); padding:var(--sp-3) var(--sp-4);">
-      <div style="font-size:var(--fs-400); color:var(--c-text-weak);">📄 我看到您正在填这一笔：</div>
+      <div style="font-size:var(--fs-400); color:var(--c-text-weak);"><i class="ico ico-doc"></i> 我看到您正在填这一笔：</div>
       <div class="u-bold" style="margin-top:var(--sp-1);">招待费 · 1280元 · “接待上级检查组午餐”</div>
     </div>
 
     <!-- 用户的就地提问 -->
     <div class="msg msg--user">
-      <div class="msg__avatar">👤</div>
+      <div class="msg__avatar"><i class="ico ico-user"></i></div>
       <div class="bubble">这个招待费能不能直接报？</div>
     </div>
 
     <!-- 三段式答案 -->
     <div class="msg msg--bot">
-      <div class="msg__avatar">🤝</div>
+      <div class="msg__avatar"><i class="ico ico-handshake"></i></div>
       <div class="bubble">
         <div class="answer__verdict">
-          <span class="verdict-pill verdict-pill--no">不能直接报</span>
+          <span class="verdict-pill verdict-pill--no"><i class="ico ico-close"></i>不能直接报</span>
         </div>
         <p>招待费属于<b>非生产性开支</b>，不能见票就报。要先满足限额、走完审批，确属公务且在限额内才可入账。</p>
 
@@ -139,7 +139,7 @@
         </div>
 
         <div class="alert alert--warn" style="margin-top:var(--sp-3); padding:var(--sp-3);">
-          <span class="alert__ico">⚠️</span>
+          <span class="alert__ico"><i class="ico ico-warn"></i></span>
           <div>限额与单笔结算门槛各地不同，<b>以本县市最新制度为准</b>；单笔超 1000 元须银行结算、直达供应商。</div>
         </div>
 
@@ -147,18 +147,18 @@
           <div class="src-list__head">依据这些资料（点我收起/展开）</div>
           <div class="src-list__body">
             <a class="src" href="policy-explain.html">
-              <span class="src__ico">📑</span>
+              <span class="src__ico"><i class="ico ico-doc"></i></span>
               <span><span class="src__name">《农村集体经济组织财务制度》</span><span class="src__meta">财政部、农业农村部 2022 · 非生产性开支限额管理</span></span>
             </a>
             <a class="src" href="threshold-lookup.html">
-              <span class="src__ico">📑</span>
+              <span class="src__ico"><i class="ico ico-doc"></i></span>
               <span><span class="src__name">本县三资管理实施细则（中方县 2025）</span><span class="src__meta">单笔&gt;1000元须银行结算</span></span>
             </a>
           </div>
         </div>
 
         <div class="fallback" style="margin-top:var(--sp-3); padding:var(--sp-4);">
-          <span class="fallback__ico">🛟</span>
+          <span class="fallback__ico"><i class="ico ico-help"></i></span>
           <div>
             <div class="fallback__title">拿不准限额数？</div>
             资料里没有您村确切数字，建议咨询乡镇农经站 / 代理服务中心。
@@ -174,8 +174,8 @@
     <!-- 底部迷你输入栏 -->
     <div class="askbar" style="padding:var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-4); box-shadow:none; margin-bottom:var(--sp-4);">
       <input class="askbar__input" style="font-size:var(--fs-500); min-height:44px;" placeholder="继续问：能报多少？" aria-label="继续提问">
-      <button class="mic" aria-label="语音提问">🎤</button>
-      <button class="send" aria-label="发送">➤</button>
+      <button class="mic" aria-label="语音提问"><i class="ico ico-sound"></i></button>
+      <button class="send" aria-label="发送"><i class="ico ico-send"></i></button>
     </div>
 
   </div>

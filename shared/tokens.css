@@ -1,5 +1,7 @@
 /* ============================================================
    三资管理助手 · 设计令牌 (Design Tokens)
+   视觉方向：政务公文 / 档案编辑风 —— 克制、权威、可信
+   - 衬线标题(宋体系) + 无衬线正文；近直角；扁平描边；纸感底色；金额用表格数字
    - 语义化变量：页面只引用 var(--c-primary) 等，绝不写死品牌色
    - 3 套主题：html[data-theme="green|blue|red"]，默认 green(惠农绿)
    - 适老化字号：html[data-fontscale="large"] 整体放大一档
@@ -7,46 +9,35 @@
 
 :root {
   /* —— 字体 —— */
-  --font-sans: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei",
-    "Hiragino Sans GB", "Source Han Sans CN", "Noto Sans CJK SC",
-    "WenQuanYi Zen Hei", "Droid Sans Fallback", sans-serif;
-  --font-num: "DIN Alternate", system-ui, sans-serif;
+  /* 标题用衬线(公文/档案的权威感)，正文用清晰无衬线；本机若无中文衬线会回退 */
+  --font-serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", STSong, STZhongsong,
+    SimSun, "宋体", "AR PL UMing CN", Georgia, serif;
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC",
+    "Hiragino Sans GB", "WenQuanYi Zen Hei", "Droid Sans Fallback", -apple-system, sans-serif;
 
   /* —— 字号(适老化基准：正文≥18 按钮≥20) —— */
-  --fs-300: 14px;   /* 辅助小字(尽量少用) */
-  --fs-400: 16px;   /* 次要信息 */
-  --fs-500: 18px;   /* 正文 */
-  --fs-600: 20px;   /* 按钮/强调 */
-  --fs-700: 24px;   /* 小标题 */
-  --fs-800: 30px;   /* 标题 */
-  --fs-900: 38px;   /* 大标题/Hero */
-  --lh-tight: 1.25;
-  --lh-normal: 1.6;
+  --fs-300: 14px; --fs-400: 16px; --fs-500: 18px; --fs-600: 20px;
+  --fs-700: 24px; --fs-800: 30px; --fs-900: 38px;
+  --lh-tight: 1.28; --lh-normal: 1.62;
 
   /* —— 间距 —— */
   --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
   --sp-5: 20px; --sp-6: 24px; --sp-7: 32px; --sp-8: 40px; --sp-9: 56px;
 
-  /* —— 圆角 —— */
-  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 22px; --r-pill: 999px;
+  /* —— 圆角（收小，求庄重直角感）—— */
+  --r-sm: 2px; --r-md: 3px; --r-lg: 4px; --r-xl: 6px; --r-pill: 999px;
 
-  /* —— 阴影 —— */
-  --sh-1: 0 1px 2px rgba(20, 30, 25, .06), 0 1px 3px rgba(20, 30, 25, .08);
-  --sh-2: 0 2px 8px rgba(20, 30, 25, .08), 0 4px 16px rgba(20, 30, 25, .06);
-  --sh-3: 0 8px 28px rgba(20, 30, 25, .16);
+  /* —— 阴影（扁平：以描边分隔为主，浮层才用阴影）—— */
+  --sh-1: 0 1px 0 rgba(20, 26, 22, .03);
+  --sh-2: 0 1px 2px rgba(20, 26, 22, .06);
+  --sh-3: 0 8px 28px rgba(20, 26, 22, .18);
 
   /* —— 布局尺寸 —— */
-  --maxw-content: 1200px;
-  --maxw-read: 840px;
-  --sidenav-w: 248px;
-  --topbar-h: 68px;
-  --m-top-h: 56px;
-  --m-tab-h: 66px;
+  --maxw-content: 1200px; --maxw-read: 840px;
+  --sidenav-w: 248px; --topbar-h: 68px; --m-top-h: 56px; --m-tab-h: 66px;
 
   /* —— 层级 —— */
   --z-nav: 100; --z-sticky: 200; --z-fab: 700; --z-sheet: 800; --z-modal: 900; --z-toast: 1000;
-
-  /* —— 触控目标最小尺寸 —— */
   --tap: 48px;
 }
 
@@ -56,102 +47,40 @@ html[data-fontscale="large"] {
   --fs-700: 28px; --fs-800: 34px; --fs-900: 44px;
 }
 
-/* ===================== 主题：惠农绿（默认） ===================== */
+/* ===================== 主题：惠农绿（默认 · 深墨绿+纸感）===================== */
 :root,
 html[data-theme="green"] {
-  --c-primary:      #1F8A4C;
-  --c-primary-700:  #166A3A;
-  --c-primary-050:  #EAF5EE;
-  --c-on-primary:   #FFFFFF;
-
-  --c-accent:       #E8852B;   /* 暖橙：提醒/次级强调 */
-  --c-accent-700:   #C26A18;
-  --c-accent-050:   #FDF0E2;
-
-  --c-danger:       #C8431F;   /* 风险/红线 */
-  --c-danger-700:   #A1330F;
-  --c-danger-050:   #FBEAE5;
-
-  --c-success:      #1F8A4C;
-  --c-warn:         #C8901F;
-  --c-warn-050:     #FBF1DC;
-
-  --c-bg:           #F5F8F4;
-  --c-surface:      #FFFFFF;
-  --c-surface-2:    #EEF3EF;
-  --c-text:         #1B2620;
-  --c-text-weak:    #566459;
-  --c-text-faint:   #839288;
-  --c-border:       #DCE6DF;
-  --c-border-strong:#C2D2C7;
-  --c-link:         #1457A6;
-
-  --grad-hero: linear-gradient(135deg, #1F8A4C 0%, #2BA86A 60%, #1457A6 130%);
+  --c-primary: #16713D; --c-primary-700: #0F5530; --c-primary-050: #E7F0E9; --c-on-primary: #FFFFFF;
+  --c-accent: #B5602A; --c-accent-700: #8E4A1E; --c-accent-050: #F3EAE0;   /* 陶土橙：克制提醒 */
+  --c-danger: #A8321C; --c-danger-700: #842413; --c-danger-050: #F3E5E1;
+  --c-success: #16713D; --c-warn: #9A6B12; --c-warn-050: #F2ECDB;
+  --c-bg: #F4F2EB; --c-surface: #FFFFFF; --c-surface-2: #ECEAE0;
+  --c-text: #1C2420; --c-text-weak: #545C56; --c-text-faint: #888E86;
+  --c-border: #D9D6CB; --c-border-strong: #BFC0B3; --c-link: #14507F;
+  --grad-hero: #123F25;   /* 深墨绿实底（替代渐变）*/
+  --c-seal: #A8321C;      /* 印章红点缀 */
 }
 
-/* ===================== 主题：政务蓝 ===================== */
+/* ===================== 主题：政务蓝（深藏青+冷纸）===================== */
 html[data-theme="blue"] {
-  --c-primary:      #1457A6;
-  --c-primary-700:  #0E3F7C;
-  --c-primary-050:  #E9F0F9;
-  --c-on-primary:   #FFFFFF;
-
-  --c-accent:       #E8852B;
-  --c-accent-700:   #C26A18;
-  --c-accent-050:   #FDF0E2;
-
-  --c-danger:       #C8431F;
-  --c-danger-700:   #A1330F;
-  --c-danger-050:   #FBEAE5;
-
-  --c-success:      #1F8A4C;
-  --c-warn:         #C8901F;
-  --c-warn-050:     #FBF1DC;
-
-  --c-bg:           #F2F6FB;
-  --c-surface:      #FFFFFF;
-  --c-surface-2:    #E9F0F8;
-  --c-text:         #18222F;
-  --c-text-weak:    #546070;
-  --c-text-faint:   #8893A4;
-  --c-border:       #D6E0EC;
-  --c-border-strong:#BBCBDD;
-  --c-link:         #0E4F95;
-
-  --grad-hero: linear-gradient(135deg, #0E4080 0%, #1457A6 55%, #2E89C9 130%);
+  --c-primary: #114A80; --c-primary-700: #0C3559; --c-primary-050: #E6EDF4; --c-on-primary: #FFFFFF;
+  --c-accent: #B5602A; --c-accent-700: #8E4A1E; --c-accent-050: #F3EAE0;
+  --c-danger: #A8321C; --c-danger-700: #842413; --c-danger-050: #F3E5E1;
+  --c-success: #16713D; --c-warn: #9A6B12; --c-warn-050: #F2ECDB;
+  --c-bg: #F1F3F5; --c-surface: #FFFFFF; --c-surface-2: #E7EBEF;
+  --c-text: #1A222C; --c-text-weak: #515964; --c-text-faint: #868D96;
+  --c-border: #D5D9DE; --c-border-strong: #BCC3CB; --c-link: #0C467F;
+  --grad-hero: #0C3357; --c-seal: #A8321C;
 }
 
-/* ===================== 主题：党政红 ===================== */
+/* ===================== 主题：党政红（深官红+象牙纸）===================== */
 html[data-theme="red"] {
-  --c-primary:      #C0282D;
-  --c-primary-700:  #9C1C20;
-  --c-primary-050:  #FAEAEA;
-  --c-on-primary:   #FFFFFF;
-
-  --c-accent:       #C8901F;   /* 金 */
-  --c-accent-700:   #A4760F;
-  --c-accent-050:   #FBF1DC;
-
-  --c-danger:       #B5400F;   /* 与品牌红区分的风险橙红 */
-  --c-danger-700:   #8F3009;
-  --c-danger-050:   #FBEBE2;
-
-  --c-success:      #1F8A4C;
-  --c-warn:         #C8901F;
-  --c-warn-050:     #FBF1DC;
-
-  --c-bg:           #FBF5F4;
-  --c-surface:      #FFFFFF;
-  --c-surface-2:    #F6ECEB;
-  --c-text:         #2A1E1E;
-  --c-text-weak:    #6B5757;
-  --c-text-faint:   #9C8787;
-  --c-border:       #ECDAD9;
-  --c-border-strong:#DCC2C1;
-  --c-link:         #1457A6;
-
-  --grad-hero: linear-gradient(135deg, #9C1C20 0%, #C0282D 55%, #C8901F 135%);
+  --c-primary: #9C2A23; --c-primary-700: #7C1E18; --c-primary-050: #F2E7E4; --c-on-primary: #FFFFFF;
+  --c-accent: #A77A1E; --c-accent-700: #835F12; --c-accent-050: #F3ECD8;   /* 金 */
+  --c-danger: #8F3A12; --c-danger-700: #6F2C0C; --c-danger-050: #F2E7DE;
+  --c-success: #16713D; --c-warn: #9A6B12; --c-warn-050: #F2ECDB;
+  --c-bg: #F5F1EB; --c-surface: #FFFFFF; --c-surface-2: #EEE6DF;
+  --c-text: #261E1C; --c-text-weak: #645853; --c-text-faint: #968A85;
+  --c-border: #E0D6CE; --c-border-strong: #CDBEB5; --c-link: #14507F;
+  --grad-hero: #7C1E18; --c-seal: #9C2A23;
 }
-
-/* 注：--c-text-faint / --c-text-weak 含 8 位透明十六进制处保留兼容；
-   组件中请优先用 --c-text 与 --c-text-weak。 */
