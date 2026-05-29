@@ -13,11 +13,10 @@
       background: var(--c-surface); border-bottom: 1px solid var(--c-border); position: sticky; top: 0; z-index: 10; }
     .pv-title { font-family: var(--font-serif); font-weight: 800; font-size: var(--fs-600); }
     .pv-stage { display: flex; justify-content: center; padding: var(--sp-7) var(--sp-4); }
-    .pv-phone { width: 412px; max-width: 100%; }
+    .pv-phone { width: 460px; max-width: 100%; }
     /* 手机外壳：仅这里用大圆角(真机机身)，与界面元素的小圆角无关 */
-    .pv-shell { border: 12px solid #1c2530; border-radius: 42px; overflow: hidden; box-shadow: var(--sh-3); background: #1c2530; position: relative; }
-    .pv-notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 150px; height: 26px; background: #1c2530; border-radius: 0 0 16px 16px; z-index: 2; }
-    .pv-screen { width: 100%; height: min(80vh, 840px); background: #fff; }
+    .pv-shell { border: 12px solid #1c2530; border-radius: 38px; overflow: hidden; box-shadow: var(--sh-3); background: #1c2530; position: relative; }
+    .pv-screen { width: 100%; height: min(84vh, 920px); background: #fff; }
     .pv-screen iframe { width: 100%; height: 100%; border: 0; display: block; }
     .pv-hint { text-align: center; color: var(--c-text-weak); font-size: var(--fs-400); margin-top: var(--sp-4); }
   </style>
@@ -32,7 +31,6 @@
   <div class="pv-stage">
     <div class="pv-phone">
       <div class="pv-shell">
-        <div class="pv-notch"></div>
         <div class="pv-screen"><iframe id="pvFrame" title="移动端预览"></iframe></div>
       </div>
       <div class="pv-hint">这是手机屏幕里的真实显示效果</div>

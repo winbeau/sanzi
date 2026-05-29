@@ -140,7 +140,7 @@ p { margin: 0; }
   padding: 0 var(--sp-7); background: var(--c-surface); border-bottom: 1px solid var(--c-border);
 }
 .pc-topbar__title { font-family: var(--font-serif); font-size: var(--fs-700); font-weight: 800; }
-.pc-content { padding: var(--sp-6) var(--sp-8); width: 100%; }
+.pc-content { padding: var(--sp-7) var(--sp-9); width: 100%; }
 
 .rolechip {
   display: inline-flex; align-items: center; gap: var(--sp-2);
@@ -171,7 +171,7 @@ p { margin: 0; }
 }
 .m-topbar__title { font-family: var(--font-serif); font-size: var(--fs-600); font-weight: 800; flex: 1; text-align: center; }
 .m-topbar__title--left { text-align: left; }
-.m-main { flex: 1; padding: var(--sp-4); padding-bottom: calc(var(--m-tab-h) + var(--sp-6)); }
+.m-main { flex: 1; padding: var(--sp-5); padding-bottom: calc(var(--m-tab-h) + var(--sp-6)); }
 .m-tabbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-nav);
   height: var(--m-tab-h); display: flex; background: var(--c-surface); border-top: 1px solid var(--c-border-strong);
@@ -420,4 +420,7 @@ p { margin: 0; }
 @media (max-width: 768px) {
   html, body, * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
   *::-webkit-scrollbar { width: 0 !important; height: 0 !important; display: none !important; }
+  /* 横滑容器改为换行，避免按钮被滚动隐藏看不见 —— 全部按钮分行铺开 */
+  .chips--scroll { flex-wrap: wrap !important; overflow-x: visible !important; }
+  .seg { flex-wrap: wrap; }
 }
