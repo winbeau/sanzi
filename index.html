@@ -9,24 +9,22 @@
   <script src="shared/app.js"></script>
   <style>
     .wrap { width: 100%; margin: 0; padding: var(--sp-7) clamp(24px, 7vw, 120px); }
-    .hero-head { background: var(--grad-hero); color:#fff; border-radius: var(--r-xl); padding: var(--sp-7); margin-bottom: var(--sp-6); }
-    .preview-grid { display:grid; grid-template-columns: 1fr; gap: var(--sp-6); }
-    @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,1fr) 500px; } }
-    /* PC 预览：等比缩放真实页面（宽度收小） */
-    .pcframe-shell{ border:1px solid var(--c-border); border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--sh-2); background:var(--c-surface); max-width:700px; }
+    .hero-head { background: var(--grad-hero); color:#fff; border-radius: var(--r-lg); border-top:3px solid var(--c-accent); padding: var(--sp-7); margin-bottom: var(--sp-6); }
+    .preview-grid { display:grid; grid-template-columns: 1fr; gap: var(--sp-7); align-items:start; }
+    @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,1fr) 360px; } }
+    /* PC 预览：等比缩放真实页面，撑满左侧大区 */
+    .pcframe-shell{ border:1px solid var(--c-border); border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--sh-2); background:var(--c-surface); }
     .pcframe-bar{ height:38px; display:flex; align-items:center; gap:8px; padding:0 14px; background:var(--c-surface-2); border-bottom:1px solid var(--c-border); }
     .dot{ width:11px;height:11px;border-radius:50%; } .dot.r{background:#ec6a5e}.dot.y{background:#f4bf4f}.dot.g{background:#61c454}
     .pcframe-url{ flex:1; height:22px; background:var(--c-surface); border-radius:var(--r-pill); border:1px solid var(--c-border); font-size:12px; color:var(--c-text-faint); display:flex; align-items:center; padding:0 12px; }
-    .pcframe-view{ position:relative; width:100%; aspect-ratio: 1280/940; overflow:hidden; }
-    .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:940px; border:0; transform-origin: top left; }
-    /* 手机预览（放大） */
-    .phone{ width:440px; max-width:100%; margin:0 auto; }
-    .phone-shell{ border:10px solid #1c2530; border-radius:30px; overflow:hidden; box-shadow:var(--sh-3); background:#1c2530; position:relative; }
-    .phone-view{ position:relative; width:420px; height:520px; overflow:hidden; background:#fff; }
-    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:483px; border:0; transform-origin: top left; transform: scale(1.0769); }
-    .dir-grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: var(--sp-3); }
-    .dir-item{ display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-3) var(--sp-4); border:1px solid var(--c-border); border-radius:var(--r-md); background:var(--c-surface); }
-    .dir-item__name{ flex:1; font-weight:700; font-size:var(--fs-400); }
+    .pcframe-view{ position:relative; width:100%; aspect-ratio: 1280/800; overflow:hidden; }
+    .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:800px; border:0; transform-origin: top left; pointer-events:none; }
+    /* 手机预览：自然手机比例（不强行对齐 PC 高度）*/
+    .phone{ width:320px; max-width:100%; margin:0 auto; }
+    .phone-shell{ border:10px solid #1c2530; border-radius:30px; overflow:hidden; box-shadow:var(--sh-3); background:#1c2530; }
+    .phone-view{ position:relative; width:300px; height:560px; overflow:hidden; background:#fff; }
+    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:728px; border:0; transform-origin: top left; transform: scale(.769); pointer-events:none; }
+    .pv-cap{ text-align:center; color:var(--c-text-weak); font-size:var(--fs-300); margin-top:var(--sp-2); }
   </style>
 </head>
 <body>
@@ -42,10 +40,10 @@
     </div>
   </header>
 
-  <!-- 版本/配色选择（供领导敲定） -->
-  <section class="card card--pad" style="margin-bottom:var(--sp-6);">
+  <!-- 版本/配色选择 -->
+  <section class="card card--pad" style="margin-bottom:var(--sp-7);">
     <div class="sect__title" style="margin-bottom:var(--sp-2);"><i class="ico ico-palette"></i> 选择版本配色</div>
-    <p class="u-weak" style="margin-bottom:var(--sp-4);">三套配色随时切换，右侧/下方预览会同步变化；正式上线时可锁定其中一套。</p>
+    <p class="u-weak" style="margin-bottom:var(--sp-4);">三套配色随时切换，下方预览同步变化；正式上线时可锁定其中一套。</p>
     <div class="theme-pick" style="margin-bottom:var(--sp-5);">
       <div class="swatch swatch--active" data-theme-swatch="green">
         <div class="swatch__dots"><span class="swatch__dot" style="background:#1F8A4C"></span><span class="swatch__dot" style="background:#1457A6"></span><span class="swatch__dot" style="background:#E8852B"></span></div>
@@ -69,12 +67,18 @@
       <button class="chip" data-pick-page="qa-chat">智能问答</button>
       <button class="chip" data-pick-page="threshold-lookup">阈值速查</button>
       <button class="chip" data-pick-page="process-guide">流程指引</button>
+      <button class="chip" data-pick-page="operation-cards">操作卡片</button>
+      <button class="chip" data-pick-page="policy-explain">政策解读</button>
       <button class="chip" data-pick-page="case-learning">案例学习</button>
+      <button class="chip" data-pick-page="search">知识检索</button>
+      <button class="chip" data-pick-page="media-library">视频音频</button>
+      <button class="chip" data-pick-page="my-history-fav">我的收藏</button>
+      <button class="chip" data-pick-page="help-settings">帮助设置</button>
       <button class="chip" data-pick-page="plugin-demo">悬浮助手</button>
     </div>
   </section>
 
-  <!-- 实时预览：PC + 手机 -->
+  <!-- 实时预览：PC + 手机（预览仅供查看，点按钮看详细）-->
   <section class="preview-grid" style="margin-bottom:var(--sp-7);">
     <div>
       <div class="sect__title" style="margin-bottom:var(--sp-3);"><i class="ico ico-desktop"></i> PC 端</div>
@@ -82,6 +86,7 @@
         <div class="pcframe-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="pcframe-url">三资管理助手 / pc</span></div>
         <div class="pcframe-view"><iframe id="pcFrame" data-preview="pc/home-entry.html" title="PC 预览"></iframe></div>
       </div>
+      <button id="pcDetail" class="btn btn--primary btn--block" style="margin-top:var(--sp-4);"><i class="ico ico-external btn__ico"></i>打开 PC 详细页</button>
     </div>
     <div>
       <div class="sect__title" style="margin-bottom:var(--sp-3);"><i class="ico ico-mobile"></i> 安卓端</div>
@@ -89,14 +94,10 @@
         <div class="phone-shell">
           <div class="phone-view"><iframe id="mFrame" data-preview="mobile/home-entry.html" title="移动预览"></iframe></div>
         </div>
+        <button id="mDetail" class="btn btn--primary btn--block" style="margin-top:var(--sp-4);"><i class="ico ico-external btn__ico"></i>打开安卓详细页</button>
+        <div class="pv-cap">预览仅供查看，点上方按钮在新窗口看完整页</div>
       </div>
     </div>
-  </section>
-
-  <!-- 全部页面目录 -->
-  <section class="card card--pad" style="margin-bottom:var(--sp-6);">
-    <div class="sect__title" style="margin-bottom:var(--sp-4);"><i class="ico ico-folder"></i> 全部原型页面（点开看完整页）</div>
-    <div class="dir-grid" id="dir"></div>
   </section>
 
   <!-- 说明 -->
@@ -111,43 +112,34 @@
 
 <script>
   (function () {
-    var PAGES = [
-      ['home-entry','首页/入口'],['qa-chat','智能问答'],['threshold-lookup','阈值速查'],
-      ['process-guide','流程指引'],['operation-cards','操作卡片'],['policy-explain','政策解读'],
-      ['case-learning','案例学习'],['search','知识检索'],['media-library','视频音频'],
-      ['my-history-fav','我的收藏'],['help-settings','帮助设置'],['plugin-demo','悬浮助手演示']
-    ];
-    var dir = document.getElementById('dir');
-    PAGES.forEach(function (p) {
-      var t = (window.SanziUI ? window.SanziUI.theme() : 'green');
-      var q = '?theme=' + t;
-      var el = document.createElement('div');
-      el.className = 'dir-item';
-      el.innerHTML = '<span class="dir-item__name">' + p[1] + '</span>' +
-        '<a class="btn btn--soft btn--sm" target="_blank" href="pc/' + p[0] + '.html' + q + '">PC</a>' +
-        '<a class="btn btn--soft btn--sm" target="_blank" href="preview.html?p=mobile/' + p[0] + '.html&theme=' + t + '">移动</a>';
-      dir.appendChild(el);
-    });
+    var currentId = 'home-entry';
+    function theme() { return window.SanziUI ? window.SanziUI.theme() : 'green'; }
 
-    // PC 预览等比缩放：按容器宽度 / 1280 计算 scale
+    // PC 预览等比缩放：按容器宽度 / 1280
     function scalePC() {
-      var v = document.querySelector('.pcframe-view');
-      var f = document.getElementById('pcFrame');
-      if (!v || !f) return;
-      f.style.transform = 'scale(' + (v.clientWidth / 1280) + ')';
+      var v = document.querySelector('.pcframe-view'), f = document.getElementById('pcFrame');
+      if (v && f) f.style.transform = 'scale(' + (v.clientWidth / 1280) + ')';
     }
     scalePC();
     window.addEventListener('resize', scalePC);
 
-    // 页面选择器：切换预览 iframe
+    // 切换预览页面
     document.querySelectorAll('[data-pick-page]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         document.querySelectorAll('[data-pick-page]').forEach(function (b) { b.classList.toggle('chip--active', b === btn); });
-        var id = btn.getAttribute('data-pick-page');
-        document.getElementById('pcFrame').setAttribute('data-preview', 'pc/' + id + '.html');
-        document.getElementById('mFrame').setAttribute('data-preview', 'mobile/' + id + '.html');
-        if (window.SanziUI) window.SanziUI.setTheme(window.SanziUI.theme()); // 触发 iframe 重新同步主题
+        currentId = btn.getAttribute('data-pick-page');
+        document.getElementById('pcFrame').setAttribute('data-preview', 'pc/' + currentId + '.html');
+        document.getElementById('mFrame').setAttribute('data-preview', 'mobile/' + currentId + '.html');
+        if (window.SanziUI) window.SanziUI.setTheme(theme()); // 触发预览 iframe 重新同步主题
       });
+    });
+
+    // 两个详细入口：按当前所选页面 + 当前配色，在新窗口打开
+    document.getElementById('pcDetail').addEventListener('click', function () {
+      window.open('pc/' + currentId + '.html?theme=' + theme(), '_blank');
+    });
+    document.getElementById('mDetail').addEventListener('click', function () {
+      window.open('preview.html?p=mobile/' + currentId + '.html&theme=' + theme(), '_blank');
     });
   })();
 </script>
