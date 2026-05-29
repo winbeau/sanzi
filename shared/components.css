@@ -140,15 +140,27 @@ p { margin: 0; }
   padding: 0 var(--sp-7); background: var(--c-surface); border-bottom: 1px solid var(--c-border);
 }
 .pc-topbar__title { font-family: var(--font-serif); font-size: var(--fs-700); font-weight: 800; }
-.pc-content { padding: var(--sp-7); max-width: var(--maxw-content); width: 100%; margin: 0 auto; }
+.pc-content { padding: var(--sp-6) var(--sp-8); width: 100%; }
 
 .rolechip {
   display: inline-flex; align-items: center; gap: var(--sp-2);
   height: 44px; padding: 0 var(--sp-4); border-radius: var(--r-sm);
   background: var(--c-surface); color: var(--c-text); font-weight: 700; font-size: var(--fs-400);
-  border: 1px solid var(--c-border);
+  border: 1px solid var(--c-border); white-space: nowrap;
 }
 .rolechip__ico { color: var(--c-primary); }
+/* 顶栏的角色/地区标识可点击设置“我的资料” */
+.pc-topbar .rolechip, .m-topbar .rolechip { cursor: pointer; }
+.pc-topbar .rolechip:hover, .m-topbar .rolechip:hover { border-color: var(--c-primary); color: var(--c-primary-700); }
+.pc-topbar .rolechip::after, .m-topbar .rolechip::after { content: "▾"; margin-left: 4px; color: var(--c-text-faint); font-size: .8em; }
+
+/* “我的资料”弹出层 */
+.profilepop__mask { position: fixed; inset: 0; z-index: calc(var(--z-modal) - 1); }
+.profilepop { position: fixed; z-index: var(--z-modal); width: 300px; max-width: calc(100vw - 16px);
+  background: var(--c-surface); border: 1px solid var(--c-border-strong); border-top: 3px solid var(--c-accent);
+  border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: var(--sp-4); }
+.profilepop__title { font-family: var(--font-serif); font-weight: 800; font-size: var(--fs-600); margin-bottom: var(--sp-2); }
+.profilepop__label { font-size: var(--fs-400); font-weight: 700; color: var(--c-text-weak); margin: var(--sp-3) 0 var(--sp-2); }
 
 /* ============================================================ 导航 — 移动 */
 .m-shell { min-height: 100vh; display: flex; flex-direction: column; }
@@ -211,7 +223,8 @@ p { margin: 0; }
 }
 .chip--active { background: var(--c-primary); color: var(--c-on-primary); border-color: var(--c-primary); }
 .chips { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
-.chips--scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: var(--sp-2); -webkit-overflow-scrolling: touch; }
+.chips--scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: var(--sp-2); -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
+.chips--scroll::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
 .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px var(--sp-3); border-radius: var(--r-sm); font-size: var(--fs-300); font-weight: 700; }
 .badge--date   { background: var(--c-primary-050); color: var(--c-primary-700); }
@@ -402,3 +415,9 @@ p { margin: 0; }
 /* ============================================================ 响应式 */
 @media (max-width: 720px) { .pc-only { display: none !important; } }
 @media (min-width: 721px) { .m-only { display: none !important; } }
+
+/* 移动/窄屏：不显示任何滚动条（仍可滑动滚动）*/
+@media (max-width: 768px) {
+  html, body, * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
+  *::-webkit-scrollbar { width: 0 !important; height: 0 !important; display: none !important; }
+}

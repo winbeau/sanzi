@@ -84,3 +84,8 @@ html[data-theme="red"] {
   --c-border: #E0D6CE; --c-border-strong: #CDBEB5; --c-link: #14507F;
   --grad-hero: #7C1E18; --c-seal: #9C2A23;
 }
+
+/* 移动/窄屏：圆角再收小一档，更显紧凑利落（安卓端） */
+@media (max-width: 768px) {
+  :root { --r-sm: 1px; --r-md: 2px; --r-lg: 3px; --r-xl: 4px; }
+}

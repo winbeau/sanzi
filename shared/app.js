@@ -141,6 +141,59 @@
       }
     });
 
+    // —— 顶栏“我的资料”：点击角色/地区标识可设置并记住 ——
+    var ROLES = ['村报账员', '村三资专干', '村会计', '村干部'];
+    var REGIONS = ['湖南 · 中方县', '北京 · 房山区', '浙江 · 安吉县', '广东 · 清远市'];
+    var pget = function (k, d) { return getStore('sanzi-' + k) || d; };
+    function topChips() { return document.querySelectorAll('.pc-topbar .rolechip, .m-topbar .rolechip'); }
+    function chipKind(c) { return c.querySelector('.ico-user') ? 'role' : (c.querySelector('.ico-pin') ? 'region' : null); }
+    function applyProfile() {
+      var v = { role: pget('role', ROLES[0]), region: pget('region', REGIONS[0]) };
+      topChips().forEach(function (chip) {
+        var kind = chipKind(chip); if (!kind) return;
+        var val = v[kind], done = false;
+        for (var i = 0; i < chip.childNodes.length; i++) {
+          var n = chip.childNodes[i];
+          if (n.nodeType === 3 && n.textContent.trim()) { n.textContent = val; done = true; break; }
+        }
+        if (!done) chip.appendChild(document.createTextNode(val));
+      });
+    }
+    function closePop() {
+      var p = document.getElementById('profilepop'); if (p) p.remove();
+      var m = document.getElementById('profilepop-mask'); if (m) m.remove();
+    }
+    function openPop(anchor) {
+      closePop();
+      var role = pget('role', ROLES[0]), region = pget('region', REGIONS[0]);
+      var row = function (kind, opts, cur, label) {
+        return '<div class="profilepop__label">' + label + '</div><div class="chips">' +
+          opts.map(function (o) { return '<button class="chip ' + (o === cur ? 'chip--active' : '') + '" data-set="' + kind + '" data-val="' + o + '">' + o + '</button>'; }).join('') + '</div>';
+      };
+      var mask = document.createElement('div'); mask.id = 'profilepop-mask'; mask.className = 'profilepop__mask';
+      var pop = document.createElement('div'); pop.id = 'profilepop'; pop.className = 'profilepop';
+      pop.innerHTML = '<div class="profilepop__title">我的资料</div>' +
+        row('role', ROLES, role, '我的角色') + row('region', REGIONS, region, '所在地区') +
+        '<a class="btn btn--soft btn--block btn--sm" href="help-settings.html" style="margin-top:16px;">前往完整设置 →</a>';
+      document.body.appendChild(mask); document.body.appendChild(pop);
+      var r = anchor.getBoundingClientRect();
+      pop.style.left = Math.min(Math.max(8, r.left), window.innerWidth - pop.offsetWidth - 8) + 'px';
+      pop.style.top = (r.bottom + 8) + 'px';
+      mask.addEventListener('click', closePop);
+      pop.querySelectorAll('[data-set]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          setStore('sanzi-' + b.getAttribute('data-set'), b.getAttribute('data-val'));
+          applyProfile(); closePop();
+        });
+      });
+    }
+    topChips().forEach(function (chip) {
+      if (!chipKind(chip)) return;
+      chip.setAttribute('role', 'button'); chip.setAttribute('tabindex', '0');
+      chip.addEventListener('click', function (e) { e.stopPropagation(); openPop(chip); });
+    });
+    applyProfile();
+
     // 阻止原型里空链接跳动
     document.querySelectorAll('a[href="#"]').forEach(function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); });

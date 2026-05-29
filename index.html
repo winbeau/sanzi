@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="shared/components.css">
   <script src="shared/app.js"></script>
   <style>
-    .wrap { max-width: 1240px; margin: 0 auto; padding: var(--sp-6); }
+    .wrap { width: 100%; margin: 0; padding: var(--sp-6) var(--sp-8); }
     .hero-head { background: var(--grad-hero); color:#fff; border-radius: var(--r-xl); padding: var(--sp-7); margin-bottom: var(--sp-6); }
     .preview-grid { display:grid; grid-template-columns: 1fr; gap: var(--sp-6); }
     @media (min-width: 1000px){ .preview-grid{ grid-template-columns: minmax(0,1fr) 320px; } }
@@ -18,13 +18,13 @@
     .dot{ width:11px;height:11px;border-radius:50%; } .dot.r{background:#ec6a5e}.dot.y{background:#f4bf4f}.dot.g{background:#61c454}
     .pcframe-url{ flex:1; height:22px; background:var(--c-surface); border-radius:var(--r-pill); border:1px solid var(--c-border); font-size:12px; color:var(--c-text-faint); display:flex; align-items:center; padding:0 12px; }
     .pcframe-view{ position:relative; width:100%; aspect-ratio: 1280/760; overflow:hidden; }
-    .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:760px; border:0; transform-origin: top left; }
+    .pcframe-view iframe{ position:absolute; top:0; left:0; width:1280px; height:760px; border:0; transform-origin: top left; pointer-events:none; }
     /* 手机预览 */
     .phone{ width:268px; margin:0 auto; }
     .phone-shell{ border:10px solid #1c2530; border-radius:34px; overflow:hidden; box-shadow:var(--sh-3); background:#1c2530; position:relative; }
     .phone-notch{ position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:20px; background:#1c2530; border-radius:0 0 14px 14px; z-index:2; }
     .phone-view{ position:relative; width:248px; height:520px; overflow:hidden; background:#fff; }
-    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:818px; border:0; transform-origin: top left; transform: scale(.636); }
+    .phone-view iframe{ position:absolute; top:0; left:0; width:390px; height:818px; border:0; transform-origin: top left; transform: scale(.636); pointer-events:none; }
     .dir-grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: var(--sp-3); }
     .dir-item{ display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-3) var(--sp-4); border:1px solid var(--c-border); border-radius:var(--r-md); background:var(--c-surface); }
     .dir-item__name{ flex:1; font-weight:700; font-size:var(--fs-400); }
@@ -45,7 +45,7 @@
 
   <!-- 版本/配色选择（供领导敲定） -->
   <section class="card card--pad" style="margin-bottom:var(--sp-6);">
-    <div class="sect__title" style="margin-bottom:var(--sp-2);"><i class="ico ico-palette"></i> 选择版本配色（实时预览，供领导敲定）</div>
+    <div class="sect__title" style="margin-bottom:var(--sp-2);"><i class="ico ico-palette"></i> 选择版本配色</div>
     <p class="u-weak" style="margin-bottom:var(--sp-4);">三套配色随时切换，右侧/下方预览会同步变化；正式上线时可锁定其中一套。</p>
     <div class="theme-pick" style="margin-bottom:var(--sp-5);">
       <div class="swatch swatch--active" data-theme-swatch="green">
@@ -61,20 +61,17 @@
         <div class="swatch__name">党政红</div>
       </div>
     </div>
-    <div class="u-row u-row--wrap" style="gap:var(--sp-4);">
-      <div class="u-row" style="gap:var(--sp-2);"><span class="u-weak">字号：</span>
-        <div class="seg"><button class="seg__btn seg__btn--active" data-font-opt="normal">标准</button><button class="seg__btn" data-font-opt="large">大字（适老）</button></div>
-      </div>
-      <div class="u-spacer"></div>
-      <span class="u-weak">预览页面：</span>
-      <div class="chips chips--scroll" style="flex:1;min-width:0;">
-        <button class="chip chip--active" data-pick-page="home-entry">首页</button>
-        <button class="chip" data-pick-page="qa-chat">智能问答</button>
-        <button class="chip" data-pick-page="threshold-lookup">阈值速查</button>
-        <button class="chip" data-pick-page="process-guide">流程指引</button>
-        <button class="chip" data-pick-page="case-learning">案例学习</button>
-        <button class="chip" data-pick-page="plugin-demo">悬浮助手</button>
-      </div>
+    <div class="u-row" style="gap:var(--sp-2); margin-bottom:var(--sp-5);"><span class="u-weak">字号：</span>
+      <div class="seg"><button class="seg__btn seg__btn--active" data-font-opt="normal">标准</button><button class="seg__btn" data-font-opt="large">大字</button></div>
+    </div>
+    <div class="u-weak" style="margin-bottom:var(--sp-2);">预览页面：</div>
+    <div class="chips">
+      <button class="chip chip--active" data-pick-page="home-entry">首页</button>
+      <button class="chip" data-pick-page="qa-chat">智能问答</button>
+      <button class="chip" data-pick-page="threshold-lookup">阈值速查</button>
+      <button class="chip" data-pick-page="process-guide">流程指引</button>
+      <button class="chip" data-pick-page="case-learning">案例学习</button>
+      <button class="chip" data-pick-page="plugin-demo">悬浮助手</button>
     </div>
   </section>
 
@@ -130,7 +127,7 @@
       el.className = 'dir-item';
       el.innerHTML = '<span class="dir-item__name">' + p[1] + '</span>' +
         '<a class="btn btn--soft btn--sm" target="_blank" href="pc/' + p[0] + '.html' + q + '">PC</a>' +
-        '<a class="btn btn--soft btn--sm" target="_blank" href="mobile/' + p[0] + '.html' + q + '">移动</a>';
+        '<a class="btn btn--soft btn--sm" target="_blank" href="preview.html?p=mobile/' + p[0] + '.html&theme=' + t + '">移动</a>';
       dir.appendChild(el);
     });
 

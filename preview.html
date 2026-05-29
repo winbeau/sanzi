@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="green">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>移动端预览 · 三资管理助手</title>
+  <link rel="stylesheet" href="shared/tokens.css">
+  <link rel="stylesheet" href="shared/components.css">
+  <script src="shared/app.js"></script>
+  <style>
+    body { background: var(--c-surface-2); }
+    .pv-top { height: 56px; display: flex; align-items: center; gap: var(--sp-3); padding: 0 var(--sp-5);
+      background: var(--c-surface); border-bottom: 1px solid var(--c-border); position: sticky; top: 0; z-index: 10; }
+    .pv-title { font-family: var(--font-serif); font-weight: 800; font-size: var(--fs-600); }
+    .pv-stage { display: flex; justify-content: center; padding: var(--sp-7) var(--sp-4); }
+    .pv-phone { width: 412px; max-width: 100%; }
+    /* 手机外壳：仅这里用大圆角(真机机身)，与界面元素的小圆角无关 */
+    .pv-shell { border: 12px solid #1c2530; border-radius: 42px; overflow: hidden; box-shadow: var(--sh-3); background: #1c2530; position: relative; }
+    .pv-notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 150px; height: 26px; background: #1c2530; border-radius: 0 0 16px 16px; z-index: 2; }
+    .pv-screen { width: 100%; height: min(80vh, 840px); background: #fff; }
+    .pv-screen iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .pv-hint { text-align: center; color: var(--c-text-weak); font-size: var(--fs-400); margin-top: var(--sp-4); }
+  </style>
+</head>
+<body>
+  <div class="pv-top">
+    <a class="iconbtn" href="index.html" aria-label="返回">←</a>
+    <span class="pv-title" id="pvTitle">移动端预览</span>
+    <span class="u-spacer"></span>
+    <span class="badge badge--region">安卓 · 移动端</span>
+  </div>
+  <div class="pv-stage">
+    <div class="pv-phone">
+      <div class="pv-shell">
+        <div class="pv-notch"></div>
+        <div class="pv-screen"><iframe id="pvFrame" title="移动端预览"></iframe></div>
+      </div>
+      <div class="pv-hint">这是手机屏幕里的真实显示效果</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      function qs(n) { var m = new RegExp('[?&]' + n + '=([^&]+)').exec(location.search); return m ? decodeURIComponent(m[1]) : null; }
+      var p = qs('p') || 'mobile/home-entry.html';
+      if (!/^(mobile|pc)\/[a-z0-9-]+\.html$/i.test(p)) p = 'mobile/home-entry.html'; // 仅允许站内页面
+      var theme = (window.SanziUI ? window.SanziUI.theme() : 'green');
+      var font = (window.SanziUI ? window.SanziUI.font() : 'normal');
+      document.getElementById('pvFrame').src = p + '?theme=' + theme + '&font=' + font;
+      var names = { 'home-entry': '首页', 'qa-chat': '智能问答', 'threshold-lookup': '阈值速查', 'process-guide': '流程指引', 'operation-cards': '操作卡片', 'policy-explain': '政策解读', 'case-learning': '案例学习', 'search': '知识检索', 'media-library': '视频音频', 'my-history-fav': '我的收藏', 'help-settings': '帮助设置', 'plugin-demo': '悬浮助手演示' };
+      var id = (p.split('/')[1] || '').replace('.html', '');
+      document.getElementById('pvTitle').textContent = (names[id] || '页面') + ' · 移动端预览';
+    })();
+  </script>
+</body>
+</html>
